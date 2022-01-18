@@ -2,13 +2,12 @@
 # Learn more at https://jupyterbook.org/customize/toc.html
 
 format: jb-book
-root: intro
+root: readme
 chapters:
 - file: 01_introduction/readme
   sections:
   - file: 01_introduction/setup_conda_environments
   - file: 01_introduction/trailer
-  
 - file: 02_python_basics/readme
   sections:
   - file: 02_python_basics/01_our_first_juptyer_notebook
@@ -18,13 +17,11 @@ chapters:
   - file: 02_python_basics/07_Conditions
   - file: 02_python_basics/08_loops
   - file: 02_python_basics/09_custom_functions
-  
 - file: 03_advanced_python/readme
   sections:
   - file: 03_advanced_python/custom_libraries
   - file: 03_advanced_python/functional_parameters
-  - file: 03_advanced_python/ipywidgets
-  
+
 - file: 12_image_analysis_basics/readme
   sections:
   - file: 12_image_analysis_basics/01_Introduction_to_image_processing
@@ -33,71 +30,72 @@ chapters:
   - file: 12_image_analysis_basics/03_multi_channel_image_data
   - file: 12_image_analysis_basics/04_Filtering
   - file: 12_image_analysis_basics/05_napari
+  - file: 12_image_analysis_basics/Volumetric_image_processing
+  - file: 12_image_analysis_basics/inspecting_3d_images
   - file: 12_image_analysis_basics/10_nd_image_data
-  
   - file: 12_image_analysis_basics/opencl_installation
   - file: 12_image_analysis_basics/clesperanto
-  - file: 12_image_analysis_basics/GPU_acceleration
-  
+  - file: 12_image_analysis_basics/why_GPU_acceleration
   - file: 12_image_analysis_basics/analyse_banana_data_set
- 
 - file: 14_image_filtering/readme
   sections:
   - file: 14_image_filtering/edge_detection_and_enhancement
   - file: 14_image_filtering/simpleitk
-  - file: 14_image_filtering/nsbatwm.ipynb
+  - file: 14_image_filtering/nsbatwm
   - file: 14_image_filtering/feature_stacks
-
-- file: 15_image_segmentation_basics/readme
+- file: 15_image_segmentation/readme
   sections:
   - file: 15_image_segmentation/06_Introduction_to_image_segmentation
   - file: 15_image_segmentation/07_Thresholding
   - file: 15_image_segmentation/08_binary_mask_refinement
   - file: 15_image_segmentation/09_Labeling
-
   - file: 15_image_segmentation/connected_component_labeling
   - file: 15_image_segmentation/touching_objects_labeling
   - file: 15_image_segmentation/voronoi_otsu_labeling
-
+  - file: 15_image_segmentation/watershed_objects_labeling
   - file: 15_image_segmentation/segmentation_2d_membranes
   - file: 15_image_segmentation/Segmentation_3D
-  
   - file: 15_image_segmentation/scikit_learn_random_forest_pixel_classifier
   - file: 15_image_segmentation/apoc_object_segmenter
   - file: 15_image_segmentation/apoc_pixel_classifier_continue_training
   - file: 15_image_segmentation/apoc_probability_mapper
-  
   - file: 15_image_segmentation/cellpose
-  - file: 15_image_segmentation/stardist
-
-- file: 16_neighborhood_relationships_between_cells/readme
-
+  - file: 15_image_segmentation/stardist  
 - file: 18_feature_extraction/readme
   sections:
   - file: 18_feature_extraction/count_blobs
   - file: 18_feature_extraction/quantitative_measurements
   - file: 18_feature_extraction/label_statistics
   - file: 18_feature_extraction/cell_classification
-
+- file: 19_neighborhood_relationships_between_cells/readme
+  sections:
+  - file: 19_neighborhood_relationships_between_cells/neighborhood_definitions
+  - file: 19_neighborhood_relationships_between_cells/mesh_between_centroids
+  - file: 19_neighborhood_relationships_between_cells/mesh_between_touching_neighbors
+  - file: 19_neighborhood_relationships_between_cells/mesh_nearest_neighbors
+  - file: 19_neighborhood_relationships_between_cells/mesh_with_distances  
+  - file: 19_neighborhood_relationships_between_cells/distance_to_other_labels
+  - file: 19_neighborhood_relationships_between_cells/neighbors_of_neighbors
+  - file: 19_neighborhood_relationships_between_cells/other_proximal_labels_count
+  - file: 19_neighborhood_relationships_between_cells/quantitative_neighbor_maps
 - file: 21_colocalization/readme
   sections:
   - file: 21_colocalization/counting_nuclei_multichannel
   - file: 21_colocalization/differentiate_nuclei_intensity
   - file: 21_colocalization/measure_overlap_between_label_images
-
 - file: 30_batch_processing/readme
   sections: 
   - file: 30_batch_processing/12_process_folders
-
 - file: 35_parameter_optimization/readme
   sections:
-  - file: sparse_label_image_optimizer.ipynb
-
+  - file: 35_parameter_optimization/label_image_optimizer.ipynb
+  - file: 35_parameter_optimization/sparse_label_image_optimizer.ipynb
+  - file: 35_parameter_optimization/membrane_segmentation.ipynb
 - file: 40_tabular_data_wrangling/readme
   sections:
   - file: 40_tabular_data_wrangling/append_tables
+  - file: 40_tabular_data_wrangling/pandas
 - file: 51_plotting/readme
   sections:
   - file: 51_plotting/11_plotting
   - file: 51_plotting/bland_altman_analysis
- 

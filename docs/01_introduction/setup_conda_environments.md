@@ -1,4 +1,4 @@
-# Setting up Python / Conda environments
+# Setting up Python and Conda environments
 When working with Python, we will make use of many plugins and software libraries which need to be organized.
 One way of doing this, is by managing so called "Conda" environments.
 A conda environment can be seen as a virtual desktop, or virtual computer, accessible via the command line. 
@@ -27,7 +27,7 @@ conda activate
 
 You will then see the term `(base)` at the beginning of each line:
 
-![](pics/python_conda_environments/base_env.png)
+![](base_env.png)
 
 ## Step 2: Creating a conda environment
 You can create a conda environment with this command:
