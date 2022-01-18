@@ -2,7 +2,7 @@
 # Learn more at https://jupyterbook.org/customize/toc.html
 
 format: jb-book
-root: readme
+root: intro
 chapters:
 - file: 01_introduction/readme
   sections:
