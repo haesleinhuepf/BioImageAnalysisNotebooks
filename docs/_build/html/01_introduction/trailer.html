@@ -1,0 +1,1286 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trailer: Bio-image Analysis with Python &#8212; Bio-image Analysis with Python</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Setting up your computer" href="readme.html" />
+    <link rel="prev" title="Introduction" href="../intro.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Bio-image Analysis with Python</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro.html">
+   Introduction
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Trailer: Bio-image Analysis with Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="readme.html">
+   Setting up your computer
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../02_python_basics/readme.html">
+   Python basics
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../02_python_basics/01_our_first_juptyer_notebook.html">
+     Python code in Jupyter notebooks
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../02_python_basics/02_Math_in_python.html">
+     Basic math in python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../02_python_basics/03_Dont_try_this_at_home.html">
+     Pitfalls when working with Jupyter notebooks
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../02_python_basics/04_Basic_types.html">
+     Basic types in python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../02_python_basics/07_Conditions.html">
+     Conditions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../02_python_basics/08_loops.html">
+     Loops
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../02_python_basics/09_custom_functions.html">
+     Functions
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../03_advanced_python/readme.html">
+   Advanced python programming
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../03_advanced_python/custom_libraries.html">
+     Custom libraries
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../03_advanced_python/functional_parameters.html">
+     Functional parameters
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../12_image_analysis_basics/readme.html">
+   Image analysis basics
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../12_image_analysis_basics/01_Introduction_to_image_processing.html">
+     Introduction to image processing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../12_image_analysis_basics/02_Working_with_images.html">
+     Working with images
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../12_image_analysis_basics/03_scikit_image.html">
+     scikit-image for processing images
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../12_image_analysis_basics/04_multi_channel_image_data.html">
+     Multi-channel image data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../12_image_analysis_basics/analyse_banana_data_set.html">
+     Exercise: Analyse the bending of a banana in MRI
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../15_gpu_acceleration/readme.html">
+   GPU accelerated image processing
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../15_gpu_acceleration/clesperanto.html">
+     clEsperanto
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../15_gpu_acceleration/why_GPU_acceleration.html">
+     Why GPU-acceleration makes sense
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../15_gpu_acceleration/cupy.html">
+     GPU-accelerated image processing using CUPY and CUCIM
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../15_gpu_acceleration/further_reading.html">
+     Further reading
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../16_3d_image_visualization/readme.html">
+   Image visualization in 3D
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../16_3d_image_visualization/Volumetric_image_processing.html">
+     Loading, processing and visualising 3D images
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../16_3d_image_visualization/inspecting_3d_images.html">
+     Inspecting 3D image data with pyclesperanto
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../16_3d_image_visualization/05_napari.html">
+     Interactive image visualization with napari
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../16_3d_image_visualization/10_nd_image_data.html">
+     Multidimensional image stacks
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../18_image_filtering/readme.html">
+   Image filtering
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../18_image_filtering/01_Filtering.html">
+     Filtering images
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../18_image_filtering/edge_detection_and_enhancement.html">
+     Edge detection
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../18_image_filtering/simpleitk.html">
+     Processing images using SimpleITK
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../18_image_filtering/nsbatwm.html">
+     Segment blobs and things with membranes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../18_image_filtering/feature_stacks.html">
+     Generating feature stacks
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../20_image_segmentation/readme.html">
+   Image segmentation
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../20_image_segmentation/06_Introduction_to_image_segmentation.html">
+     Image segmentation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../20_image_segmentation/07_Thresholding.html">
+     Thresholding
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../20_image_segmentation/08_binary_mask_refinement.html">
+     Binary mask refinement
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../20_image_segmentation/09_connected_component_labeling.html">
+     Label images
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../20_image_segmentation/10_touching_objects_labeling.html">
+     Touching objects labeling
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../20_image_segmentation/11_voronoi_otsu_labeling.html">
+     Voronoi-Otsu-labeling
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../20_image_segmentation/12_watershed_objects_labeling.html">
+     Watershed objects labeling
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../20_image_segmentation/14_remove_labels_on_image_edges.html">
+     Remove labels on image edges
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../20_image_segmentation/15_sequential_labeling.html">
+     Sequential object (re-)labeling
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../20_image_segmentation/segmentation_2d_membranes.html">
+     Image Segmentation from membrane images
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../20_image_segmentation/Segmentation_3D.html">
+     3D Image Segmentation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../20_image_segmentation/scikit_learn_random_forest_pixel_classifier.html">
+     Pixel classification using Scikit image
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../20_image_segmentation/apoc_object_segmenter.html">
+     Object segmentation on OpenCL-compatible GPUs
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../20_image_segmentation/apoc_pixel_classifier_continue_training.html">
+     Pixel classification on OpenCL-compatible GPUs
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../20_image_segmentation/apoc_probability_mapper.html">
+     Probability maps
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../20_image_segmentation/cellpose.html">
+     Image Segmentation with CellPose
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../20_image_segmentation/stardist.html">
+     Image segmentation with StarDist
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../22_feature_extraction/readme.html">
+   Feature extraction
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../22_feature_extraction/count_blobs.html">
+     Counting blobs with pyclesperanto
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../22_feature_extraction/quantitative_measurements.html">
+     Quantitative image analysis
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../22_feature_extraction/label_statistics.html">
+     Basic statistics with pyclesperanto
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../22_feature_extraction/cell_classification.html">
+     Cell classification using Random Forest Classifiers
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../25_neighborhood_relationships_between_cells/readme.html">
+   Neighborhood analysis in tissues
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../25_neighborhood_relationships_between_cells/neighborhood_definitions.html">
+     Neighborhood definitions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../25_neighborhood_relationships_between_cells/mesh_between_centroids.html">
+     Mesh between centroids
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../25_neighborhood_relationships_between_cells/mesh_between_touching_neighbors.html">
+     Mesh between touching neighbors
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../25_neighborhood_relationships_between_cells/mesh_nearest_neighbors.html">
+     Mesh nearest neighbors
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../25_neighborhood_relationships_between_cells/mesh_with_distances.html">
+     Distance-meshes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../25_neighborhood_relationships_between_cells/distance_to_other_labels.html">
+     Measure the distance to neighboring cells
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../25_neighborhood_relationships_between_cells/neighbors_of_neighbors.html">
+     Neighbors of neighbors
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../25_neighborhood_relationships_between_cells/other_proximal_labels_count.html">
+     Count proximal labels in an other label image
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../25_neighborhood_relationships_between_cells/quantitative_neighbor_maps.html">
+     Quantitative maps from neighbor statistics
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../28_colocalization/readme.html">
+   Colocalization
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+  <label for="toctree-checkbox-10">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../28_colocalization/counting_nuclei_multichannel.html">
+     Counting nuclei according to expression in multiple channels
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../28_colocalization/differentiate_nuclei_intensity.html">
+     Differentiating nuclei according to signal intensity
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../28_colocalization/measure_overlap_between_label_images.html">
+     Measure overlap between two label images
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../33_batch_processing/readme.html">
+   Batch processing
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+  <label for="toctree-checkbox-11">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../33_batch_processing/12_process_folders.html">
+     How process files in a folder
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../35_parameter_optimization/readme.html">
+   Parameter optimization
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+  <label for="toctree-checkbox-12">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../35_parameter_optimization/label_image_optimizer.html">
+     Optimize segmentation / labeling
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../35_parameter_optimization/sparse_label_image_optimizer.html">
+     Optimize image segmentation / labeling with spare annotations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../35_parameter_optimization/membrane_segmentation.html">
+     Segmenting cells with fluorescent membranes using Random Forest Classifiers
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../40_tabular_data_wrangling/readme.html">
+   Tabular data wrangling
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
+  <label for="toctree-checkbox-13">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../40_tabular_data_wrangling/append_tables.html">
+     Append tables
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../40_tabular_data_wrangling/pandas.html">
+     Working with tables in pandas
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../51_plotting/readme.html">
+   Plotting
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
+  <label for="toctree-checkbox-14">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../51_plotting/11_plotting.html">
+     Plotting
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../51_plotting/bland_altman_analysis.html">
+     Comparison of means
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/01_introduction/trailer.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/haesleinhuepf/BioImageAnalysisNotebooks"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/haesleinhuepf/BioImageAnalysisNotebooks/issues/new?title=Issue%20on%20page%20%2F01_introduction/trailer.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/haesleinhuepf/BioImageAnalysisNotebooks/main?urlpath=tree/docs/01_introduction/trailer.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#working-with-image-data">
+   Working with image data
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#image-segmentation">
+   Image segmentation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#measurements-and-feature-extraction">
+   Measurements and feature extraction
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#working-with-tables">
+   Working with tables
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#statistical-analysis">
+   Statistical analysis
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Trailer: Bio-image Analysis with Python</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#working-with-image-data">
+   Working with image data
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#image-segmentation">
+   Image segmentation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#measurements-and-feature-extraction">
+   Measurements and feature extraction
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#working-with-tables">
+   Working with tables
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#statistical-analysis">
+   Statistical analysis
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="trailer-bio-image-analysis-with-python">
+<h1>Trailer: Bio-image Analysis with Python<a class="headerlink" href="#trailer-bio-image-analysis-with-python" title="Permalink to this headline">¶</a></h1>
+<p>In this collection of notebooks we will dive into image analysis, machine learning and bio-statistics with Python. This notebook serves as a trailer of what we will be doing.</p>
+<div class="section" id="working-with-image-data">
+<h2>Working with image data<a class="headerlink" href="#working-with-image-data" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">skimage.io</span> <span class="kn">import</span> <span class="n">imread</span>
+<span class="kn">from</span> <span class="nn">pyclesperanto_prototype</span> <span class="kn">import</span> <span class="n">imshow</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># open an image file</span>
+<span class="n">image</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s2">&quot;../../data/blobs.tif&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Image size&quot;</span><span class="p">,</span> <span class="n">image</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Image size (254, 256)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># visualizing an image</span>
+<span class="n">imshow</span><span class="p">(</span><span class="n">image</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/trailer_3_0.png" src="../_images/trailer_3_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="image-segmentation">
+<h2>Image segmentation<a class="headerlink" href="#image-segmentation" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># normalize image</span>
+<span class="kn">from</span> <span class="nn">csbdeep.utils</span> <span class="kn">import</span> <span class="n">normalize</span>
+<span class="n">normalized_image</span> <span class="o">=</span> <span class="n">normalize</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span><span class="mf">99.8</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span>
+
+<span class="c1"># load pretrained deep-learning model</span>
+<span class="kn">from</span> <span class="nn">stardist.models</span> <span class="kn">import</span> <span class="n">StarDist2D</span> 
+<span class="n">model</span> <span class="o">=</span> <span class="n">StarDist2D</span><span class="o">.</span><span class="n">from_pretrained</span><span class="p">(</span><span class="s1">&#39;2D_versatile_fluo&#39;</span><span class="p">)</span>
+
+<span class="c1"># predict labels</span>
+<span class="n">label_image</span><span class="p">,</span> <span class="n">details</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict_instances</span><span class="p">(</span><span class="n">normalized_image</span><span class="p">)</span>
+<span class="n">imshow</span><span class="p">(</span><span class="n">label_image</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">p1</span><span class="o">/</span><span class="mi">6</span><span class="n">svzckgd1y5906pfgm71fvmr0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_17712</span><span class="o">/</span><span class="mf">3789800383.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># normalize image</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="kn">from</span> <span class="nn">csbdeep.utils</span> <span class="kn">import</span> <span class="n">normalize</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">normalized_image</span> <span class="o">=</span> <span class="n">normalize</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span><span class="mf">99.8</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> 
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="c1"># load pretrained deep-learning model</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;csbdeep&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="measurements-and-feature-extraction">
+<h2>Measurements and feature extraction<a class="headerlink" href="#measurements-and-feature-extraction" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">skimage</span> <span class="kn">import</span> <span class="n">measure</span>
+
+<span class="c1"># analyse objects</span>
+<span class="n">table</span> <span class="o">=</span> <span class="n">measure</span><span class="o">.</span><span class="n">regionprops_table</span><span class="p">(</span><span class="n">label_image</span><span class="p">,</span> <span class="n">intensity_image</span><span class="o">=</span><span class="n">image</span><span class="p">,</span>
+                                  <span class="n">properties</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;area&#39;</span><span class="p">,</span> <span class="s1">&#39;mean_intensity&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="working-with-tables">
+<h2>Working with tables<a class="headerlink" href="#working-with-tables" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># show table</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="n">dataframe</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">table</span><span class="p">)</span>
+<span class="n">dataframe</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>area</th>
+      <th>mean_intensity</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>37</td>
+      <td>115.027027</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>33</td>
+      <td>99.878788</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>182</td>
+      <td>192.395604</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>212</td>
+      <td>196.037736</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>491</td>
+      <td>208.130346</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>221</td>
+      <td>167.384615</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>693</td>
+      <td>196.121212</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>536</td>
+      <td>193.388060</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>475</td>
+      <td>168.016842</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>562</td>
+      <td>157.309609</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>117</td>
+      <td>144.136752</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>389</td>
+      <td>182.334190</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>516</td>
+      <td>197.240310</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>340</td>
+      <td>161.505882</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>305</td>
+      <td>179.147541</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>250</td>
+      <td>164.192000</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>704</td>
+      <td>199.454545</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>187</td>
+      <td>175.058824</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>256</td>
+      <td>172.250000</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>324</td>
+      <td>179.111111</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>475</td>
+      <td>187.924211</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>652</td>
+      <td>190.110429</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>205</td>
+      <td>169.834146</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>271</td>
+      <td>182.110701</td>
+    </tr>
+    <tr>
+      <th>24</th>
+      <td>298</td>
+      <td>172.268456</td>
+    </tr>
+    <tr>
+      <th>25</th>
+      <td>285</td>
+      <td>177.908772</td>
+    </tr>
+    <tr>
+      <th>26</th>
+      <td>886</td>
+      <td>196.207675</td>
+    </tr>
+    <tr>
+      <th>27</th>
+      <td>471</td>
+      <td>208.662420</td>
+    </tr>
+    <tr>
+      <th>28</th>
+      <td>145</td>
+      <td>145.268966</td>
+    </tr>
+    <tr>
+      <th>29</th>
+      <td>515</td>
+      <td>174.586408</td>
+    </tr>
+    <tr>
+      <th>30</th>
+      <td>192</td>
+      <td>170.791667</td>
+    </tr>
+    <tr>
+      <th>31</th>
+      <td>420</td>
+      <td>186.780952</td>
+    </tr>
+    <tr>
+      <th>32</th>
+      <td>291</td>
+      <td>170.776632</td>
+    </tr>
+    <tr>
+      <th>33</th>
+      <td>309</td>
+      <td>168.181230</td>
+    </tr>
+    <tr>
+      <th>34</th>
+      <td>334</td>
+      <td>189.437126</td>
+    </tr>
+    <tr>
+      <th>35</th>
+      <td>313</td>
+      <td>187.680511</td>
+    </tr>
+    <tr>
+      <th>36</th>
+      <td>332</td>
+      <td>177.686747</td>
+    </tr>
+    <tr>
+      <th>37</th>
+      <td>753</td>
+      <td>163.580345</td>
+    </tr>
+    <tr>
+      <th>38</th>
+      <td>449</td>
+      <td>196.204900</td>
+    </tr>
+    <tr>
+      <th>39</th>
+      <td>447</td>
+      <td>193.413870</td>
+    </tr>
+    <tr>
+      <th>40</th>
+      <td>909</td>
+      <td>192.448845</td>
+    </tr>
+    <tr>
+      <th>41</th>
+      <td>678</td>
+      <td>196.389381</td>
+    </tr>
+    <tr>
+      <th>42</th>
+      <td>614</td>
+      <td>219.596091</td>
+    </tr>
+    <tr>
+      <th>43</th>
+      <td>399</td>
+      <td>189.273183</td>
+    </tr>
+    <tr>
+      <th>44</th>
+      <td>468</td>
+      <td>187.863248</td>
+    </tr>
+    <tr>
+      <th>45</th>
+      <td>483</td>
+      <td>174.741201</td>
+    </tr>
+    <tr>
+      <th>46</th>
+      <td>486</td>
+      <td>201.448560</td>
+    </tr>
+    <tr>
+      <th>47</th>
+      <td>485</td>
+      <td>168.461856</td>
+    </tr>
+    <tr>
+      <th>48</th>
+      <td>574</td>
+      <td>185.839721</td>
+    </tr>
+    <tr>
+      <th>49</th>
+      <td>606</td>
+      <td>196.858086</td>
+    </tr>
+    <tr>
+      <th>50</th>
+      <td>430</td>
+      <td>196.279070</td>
+    </tr>
+    <tr>
+      <th>51</th>
+      <td>625</td>
+      <td>205.542400</td>
+    </tr>
+    <tr>
+      <th>52</th>
+      <td>589</td>
+      <td>211.286927</td>
+    </tr>
+    <tr>
+      <th>53</th>
+      <td>579</td>
+      <td>184.110535</td>
+    </tr>
+    <tr>
+      <th>54</th>
+      <td>584</td>
+      <td>192.534247</td>
+    </tr>
+    <tr>
+      <th>55</th>
+      <td>564</td>
+      <td>179.843972</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</div>
+<div class="section" id="statistical-analysis">
+<h2>Statistical analysis<a class="headerlink" href="#statistical-analysis" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Mean blob area is &quot;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">dataframe</span><span class="p">[</span><span class="s1">&#39;area&#39;</span><span class="p">]))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Mean blob area is  427.60714285714283
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./01_introduction"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="../intro.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Introduction</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="readme.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Setting up your computer</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Robert Haase & add-your-name-here-by-sending-a-pull-request-containing-a-notebook<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

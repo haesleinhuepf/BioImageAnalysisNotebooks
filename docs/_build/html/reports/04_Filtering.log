@@ -1,0 +1,93 @@
+Traceback (most recent call last):
+  File "/Users/haase/opt/anaconda3/envs/bio_39/lib/python3.9/site-packages/jupyter_cache/executors/utils.py", line 51, in single_nb_execution
+    executenb(
+  File "/Users/haase/opt/anaconda3/envs/bio_39/lib/python3.9/site-packages/nbclient/client.py", line 1093, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+  File "/Users/haase/opt/anaconda3/envs/bio_39/lib/python3.9/site-packages/nbclient/util.py", line 84, in wrapped
+    return just_run(coro(*args, **kwargs))
+  File "/Users/haase/opt/anaconda3/envs/bio_39/lib/python3.9/site-packages/nbclient/util.py", line 62, in just_run
+    return loop.run_until_complete(coro)
+  File "/Users/haase/opt/anaconda3/envs/bio_39/lib/python3.9/asyncio/base_events.py", line 642, in run_until_complete
+    return future.result()
+  File "/Users/haase/opt/anaconda3/envs/bio_39/lib/python3.9/site-packages/nbclient/client.py", line 559, in async_execute
+    await self.async_execute_cell(
+  File "/Users/haase/opt/anaconda3/envs/bio_39/lib/python3.9/site-packages/nbclient/client.py", line 854, in async_execute_cell
+    self._check_raise_for_error(cell, exec_reply)
+  File "/Users/haase/opt/anaconda3/envs/bio_39/lib/python3.9/site-packages/nbclient/client.py", line 756, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+from skimage.io import imread
+import matplotlib.pyplot as plt
+
+# open dataset and extract single plane
+noisy_mri = imread('../data/Haase_MRT_tfl3d1-100.tif')
+
+# zoom in by cropping a part out
+noisy_mri_zoom = noisy_mri[50:100, 50:100]
+
+fig, axs = plt.subplots(1, 2, figsize=(15,15))
+
+axs[0].imshow(noisy_mri)
+axs[1].imshow(noisy_mri_zoom)
+------------------
+
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mFileNotFoundError[0m                         Traceback (most recent call last)
+[0;32m/var/folders/p1/6svzckgd1y5906pfgm71fvmr0000gn/T/ipykernel_17210/2652694166.py[0m in [0;36m<module>[0;34m[0m
+[1;32m      3[0m [0;34m[0m[0m
+[1;32m      4[0m [0;31m# open dataset and extract single plane[0m[0;34m[0m[0;34m[0m[0m
+[0;32m----> 5[0;31m [0mnoisy_mri[0m [0;34m=[0m [0mimread[0m[0;34m([0m[0;34m'../data/Haase_MRT_tfl3d1-100.tif'[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m      6[0m [0;34m[0m[0m
+[1;32m      7[0m [0;31m# zoom in by cropping a part out[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m~/opt/anaconda3/envs/bio_39/lib/python3.9/site-packages/skimage/io/_io.py[0m in [0;36mimread[0;34m(fname, as_gray, plugin, **plugin_args)[0m
+[1;32m     46[0m [0;34m[0m[0m
+[1;32m     47[0m     [0;32mwith[0m [0mfile_or_url_context[0m[0;34m([0m[0mfname[0m[0;34m)[0m [0;32mas[0m [0mfname[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0;32m---> 48[0;31m         [0mimg[0m [0;34m=[0m [0mcall_plugin[0m[0;34m([0m[0;34m'imread'[0m[0;34m,[0m [0mfname[0m[0;34m,[0m [0mplugin[0m[0;34m=[0m[0mplugin[0m[0;34m,[0m [0;34m**[0m[0mplugin_args[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m     49[0m [0;34m[0m[0m
+[1;32m     50[0m     [0;32mif[0m [0;32mnot[0m [0mhasattr[0m[0;34m([0m[0mimg[0m[0;34m,[0m [0;34m'ndim'[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m~/opt/anaconda3/envs/bio_39/lib/python3.9/site-packages/skimage/io/manage_plugins.py[0m in [0;36mcall_plugin[0;34m(kind, *args, **kwargs)[0m
+[1;32m    205[0m                                (plugin, kind))
+[1;32m    206[0m [0;34m[0m[0m
+[0;32m--> 207[0;31m     [0;32mreturn[0m [0mfunc[0m[0;34m([0m[0;34m*[0m[0margs[0m[0;34m,[0m [0;34m**[0m[0mkwargs[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    208[0m [0;34m[0m[0m
+[1;32m    209[0m [0;34m[0m[0m
+
+[0;32m~/opt/anaconda3/envs/bio_39/lib/python3.9/site-packages/skimage/io/_plugins/tifffile_plugin.py[0m in [0;36mimread[0;34m(fname, **kwargs)[0m
+[1;32m     28[0m         [0mkwargs[0m[0;34m[[0m[0;34m'key'[0m[0;34m][0m [0;34m=[0m [0mkwargs[0m[0;34m.[0m[0mpop[0m[0;34m([0m[0;34m'img_num'[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[1;32m     29[0m [0;34m[0m[0m
+[0;32m---> 30[0;31m     [0;32mreturn[0m [0mtifffile_imread[0m[0;34m([0m[0mfname[0m[0;34m,[0m [0;34m**[0m[0mkwargs[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m
+[0;32m~/opt/anaconda3/envs/bio_39/lib/python3.9/site-packages/tifffile/tifffile.py[0m in [0;36mimread[0;34m(files, aszarr, **kwargs)[0m
+[1;32m    889[0m [0;34m[0m[0m
+[1;32m    890[0m         [0;32mif[0m [0misinstance[0m[0;34m([0m[0mfiles[0m[0;34m,[0m [0;34m([0m[0mstr[0m[0;34m,[0m [0mos[0m[0;34m.[0m[0mPathLike[0m[0;34m)[0m[0;34m)[0m [0;32mor[0m [0mhasattr[0m[0;34m([0m[0mfiles[0m[0;34m,[0m [0;34m'seek'[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 891[0;31m             [0;32mwith[0m [0mTiffFile[0m[0;34m([0m[0mfiles[0m[0;34m,[0m [0;34m**[0m[0mkwargs_file[0m[0;34m)[0m [0;32mas[0m [0mtif[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    892[0m                 [0;32mif[0m [0maszarr[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    893[0m                     [0;32mreturn[0m [0mtif[0m[0;34m.[0m[0maszarr[0m[0;34m([0m[0;34m**[0m[0mkwargs[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m~/opt/anaconda3/envs/bio_39/lib/python3.9/site-packages/tifffile/tifffile.py[0m in [0;36m__init__[0;34m(self, arg, mode, name, offset, size, _multifile, _useframes, _parent, **kwargs)[0m
+[1;32m   3129[0m             [0;32mraise[0m [0mValueError[0m[0;34m([0m[0;34mf'invalid mode {mode!r}'[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[1;32m   3130[0m [0;34m[0m[0m
+[0;32m-> 3131[0;31m         [0mfh[0m [0;34m=[0m [0mFileHandle[0m[0;34m([0m[0marg[0m[0;34m,[0m [0mmode[0m[0;34m=[0m[0mmode[0m[0;34m,[0m [0mname[0m[0;34m=[0m[0mname[0m[0;34m,[0m [0moffset[0m[0;34m=[0m[0moffset[0m[0;34m,[0m [0msize[0m[0;34m=[0m[0msize[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m   3132[0m         [0mself[0m[0;34m.[0m[0m_fh[0m [0;34m=[0m [0mfh[0m[0;34m[0m[0;34m[0m[0m
+[1;32m   3133[0m         [0mself[0m[0;34m.[0m[0m_multifile[0m [0;34m=[0m [0mbool[0m[0;34m([0m[0m_multifile[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m~/opt/anaconda3/envs/bio_39/lib/python3.9/site-packages/tifffile/tifffile.py[0m in [0;36m__init__[0;34m(self, file, mode, name, offset, size)[0m
+[1;32m  10445[0m         [0mself[0m[0;34m.[0m[0mis_file[0m [0;34m=[0m [0;32mNone[0m[0;34m[0m[0;34m[0m[0m
+[1;32m  10446[0m         [0mself[0m[0;34m.[0m[0m_lock[0m [0;34m=[0m [0mNullContext[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0;32m> 10447[0;31m         [0mself[0m[0;34m.[0m[0mopen[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m  10448[0m [0;34m[0m[0m
+[1;32m  10449[0m     [0;32mdef[0m [0mopen[0m[0;34m([0m[0mself[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m~/opt/anaconda3/envs/bio_39/lib/python3.9/site-packages/tifffile/tifffile.py[0m in [0;36mopen[0;34m(self)[0m
+[1;32m  10458[0m             [0mself[0m[0;34m.[0m[0m_file[0m [0;34m=[0m [0mos[0m[0;34m.[0m[0mpath[0m[0;34m.[0m[0mrealpath[0m[0;34m([0m[0mself[0m[0;34m.[0m[0m_file[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[1;32m  10459[0m             [0mself[0m[0;34m.[0m[0m_dir[0m[0;34m,[0m [0mself[0m[0;34m.[0m[0m_name[0m [0;34m=[0m [0mos[0m[0;34m.[0m[0mpath[0m[0;34m.[0m[0msplit[0m[0;34m([0m[0mself[0m[0;34m.[0m[0m_file[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0;32m> 10460[0;31m             [0mself[0m[0;34m.[0m[0m_fh[0m [0;34m=[0m [0mopen[0m[0;34m([0m[0mself[0m[0;34m.[0m[0m_file[0m[0;34m,[0m [0mself[0m[0;34m.[0m[0m_mode[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m  10461[0m             [0mself[0m[0;34m.[0m[0m_close[0m [0;34m=[0m [0;32mTrue[0m[0;34m[0m[0;34m[0m[0m
+[1;32m  10462[0m             [0;32mif[0m [0mself[0m[0;34m.[0m[0m_offset[0m [0;32mis[0m [0;32mNone[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+
+[0;31mFileNotFoundError[0m: [Errno 2] No such file or directory: '/Users/haase/code/BioImageAnalysisNotebooks/docs/data/Haase_MRT_tfl3d1-100.tif'
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/haase/code/BioImageAnalysisNotebooks/docs/data/Haase_MRT_tfl3d1-100.tif'
+

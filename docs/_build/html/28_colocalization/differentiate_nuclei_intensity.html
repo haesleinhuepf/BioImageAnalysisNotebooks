@@ -1,0 +1,1374 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Differentiating nuclei according to signal intensity &#8212; Bio-image Analysis with Python</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Measure overlap between two label images" href="measure_overlap_between_label_images.html" />
+    <link rel="prev" title="Counting nuclei according to expression in multiple channels" href="counting_nuclei_multichannel.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Bio-image Analysis with Python</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro.html">
+   Introduction
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../01_introduction/readme.html">
+   Setting up your computer
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../01_introduction/setup_conda_environments.html">
+     Setting up Python and Conda environments
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../01_introduction/trailer.html">
+     Trailer: bio-image analysis with Python
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../02_python_basics/readme.html">
+   Python basics
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../02_python_basics/01_our_first_juptyer_notebook.html">
+     Python code in Jupyter notebooks
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../02_python_basics/02_Math_in_python.html">
+     Basic math in python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../02_python_basics/03_Dont_try_this_at_home.html">
+     Pitfalls when working with Jupyter notebooks
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../02_python_basics/04_Basic_types.html">
+     Basic types in python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../02_python_basics/07_Conditions.html">
+     Conditions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../02_python_basics/08_loops.html">
+     Loops
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../02_python_basics/09_custom_functions.html">
+     Functions
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../03_advanced_python/readme.html">
+   Advanced python programming
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../03_advanced_python/custom_libraries.html">
+     Custom libraries
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../03_advanced_python/functional_parameters.html">
+     Functional parameters
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../12_image_analysis_basics/readme.html">
+   Image analysis basics
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../12_image_analysis_basics/01_Introduction_to_image_processing.html">
+     Introduction to image processing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../12_image_analysis_basics/02_Working_with_images.html">
+     Working with images
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../12_image_analysis_basics/03_scikit_image.html">
+     scikit-image for processing images
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../12_image_analysis_basics/analyse_banana_data_set.html">
+     Exercise: Analyse the bending of a banana in MRI
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../15_gpu_acceleration/readme.html">
+   GPU accelerated image processing
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../15_gpu_acceleration/clesperanto.html">
+     clEsperanto
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../15_gpu_acceleration/why_GPU_acceleration.html">
+     Why GPU-acceleration makes sense
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../16_3d_image_visualization/readme.html">
+   Image visualization in 3D
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../16_3d_image_visualization/Volumetric_image_processing.html">
+     Loading, processing and visualising 3D images
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../16_3d_image_visualization/inspecting_3d_images.html">
+     Inspecting 3D image data with pyclesperanto
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../16_3d_image_visualization/05_napari.html">
+     Interactive image visualization with napari
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../16_3d_image_visualization/10_nd_image_data.html">
+     Multidimensional image stacks
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../18_image_filtering/readme.html">
+   Image filtering
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../18_image_filtering/01_Filtering.html">
+     Filtering images
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../18_image_filtering/edge_detection_and_enhancement.html">
+     Edge detection
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../18_image_filtering/simpleitk.html">
+     Processing images using SimpleITK
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../18_image_filtering/nsbatwm.html">
+     Segment blobs and things with membranes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../18_image_filtering/feature_stacks.html">
+     Generating feature stacks
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../20_image_segmentation/readme.html">
+   Image segmentation
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../20_image_segmentation/06_Introduction_to_image_segmentation.html">
+     Introduction to image segmentation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../20_image_segmentation/07_Thresholding.html">
+     Thresholding
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../20_image_segmentation/08_binary_mask_refinement.html">
+     Binary mask refinement
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../20_image_segmentation/09_Labeling.html">
+     Labeling
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../20_image_segmentation/connected_component_labeling.html">
+     Counting blobs with pyclesperanto
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../20_image_segmentation/touching_objects_labeling.html">
+     Touching object labeling
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../20_image_segmentation/voronoi_otsu_labeling.html">
+     Voronoi-Otsu-labeling
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../20_image_segmentation/watershed_objects_labeling.html">
+     Watershed objects labeling
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../20_image_segmentation/segmentation_2d_membranes.html">
+     Image Segmentation from membrane images
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../20_image_segmentation/Segmentation_3D.html">
+     3D Image Segmentation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../20_image_segmentation/scikit_learn_random_forest_pixel_classifier.html">
+     Pixel classification using Scikit image
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../20_image_segmentation/apoc_object_segmenter.html">
+     Object segmentation on OpenCL-compatible GPUs
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../20_image_segmentation/apoc_pixel_classifier_continue_training.html">
+     Pixel classification on OpenCL-compatible GPUs
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../20_image_segmentation/apoc_probability_mapper.html">
+     Probability maps
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../20_image_segmentation/cellpose.html">
+     Image Segmentation with CellPose
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../20_image_segmentation/stardist.html">
+     Image segmentation with StarDist
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../22_feature_extraction/readme.html">
+   Feature extraction
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../22_feature_extraction/count_blobs.html">
+     Counting blobs with pyclesperanto
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../22_feature_extraction/quantitative_measurements.html">
+     Quantitative image analysis
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../22_feature_extraction/label_statistics.html">
+     Basic statistics with pyclesperanto
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../22_feature_extraction/cell_classification.html">
+     Cell classification using Random Forest Classifiers
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../25_neighborhood_relationships_between_cells/readme.html">
+   Neighborhood analysis in tissues
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+  <label for="toctree-checkbox-10">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../25_neighborhood_relationships_between_cells/neighborhood_definitions.html">
+     Neighborhood definitions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../25_neighborhood_relationships_between_cells/mesh_between_centroids.html">
+     Mesh between centroids
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../25_neighborhood_relationships_between_cells/mesh_between_touching_neighbors.html">
+     Mesh between touching neighbors
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../25_neighborhood_relationships_between_cells/mesh_nearest_neighbors.html">
+     Mesh nearest neighbors
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../25_neighborhood_relationships_between_cells/mesh_with_distances.html">
+     Distance-meshes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../25_neighborhood_relationships_between_cells/distance_to_other_labels.html">
+     Measure the distance to neighboring cells
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../25_neighborhood_relationships_between_cells/neighbors_of_neighbors.html">
+     Neighbors of neighbors
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../25_neighborhood_relationships_between_cells/other_proximal_labels_count.html">
+     Count proximal labels in an other label image
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../25_neighborhood_relationships_between_cells/quantitative_neighbor_maps.html">
+     Quantitative maps from neighbor statistics
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="readme.html">
+   Colocalization
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+  <label for="toctree-checkbox-11">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="counting_nuclei_multichannel.html">
+     Counting nuclei according to expression in multiple channels
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Differentiating nuclei according to signal intensity
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="measure_overlap_between_label_images.html">
+     Measure overlap between two label images
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../33_batch_processing/readme.html">
+   Batch processing
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+  <label for="toctree-checkbox-12">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../33_batch_processing/12_process_folders.html">
+     How process files in a folder
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../35_parameter_optimization/readme.html">
+   Parameter optimization
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
+  <label for="toctree-checkbox-13">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../35_parameter_optimization/label_image_optimizer.html">
+     Optimize segmentation / labeling
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../35_parameter_optimization/sparse_label_image_optimizer.html">
+     Optimize image segmentation / labeling with spare annotations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../35_parameter_optimization/membrane_segmentation.html">
+     Segmenting cells with fluorescent membranes using Random Forest Classifiers
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../40_tabular_data_wrangling/readme.html">
+   Tabular data wrangling
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
+  <label for="toctree-checkbox-14">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../40_tabular_data_wrangling/append_tables.html">
+     Append tables
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../40_tabular_data_wrangling/pandas.html">
+     Working with tables in pandas
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../51_plotting/readme.html">
+   Plotting
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
+  <label for="toctree-checkbox-15">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../51_plotting/11_plotting.html">
+     Plotting
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../51_plotting/bland_altman_analysis.html">
+     Comparison of means
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/28_colocalization/differentiate_nuclei_intensity.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/haesleinhuepf/BioImageAnalysisNotebooks"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/haesleinhuepf/BioImageAnalysisNotebooks/issues/new?title=Issue%20on%20page%20%2F28_colocalization/differentiate_nuclei_intensity.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/haesleinhuepf/BioImageAnalysisNotebooks/main?urlpath=tree/docs/28_colocalization/differentiate_nuclei_intensity.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#segmenting-nuclei">
+   Segmenting nuclei
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#selecting-labels-above-a-given-intensity-threshold">
+   Selecting labels above a given intensity threshold
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#references">
+   References
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Differentiating nuclei according to signal intensity</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#segmenting-nuclei">
+   Segmenting nuclei
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#selecting-labels-above-a-given-intensity-threshold">
+   Selecting labels above a given intensity threshold
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#references">
+   References
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="differentiating-nuclei-according-to-signal-intensity">
+<h1>Differentiating nuclei according to signal intensity<a class="headerlink" href="#differentiating-nuclei-according-to-signal-intensity" title="Permalink to this headline">¶</a></h1>
+<p>A common bio-image analysis task is differentiating cells according to their signal expression. In this example we take a two-channel image of nuclei which express Cy3 and eGFP. Visually, we can easily see that some nuclei expressing Cy3 also express eGFP, others don’t. This notebook demonstrates how to differentiate nuclei segmented in one channel according to the intensity in the other channel.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyclesperanto_prototype</span> <span class="k">as</span> <span class="nn">cle</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">skimage.io</span> <span class="kn">import</span> <span class="n">imread</span><span class="p">,</span> <span class="n">imshow</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="n">cle</span><span class="o">.</span><span class="n">get_device</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Apple M1 Max on Platform: Apple (2 refs)&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<p>We’re using a dataset published by <a class="reference external" href="https://doi.org/10.1091/mbc.E13-04-0221">Heriche et al.</a> licensed <a class="reference external" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> available in the <a class="reference external" href="https://idr.openmicroscopy.org/webclient/img_detail/179719/">Image Data Resource</a>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># load file</span>
+<span class="n">raw_image</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s1">&#39;plate1_1_013 [Well 5, Field 1 (Spot 5)].png&#39;</span><span class="p">)</span>
+
+<span class="c1"># visualize</span>
+<span class="n">imshow</span><span class="p">(</span><span class="n">raw_image</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x178cbaf70&gt;
+</pre></div>
+</div>
+<img alt="../_images/differentiate_nuclei_intensity_3_1.png" src="../_images/differentiate_nuclei_intensity_3_1.png" />
+</div>
+</div>
+<p>First, we need to split channels (<a class="reference external" href="https://github.com/BiAPoL/Bio-image_Analysis_with_Python/blob/a62070dee408814cee4258758f5187f135774519/image_processing/03_multi_channel_image_data.ipynb">read more</a>). After that, we can actually see that not all cells marked with Cy3 (channel 0) are also marked with eGFP (channel 1):</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># extract channels</span>
+<span class="n">channel_cy3</span> <span class="o">=</span> <span class="n">raw_image</span><span class="p">[</span><span class="o">...</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">channel_egfp</span> <span class="o">=</span> <span class="n">raw_image</span><span class="p">[</span><span class="o">...</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span>
+
+<span class="c1"># visualize</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">axs</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">15</span><span class="p">))</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">channel_cy3</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">channel_egfp</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x17acb54c0&gt;
+</pre></div>
+</div>
+<img alt="../_images/differentiate_nuclei_intensity_5_1.png" src="../_images/differentiate_nuclei_intensity_5_1.png" />
+</div>
+</div>
+<div class="section" id="segmenting-nuclei">
+<h2>Segmenting nuclei<a class="headerlink" href="#segmenting-nuclei" title="Permalink to this headline">¶</a></h2>
+<p>As the staining marks the nuclei in the Cy3 channel, it is reasonable to segment nuclei in this channel and afterwards measure the intensity in the other channel. We use <a class="reference external" href="https://github.com/clEsperanto/pyclesperanto_prototype/blob/f9c9b73c1f9f194fdabdab8bd8507eb73c3ef8c9/demo/segmentation/voronoi_otsu_labeling.ipynb">Voronoi-Otsu-Labeling</a> for the segmentation because it is a quick and straightforward approach.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># segmentation</span>
+<span class="n">nuclei_cy3</span> <span class="o">=</span> <span class="n">cle</span><span class="o">.</span><span class="n">voronoi_otsu_labeling</span><span class="p">(</span><span class="n">channel_cy3</span><span class="p">,</span> <span class="n">spot_sigma</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+
+<span class="c1"># visualize</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">axs</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">15</span><span class="p">))</span>
+<span class="n">cle</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">channel_cy3</span><span class="p">,</span> <span class="n">plot</span><span class="o">=</span><span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">color_map</span><span class="o">=</span><span class="s2">&quot;gray&quot;</span><span class="p">)</span>
+<span class="n">cle</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">nuclei_cy3</span><span class="p">,</span> <span class="n">plot</span><span class="o">=</span><span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">labels</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/differentiate_nuclei_intensity_7_0.png" src="../_images/differentiate_nuclei_intensity_7_0.png" />
+</div>
+</div>
+<p>Firstly, we can measure the intensity in the second channel, marked with eGFP and visualize that measurement in a parametric image. In such a parametric image, all pixels inside a nucleus have the same value, in this case the mean average intensity of the cell.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">intensity_map</span> <span class="o">=</span> <span class="n">cle</span><span class="o">.</span><span class="n">mean_intensity_map</span><span class="p">(</span><span class="n">channel_egfp</span><span class="p">,</span> <span class="n">nuclei_cy3</span><span class="p">)</span>
+
+<span class="c1"># visualize</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">axs</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">15</span><span class="p">))</span>
+<span class="n">cle</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">channel_egfp</span><span class="p">,</span> <span class="n">plot</span><span class="o">=</span><span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">color_map</span><span class="o">=</span><span class="s2">&quot;gray&quot;</span><span class="p">)</span>
+<span class="n">cle</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">intensity_map</span><span class="p">,</span> <span class="n">plot</span><span class="o">=</span><span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">color_map</span><span class="o">=</span><span class="s2">&quot;gray&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/differentiate_nuclei_intensity_9_0.png" src="../_images/differentiate_nuclei_intensity_9_0.png" />
+</div>
+</div>
+<p>From such a parametric image, we can retrieve the intensity values and get them in a vector. The first item in this list has value 0 and corresponds to the intensity of the background, which is 0 in the parametric image.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">intensity_vector</span> <span class="o">=</span> <span class="n">cle</span><span class="o">.</span><span class="n">read_intensities_from_map</span><span class="p">(</span><span class="n">nuclei_cy3</span><span class="p">,</span> <span class="n">intensity_map</span><span class="p">)</span>
+<span class="n">intensity_vector</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>cl.Array([[  0.      ,  80.87585 ,  23.529799, 118.17817 ,  80.73025 ,
+         95.55178 ,  72.84752 ,  92.34759 ,  78.84362 ,  85.400444,
+        105.108025,  65.06639 ,  73.69295 ,  77.40092 ,  81.48371 ,
+         77.12867 ,  96.582085,  95.94536 ,  70.883995,  89.705025,
+         72.01046 ,  27.257877,  84.460075,  25.497112,  80.69056 ,
+        147.49736 ,  28.112642,  25.16763 ,  28.448261,  25.31705 ,
+         38.072815, 108.81613 ]], dtype=float32)
+</pre></div>
+</div>
+</div>
+</div>
+<p>There is by the way also an alternative way to come to the mean intensities directly, by measuring all properties of the nuclei including position and shape. It the statistics can be further processed as <a class="reference external" href="https://pandas.pydata.org/">pandas</a> DataFrame.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">statistics</span> <span class="o">=</span> <span class="n">cle</span><span class="o">.</span><span class="n">statistics_of_background_and_labelled_pixels</span><span class="p">(</span><span class="n">channel_egfp</span><span class="p">,</span> <span class="n">nuclei_cy3</span><span class="p">)</span>
+
+<span class="n">statistics_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">statistics</span><span class="p">)</span>
+<span class="n">statistics_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>label</th>
+      <th>original_label</th>
+      <th>bbox_min_x</th>
+      <th>bbox_min_y</th>
+      <th>bbox_min_z</th>
+      <th>bbox_max_x</th>
+      <th>bbox_max_y</th>
+      <th>bbox_max_z</th>
+      <th>bbox_width</th>
+      <th>bbox_height</th>
+      <th>...</th>
+      <th>centroid_z</th>
+      <th>sum_distance_to_centroid</th>
+      <th>mean_distance_to_centroid</th>
+      <th>sum_distance_to_mass_center</th>
+      <th>mean_distance_to_mass_center</th>
+      <th>standard_deviation_intensity</th>
+      <th>max_distance_to_centroid</th>
+      <th>max_distance_to_mass_center</th>
+      <th>mean_max_distance_to_centroid_ratio</th>
+      <th>mean_max_distance_to_mass_center_ratio</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1841.0</td>
+      <td>1477.0</td>
+      <td>0.0</td>
+      <td>1842.0</td>
+      <td>1478.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>1.683849e+09</td>
+      <td>640.648621</td>
+      <td>1.683884e+09</td>
+      <td>640.661621</td>
+      <td>8.487288</td>
+      <td>1187.033325</td>
+      <td>1187.743164</td>
+      <td>1.852862</td>
+      <td>1.853932</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>1</td>
+      <td>127.0</td>
+      <td>967.0</td>
+      <td>0.0</td>
+      <td>167.0</td>
+      <td>1033.0</td>
+      <td>0.0</td>
+      <td>41.0</td>
+      <td>67.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>4.128045e+04</td>
+      <td>18.704329</td>
+      <td>4.128327e+04</td>
+      <td>18.705606</td>
+      <td>4.734930</td>
+      <td>34.280666</td>
+      <td>34.338104</td>
+      <td>1.832767</td>
+      <td>1.835712</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>2</td>
+      <td>259.0</td>
+      <td>205.0</td>
+      <td>0.0</td>
+      <td>314.0</td>
+      <td>265.0</td>
+      <td>0.0</td>
+      <td>56.0</td>
+      <td>61.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>5.392080e+04</td>
+      <td>19.715101</td>
+      <td>5.393992e+04</td>
+      <td>19.722090</td>
+      <td>1.663604</td>
+      <td>32.079910</td>
+      <td>31.469477</td>
+      <td>1.627174</td>
+      <td>1.595646</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>3</td>
+      <td>432.0</td>
+      <td>1377.0</td>
+      <td>0.0</td>
+      <td>492.0</td>
+      <td>1423.0</td>
+      <td>0.0</td>
+      <td>61.0</td>
+      <td>47.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>3.630314e+04</td>
+      <td>17.769527</td>
+      <td>3.636824e+04</td>
+      <td>17.801392</td>
+      <td>24.842558</td>
+      <td>36.856163</td>
+      <td>36.085430</td>
+      <td>2.074122</td>
+      <td>2.027113</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5</td>
+      <td>4</td>
+      <td>631.0</td>
+      <td>1123.0</td>
+      <td>0.0</td>
+      <td>690.0</td>
+      <td>1194.0</td>
+      <td>0.0</td>
+      <td>60.0</td>
+      <td>72.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>6.753253e+04</td>
+      <td>21.686747</td>
+      <td>6.755171e+04</td>
+      <td>21.692907</td>
+      <td>17.358543</td>
+      <td>38.805695</td>
+      <td>38.417568</td>
+      <td>1.789374</td>
+      <td>1.770974</td>
+    </tr>
+  </tbody>
+</table>
+<p>5 rows × 37 columns</p>
+</div></div></div>
+</div>
+<p>The intensity vector can then be retrieved from the tabular statistics. Note: In this case, the background intensity is not 0, because we were directly reading it from the original image.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">intensity_vector2</span> <span class="o">=</span> <span class="n">statistics</span><span class="p">[</span><span class="s1">&#39;mean_intensity&#39;</span><span class="p">]</span>
+<span class="n">intensity_vector2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ 20.829758,  80.87585 ,  23.529799, 118.17817 ,  80.73025 ,
+        95.55178 ,  72.84752 ,  92.34759 ,  78.84362 ,  85.400444,
+       105.108025,  65.06639 ,  73.69295 ,  77.40092 ,  81.48371 ,
+        77.12867 ,  96.582085,  95.94536 ,  70.883995,  89.705025,
+        72.01046 ,  27.257877,  84.460075,  25.497112,  80.69056 ,
+       147.49736 ,  28.112642,  25.16763 ,  28.448261,  25.31705 ,
+        38.072815, 108.81613 ], dtype=float32)
+</pre></div>
+</div>
+</div>
+</div>
+<p>To get an averview about the mean intensity measurement, we can use <a class="reference external" href="https://matplotlib.org/">matplotlib</a> to plot a histogram. We ignore the first element, because it corresponds to the background intensity.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">intensity_vector2</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(array([ 7.,  1.,  0.,  4., 10.,  5.,  2.,  1.,  0.,  1.]),
+ array([ 23.529799,  35.926556,  48.32331 ,  60.720066,  73.11682 ,
+         85.51358 ,  97.91034 , 110.30709 , 122.70385 , 135.1006  ,
+        147.49736 ], dtype=float32),
+ &lt;BarContainer object of 10 artists&gt;)
+</pre></div>
+</div>
+<img alt="../_images/differentiate_nuclei_intensity_17_1.png" src="../_images/differentiate_nuclei_intensity_17_1.png" />
+</div>
+</div>
+<p>From such a histogram, we could conclude that objects with intensity above 50 are positive.</p>
+</div>
+<div class="section" id="selecting-labels-above-a-given-intensity-threshold">
+<h2>Selecting labels above a given intensity threshold<a class="headerlink" href="#selecting-labels-above-a-given-intensity-threshold" title="Permalink to this headline">¶</a></h2>
+<p>We next generate a new labels image with the nuclei having intensity &gt; 50. Note, all the above steps for extracting the intensity vector are not necessary for this. We just did that to get an idea about a good intensity threshold.</p>
+<p>The following label image show the nuclei segmented in the Cy3 channel which have a high intensity in the eGFP channel.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">intensity_threshold</span> <span class="o">=</span> <span class="mi">50</span>
+
+<span class="n">nuclei_with_high_intensity_egfg</span> <span class="o">=</span> <span class="n">cle</span><span class="o">.</span><span class="n">exclude_labels_with_map_values_within_range</span><span class="p">(</span><span class="n">intensity_map</span><span class="p">,</span> <span class="n">nuclei_cy3</span><span class="p">,</span> <span class="n">maximum_value_range</span><span class="o">=</span><span class="n">intensity_threshold</span><span class="p">)</span>
+<span class="n">intensity_map</span> <span class="o">=</span> <span class="n">cle</span><span class="o">.</span><span class="n">mean_intensity_map</span><span class="p">(</span><span class="n">channel_egfp</span><span class="p">,</span> <span class="n">nuclei_cy3</span><span class="p">)</span>
+
+<span class="c1"># visualize</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">axs</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">15</span><span class="p">))</span>
+<span class="n">cle</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">channel_egfp</span><span class="p">,</span> <span class="n">plot</span><span class="o">=</span><span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">color_map</span><span class="o">=</span><span class="s2">&quot;gray&quot;</span><span class="p">)</span>
+<span class="n">cle</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">nuclei_with_high_intensity_egfg</span><span class="p">,</span> <span class="n">plot</span><span class="o">=</span><span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">labels</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/differentiate_nuclei_intensity_19_0.png" src="../_images/differentiate_nuclei_intensity_19_0.png" />
+</div>
+</div>
+<p>And we can also count those by determining the maximum intensity in the label image:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">number_of_double_positives</span> <span class="o">=</span> <span class="n">nuclei_with_high_intensity_egfg</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Number of Cy3 nuclei that also express eGFP&quot;</span><span class="p">,</span> <span class="n">number_of_double_positives</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number of Cy3 nuclei that also express eGFP 23.0
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="references">
+<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<p>Some of the functions we used might be uncommon. Hence, we can add their documentation for reference.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">cle</span><span class="o">.</span><span class="n">voronoi_otsu_labeling</span><span class="o">.</span><span class="vm">__doc__</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Labels objects directly from grey-value images.
+
+    The two sigma parameters allow tuning the segmentation result. Under the hood,
+    this filter applies two Gaussian blurs, spot detection, Otsu-thresholding [2] and Voronoi-labeling [3]. The
+    thresholded binary image is flooded using the Voronoi tesselation approach starting from the found local maxima.
+    
+    Parameters
+    ----------
+    source : Image
+        Input grey-value image
+    label_image_destination : Image, optional
+        Output image
+    spot_sigma : float
+        controls how close detected cells can be
+    outline_sigma : float
+        controls how precise segmented objects are outlined.
+    
+    Returns
+    -------
+    label_image_destination
+    
+    Examples
+    --------
+    &gt;&gt;&gt; import pyclesperanto_prototype as cle
+    &gt;&gt;&gt; cle.voronoi_otsu_labeling(source, label_image_destination, 10, 2)
+    
+    References
+    ----------
+    .. [1] https://clij.github.io/clij2-docs/reference_voronoiOtsuLabeling
+    .. [2] https://ieeexplore.ieee.org/document/4310076
+    .. [3] https://en.wikipedia.org/wiki/Voronoi_diagram
+    
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">cle</span><span class="o">.</span><span class="n">mean_intensity_map</span><span class="o">.</span><span class="vm">__doc__</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Takes an image and a corresponding label map, determines the mean 
+    intensity per label and replaces every label with the that number.
+    
+    This results in a parametric image expressing mean object intensity. 
+    
+    Parameters
+    ----------
+    input : Image
+    label_map : Image
+    destination : Image
+    
+    Returns
+    -------
+    destination
+    
+    References
+    ----------
+    .. [1] https://clij.github.io/clij2-docs/reference_meanIntensityMap
+    
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">cle</span><span class="o">.</span><span class="n">read_intensities_from_map</span><span class="o">.</span><span class="vm">__doc__</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Takes a label image and a parametric image to read parametric values from the labels positions.
+    The read intensity values are stored in a new vector.
+
+    Note: This will only work if all labels have number of voxels == 1 or if all pixels in each label have the same value.
+
+    Parameters
+    ----------
+    labels: Image
+    map_image: Image
+    values_destination: Image, optional
+        1d vector with length == number of labels + 1
+
+    Returns
+    -------
+    values_destination, Image:
+        vector of intensity values with 0th element corresponding to background and subsequent entries corresponding to
+        the intensity in the given labeled object
+    
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">cle</span><span class="o">.</span><span class="n">statistics_of_background_and_labelled_pixels</span><span class="o">.</span><span class="vm">__doc__</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Determines bounding box, area (in pixels/voxels), min, max and mean 
+    intensity of background and labelled objects in a label map and corresponding
+    pixels in the original image.
+    
+    Instead of a label map, you can also use a binary image as a binary image is a 
+    label map with just one label.
+    
+    This method is executed on the CPU and not on the GPU/OpenCL device. 
+    
+    Parameters
+    ----------
+    input : Image
+    labelmap : Image
+
+    Returns
+    -------
+    Dictionary of measurements
+    
+    References
+    ----------
+    .. [1] https://clij.github.io/clij2-docs/reference_statisticsOfBackgroundAndLabelledPixels
+    
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">cle</span><span class="o">.</span><span class="n">exclude_labels_with_map_values_within_range</span><span class="o">.</span><span class="vm">__doc__</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>This operation removes labels from a labelmap and renumbers the
+    remaining labels.
+
+    Parameters
+    ----------
+    values_map : Image
+    label_map_input : Image
+    label_map_destination : Image
+    minimum_value_range : Number
+    maximum_value_range : Number
+
+    Returns
+    -------
+    label_map_destination
+
+    References
+    ----------
+    .. [1] https://clij.github.io/clij2-docs/reference_excludeLabelsWithValuesWithinRange
+    
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./28_colocalization"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="counting_nuclei_multichannel.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Counting nuclei according to expression in multiple channels</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="measure_overlap_between_label_images.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Measure overlap between two label images</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Robert Haase & add-your-name-here-by-sending-a-pull-request-containing-a-notebook<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
