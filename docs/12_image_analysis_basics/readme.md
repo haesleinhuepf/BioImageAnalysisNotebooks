@@ -12,5 +12,5 @@ pip install numpy scipy scikit-image matplotlib
 
 or conda:
 ```
-conda install numpy scipy scikit-image matplotlibmatplotlib
+conda install numpy scipy scikit-image matplotlib
 ```

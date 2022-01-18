@@ -1,4 +1,4 @@
-# Introduction
+# Bio-image Analysis with Python
 
 This collection of [Python](https://www.python.org/)
 [jupyter](https://jupyter.org/) notebooks are written for Python beginners who are interested in analysing images acquired using modern fluorescence microscopes. 
