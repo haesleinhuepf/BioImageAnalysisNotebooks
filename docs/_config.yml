@@ -1,0 +1,30 @@
+title: Bio-image Analysis with Python
+author: Robert Haase & add-your-name-here-by-sending-a-pull-request-containging-a-notebook
+logo: logo.png
+
+# Execute notebooks if the have one missing output
+# could be "force" or "auto" or "off" 
+# See https://jupyterbook.org/content/execute.html
+execute:
+  execute_notebooks: off
+
+# Define the name of the latex output file for PDF builds
+latex:
+  latex_documents:
+    targetname: book.tex
+
+# Add a bibtex file so that we can create citations
+bibtex_bibfiles:
+  - references.bib
+
+# Information about where the book exists on the web
+repository:
+  url: https://github.com/haesleinhuepf/BioImageAnalysisNotebooks
+  path_to_book: docs  # Optional path to your book, relative to the repository root
+  branch: main  # Which branch of the repository should be used when creating links (optional)
+
+# Add GitHub buttons to your book
+# See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
+html:
+  use_issues_button: true
+  use_repository_button: true
