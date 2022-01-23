@@ -21,6 +21,8 @@ chapters:
   sections:
   - file: 03_advanced_python/custom_libraries
   - file: 03_advanced_python/functional_parameters
+  - file: 03_advanced_python/napari_workflows
+  - file: 03_advanced_python/parallelization
 
 - file: 12_image_analysis_basics/readme
   sections:
@@ -28,6 +30,7 @@ chapters:
   - file: 12_image_analysis_basics/02_Working_with_images
   - file: 12_image_analysis_basics/03_scikit_image
   - file: 12_image_analysis_basics/04_multi_channel_image_data
+  - file: 12_image_analysis_basics/skeletonization
   - file: 12_image_analysis_basics/analyse_banana_data_set
   
 - file: 15_gpu_acceleration/readme
