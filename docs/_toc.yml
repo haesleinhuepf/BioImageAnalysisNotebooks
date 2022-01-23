@@ -28,7 +28,6 @@ chapters:
   sections:
   - file: 12_image_analysis_basics/01_Introduction_to_image_processing
   - file: 12_image_analysis_basics/02_Working_with_images
-#  - file: 12_image_analysis_basics/03_scikit_image
   - file: 12_image_analysis_basics/04_multi_channel_image_data
 #  - file: 12_image_analysis_basics/skeletonization
 # todo: https://github.com/jni/skan
@@ -62,7 +61,7 @@ chapters:
 - file: 19_spatial_transforms/readme
   sections:
   - file: 19_spatial_transforms/affine_transforms_scikit_image
-#  - file: 19_spatial_transforms/affine_transforms_scipy
+  - file: 19_spatial_transforms/affine_transforms_scipy
 #  - file: 19_spatial_transforms/affine_transforms_cupy
   - file: 19_spatial_transforms/affine_transforms_clesperanto
 #  - file: 19_spatial_transforms/transpose
