@@ -1,0 +1,4 @@
+maize_clsm.tif was taken from
+https://github.com/dlegland/mathematical_morphology_with_MorphoLibJ/blob/master/sampleImages/maize_clsm.tif
+Licensed by David Legland under CC-BY 4.0 license
+https://github.com/dlegland/mathematical_morphology_with_MorphoLibJ/blob/master/LICENSE   
