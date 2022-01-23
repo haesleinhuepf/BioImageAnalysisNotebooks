@@ -6,6 +6,30 @@ The journey starts with Python basics and introduces general concepts of bio-ima
 Special emphasis is put on image data showing cells and nuclei forming tissues and organisms. 
 Demonstrations of basic principles are done in two-dimensional image data and more sophisticated examples demonstrate the basic principles in three-dimensional image data, potentially also over time.
 
+## Material origin
+
+This repository contains Jupyter notebooks collected from multiple sources. They are maintained here to produce course materials with more streamlinded relationships between contents. In case you are interested in specific topics, you may find more recent materials in the notebook source repositories.
+
+Sources (alphabetical)
+* [apoc](https://github.com/haesleinhuepf/apoc)
+* [Bio-image_Analysis_with_Python](https://github.com/BiAPoL/Bio-image_Analysis_with_Python)
+* [napari-cupy-image-processing](https://github.com/haesleinhuepf/napari-cupy-image-processing)
+* [napari-segment-blobs-and-things-with-membranes](https://github.com/haesleinhuepf/napari-segment-blobs-and-things-with-membranes)
+* [napari-simpleitk-image-processing](https://github.com/haesleinhuepf/napari-simpleitk-image-processing)
+* [napari-workflow-optimizer](https://github.com/haesleinhuepf/napari-workflow-optimizer)
+* [napari-workflows](https://github.com/haesleinhuepf/napari-workflows)
+* [on_the_fly_image_processing_napari](https://github.com/BiAPoL/on_the_fly_image_processing_napari)
+* [pyclesperanto-prototype](https://github.com/clesperanto/pyclesperanto_prototype/)
+
+
+## License
+
+All contents of this jupyter book and the corresponding github repository is licensed [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/) and 
+BSD3 by Robert Haase.
+
+## Contributing
+
+If you see any issues in this book, have questions or suggestions, please open a [github issue](https://github.com/haesleinhuepf/BioImageAnalysisNotebooks/issues). Contributions of any kind (pull-requests, feedback, suggestions) are very welcome. If you send a pull-request, please make sure that you own the copyright of the materials you send. In case your materials are merged, and your contribution is more than just minor corrections and additions, you will be listed under authors and copyright holders. Also please make sure that the algorithms you present a
 
 ## Work-in-progress
 
