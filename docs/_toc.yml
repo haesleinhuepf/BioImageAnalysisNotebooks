@@ -44,6 +44,7 @@ chapters:
 - file: 16_3d_image_visualization/readme
   sections:
   - file: 16_3d_image_visualization/10_nd_image_data
+# projections
   - file: 16_3d_image_visualization/inspecting_3d_images
   - file: 16_3d_image_visualization/05_napari
 
@@ -51,6 +52,7 @@ chapters:
   sections:
   - file: 18_image_filtering/01_Filtering
 #  - file: 18_image_filtering/convolution
+# deconvolution
 #  - file: 18_image_filtering/top_hat
   - file: 18_image_filtering/edge_detection_and_enhancement
   - file: 18_image_filtering/simpleitk
@@ -60,6 +62,8 @@ chapters:
 
 - file: 19_spatial_transforms/readme
   sections:
+# cropping
+# slicing
   - file: 19_spatial_transforms/affine_transforms_scikit_image
   - file: 19_spatial_transforms/affine_transforms_scipy
   - file: 19_spatial_transforms/affine_transforms_cupy
