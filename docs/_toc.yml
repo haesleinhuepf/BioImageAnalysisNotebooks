@@ -39,6 +39,7 @@ chapters:
   - file: 15_gpu_acceleration/clesperanto
   - file: 15_gpu_acceleration/why_GPU_acceleration
   - file: 15_gpu_acceleration/cupy
+  - file: 15_gpu_acceleration/memory_management
   - file: 15_gpu_acceleration/further_reading
   
 - file: 16_3d_image_visualization/readme
@@ -50,10 +51,20 @@ chapters:
 - file: 18_image_filtering/readme
   sections:
   - file: 18_image_filtering/01_Filtering
+#  - file: 18_image_filtering/convolution
+#  - file: 18_image_filtering/top_hat
   - file: 18_image_filtering/edge_detection_and_enhancement
   - file: 18_image_filtering/simpleitk
 #  - file: 18_image_filtering/nsbatwm
   - file: 18_image_filtering/feature_stacks
+
+- file: 19_spatial_transforms/readme
+  sections:
+  - file: 19_spatial_transforms/affine_transforms_scikit_image
+#  - file: 19_spatial_transforms/affine_transforms_scipy
+#  - file: 19_spatial_transforms/affine_transforms_cupy
+  - file: 19_spatial_transforms/affine_transforms_clesperanto
+#  - file: 19_spatial_transforms/transpose
   
 - file: 20_image_segmentation/readme
   sections:
@@ -85,6 +96,7 @@ chapters:
   - file: 22_feature_extraction/statistics_with_pyclesperanto
   - file: 22_feature_extraction/statistics_with_simpleitk
 #  - file: 22_feature_extraction/cell_classification
+  - file: 22_feature_extraction/parametric_maps
   
 - file: 25_neighborhood_relationships_between_cells/readme
   sections:
@@ -104,16 +116,22 @@ chapters:
   - file: 28_colocalization/differentiate_nuclei_intensity
   #- file: 28_colocalization/measure_overlap_between_label_images
   
+- file: 31_graphical_user_interfaces/readme
+  sections:
+  - file: 31_graphical_user_interfaces/napari_magicgui
+  - file: 31_graphical_user_interfaces/napari_dask
+  
 - file: 33_batch_processing/readme
   sections: 
   - file: 33_batch_processing/12_process_folders
   
 #- file: 35_parameter_optimization/readme
 #  sections:
-#  - file: 35_parameter_optimization/label_image_optimizer.ipynb
-#  - file: 35_parameter_optimization/sparse_label_image_optimizer.ipynb
-#  - file: 35_parameter_optimization/membrane_segmentation.ipynb
-  
+#  - file: 35_parameter_optimization/optimize_blobs_segmentation
+#  - file: 35_parameter_optimization/label_image_optimizer
+#  - file: 35_parameter_optimization/sparse_label_image_optimizer
+#  - file: 35_parameter_optimization/membrane_segmentation
+
 - file: 40_tabular_data_wrangling/readme
   sections:
   - file: 40_tabular_data_wrangling/pandas
