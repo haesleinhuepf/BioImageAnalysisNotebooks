@@ -113,7 +113,7 @@ chapters:
   sections:
   - file: 27_cell_classification/apoc_object_classifier
 #  - file: 27_cell_classification/cell_classification
-  - file: 27_cell_classification/cell_classification_correction.ipynb
+#  - file: 27_cell_classification/cell_classification_correction.ipynb
 
 - file: 28_colocalization/readme
   sections:

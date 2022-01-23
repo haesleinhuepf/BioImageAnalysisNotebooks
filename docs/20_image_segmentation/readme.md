@@ -25,3 +25,6 @@ Mac users may have to execute the second command like this:
 ```
 pip install "cellpose[all]"
 ```
+
+See also
+* [SimpleITK notebooks](https://github.com/InsightSoftwareConsortium/SimpleITK-Notebooks)

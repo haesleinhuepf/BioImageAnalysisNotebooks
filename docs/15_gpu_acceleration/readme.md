@@ -40,3 +40,7 @@ pip install napari-cupy-image-processing
 ```
 
 Note: Depending on your CUDA installation, you may want to replace the "10.2" in the command line above with the CUDA version you installed on your computer.
+
+See also
+* [Performance of dedicated laptop GPUs versus desktop GPUs (Linus Tech Tips video)](https://www.youtube.com/watch?v=z9fk9d6pry4)
+* [Cupy installation](https://docs.cupy.dev/en/stable/install.html#installing-cupy)

@@ -14,3 +14,6 @@ or conda:
 ```
 conda install numpy scipy scikit-image matplotlib
 ```
+
+See also
+* [Introduction to bio-image analysis](https://youtu.be/e-2DbkUwKk4)
