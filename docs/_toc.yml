@@ -57,6 +57,7 @@ chapters:
   - file: 18_image_filtering/simpleitk
 #  - file: 18_image_filtering/nsbatwm
   - file: 18_image_filtering/feature_stacks
+#  - file: 18_image_filtering/run_on_all_hyperslices
 
 - file: 19_spatial_transforms/readme
   sections:
