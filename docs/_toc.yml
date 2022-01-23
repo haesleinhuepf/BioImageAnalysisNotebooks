@@ -42,17 +42,16 @@ chapters:
   
 - file: 16_3d_image_visualization/readme
   sections:
-  - file: 16_3d_image_visualization/Volumetric_image_processing
+  - file: 16_3d_image_visualization/10_nd_image_data
   - file: 16_3d_image_visualization/inspecting_3d_images
   - file: 16_3d_image_visualization/05_napari
-  - file: 16_3d_image_visualization/10_nd_image_data
 
 - file: 18_image_filtering/readme
   sections:
   - file: 18_image_filtering/01_Filtering
   - file: 18_image_filtering/edge_detection_and_enhancement
   - file: 18_image_filtering/simpleitk
-  - file: 18_image_filtering/nsbatwm
+#  - file: 18_image_filtering/nsbatwm
   - file: 18_image_filtering/feature_stacks
   
 - file: 20_image_segmentation/readme
@@ -63,34 +62,37 @@ chapters:
   - file: 20_image_segmentation/09_connected_component_labeling
   - file: 20_image_segmentation/10_touching_objects_labeling
   - file: 20_image_segmentation/11_voronoi_otsu_labeling
-  - file: 20_image_segmentation/12_watershed_objects_labeling
+#  - file: 20_image_segmentation/12_watershed_objects_labeling
   - file: 20_image_segmentation/14_remove_labels_on_image_edges
   - file: 20_image_segmentation/15_sequential_labeling
   - file: 20_image_segmentation/segmentation_2d_membranes
   - file: 20_image_segmentation/Segmentation_3D
+  - file: 20_image_segmentation/nsbatwm
   - file: 20_image_segmentation/scikit_learn_random_forest_pixel_classifier
   - file: 20_image_segmentation/apoc_object_segmenter
   - file: 20_image_segmentation/apoc_pixel_classifier_continue_training
   - file: 20_image_segmentation/apoc_probability_mapper
   - file: 20_image_segmentation/cellpose
   - file: 20_image_segmentation/stardist
+  - file: 20_image_segmentation/apoc_object_classifier
 
 - file: 22_feature_extraction/readme
   sections:
-  - file: 22_feature_extraction/count_blobs
   - file: 22_feature_extraction/quantitative_measurements
-  - file: 22_feature_extraction/label_statistics
-  - file: 22_feature_extraction/cell_classification
+  - file: 22_feature_extraction/count_blobs
+  - file: 22_feature_extraction/statistics_with_pyclesperanto
+  - file: 22_feature_extraction/statistics_with_simpleitk
+#  - file: 22_feature_extraction/cell_classification
   
 - file: 25_neighborhood_relationships_between_cells/readme
   sections:
   - file: 25_neighborhood_relationships_between_cells/neighborhood_definitions
-  - file: 25_neighborhood_relationships_between_cells/mesh_between_centroids
+#  - file: 25_neighborhood_relationships_between_cells/mesh_between_centroids
   - file: 25_neighborhood_relationships_between_cells/mesh_between_touching_neighbors
   - file: 25_neighborhood_relationships_between_cells/mesh_nearest_neighbors
-  - file: 25_neighborhood_relationships_between_cells/mesh_with_distances  
+#  - file: 25_neighborhood_relationships_between_cells/mesh_with_distances  
   - file: 25_neighborhood_relationships_between_cells/distance_to_other_labels
-  - file: 25_neighborhood_relationships_between_cells/neighbors_of_neighbors
+  - file: 25_neighborhood_relationships_between_cells/label_neighbor_filters
   - file: 25_neighborhood_relationships_between_cells/other_proximal_labels_count
   - file: 25_neighborhood_relationships_between_cells/quantitative_neighbor_maps
   
@@ -98,24 +100,26 @@ chapters:
   sections:
   - file: 28_colocalization/counting_nuclei_multichannel
   - file: 28_colocalization/differentiate_nuclei_intensity
-  - file: 28_colocalization/measure_overlap_between_label_images
+  #- file: 28_colocalization/measure_overlap_between_label_images
   
 - file: 33_batch_processing/readme
   sections: 
   - file: 33_batch_processing/12_process_folders
   
-- file: 35_parameter_optimization/readme
-  sections:
-  - file: 35_parameter_optimization/label_image_optimizer.ipynb
-  - file: 35_parameter_optimization/sparse_label_image_optimizer.ipynb
-  - file: 35_parameter_optimization/membrane_segmentation.ipynb
+#- file: 35_parameter_optimization/readme
+#  sections:
+#  - file: 35_parameter_optimization/label_image_optimizer.ipynb
+#  - file: 35_parameter_optimization/sparse_label_image_optimizer.ipynb
+#  - file: 35_parameter_optimization/membrane_segmentation.ipynb
   
 - file: 40_tabular_data_wrangling/readme
   sections:
-  - file: 40_tabular_data_wrangling/append_tables
   - file: 40_tabular_data_wrangling/pandas
+#  - file: 40_tabular_data_wrangling/append_tables
   
-- file: 51_plotting/readme
-  sections:
-  - file: 51_plotting/11_plotting
-  - file: 51_plotting/bland_altman_analysis
+#- file: 51_plotting/readme
+#  sections:
+#  - file: 51_plotting/11_plotting
+#  - file: 51_plotting/bland_altman_analysis
+
+- file: imprint

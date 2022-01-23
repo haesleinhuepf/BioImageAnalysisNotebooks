@@ -1,4 +1,4 @@
-# Bio-image Analysis with Python
+# Bio-image Analysis Notebooks
 
 This collection of [Python](https://www.python.org/)
 [jupyter](https://jupyter.org/) notebooks are written for Python beginners who are interested in analysing images acquired using modern fluorescence microscopes. 
@@ -12,7 +12,10 @@ This repository contains Jupyter notebooks collected from multiple sources. They
 
 Sources (alphabetical)
 * [apoc](https://github.com/haesleinhuepf/apoc)
+* [BiaPol blog](https://github.com/biapol/blog)
 * [Bio-image_Analysis_with_Python](https://github.com/BiAPoL/Bio-image_Analysis_with_Python)
+* [label_neighbor_filters](https://github.com/haesleinhuepf/label_neighbor_filters)
+* [lecture_applied_bioimage_analysis_2020](https://git.mpi-cbg.de/rhaase/lecture_applied_bioimage_analysis_2020)
 * [napari-cupy-image-processing](https://github.com/haesleinhuepf/napari-cupy-image-processing)
 * [napari-segment-blobs-and-things-with-membranes](https://github.com/haesleinhuepf/napari-segment-blobs-and-things-with-membranes)
 * [napari-simpleitk-image-processing](https://github.com/haesleinhuepf/napari-simpleitk-image-processing)
@@ -25,11 +28,11 @@ Sources (alphabetical)
 ## License
 
 All contents of this jupyter book and the corresponding github repository is licensed [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/) and 
-BSD3 by Robert Haase.
+BSD3 by the [authors and contributors](https://github.com/haesleinhuepf/BioImageAnalysisNotebooks/contributors), unless mentioned otherwise.
 
 ## Contributing
 
-If you see any issues in this book, have questions or suggestions, please open a [github issue](https://github.com/haesleinhuepf/BioImageAnalysisNotebooks/issues). Contributions of any kind (pull-requests, feedback, suggestions) are very welcome. If you send a pull-request, please make sure that you own the copyright of the materials you send. In case your materials are merged, and your contribution is more than just minor corrections and additions, you will be listed under authors and copyright holders. Also please make sure that the algorithms you present a
+If you see any issues in this book, have questions or suggestions, please open a [github issue](https://github.com/haesleinhuepf/BioImageAnalysisNotebooks/issues). Contributions of any kind (pull-requests, feedback, suggestions) are very welcome. If you send a pull-request, please make sure that you own the copyright of the materials you send. In case your materials are merged, and your contribution is more than just minor corrections and additions, you will be listed under authors and copyright holders. Also please make sure that the algorithms you present are well-explained and contain links to additional resources such as [Wikipedia](https://www.wikipedia.org/) pages, online videos and tutorials.
 
 ## Work-in-progress
 
