@@ -37,7 +37,7 @@ Sources (alphabetical)
 
 ## License
 
-All contents of this jupyter book and the corresponding github repository is licensed [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/) and 
+All contents of this jupyter book and the corresponding github repository are licensed [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/) and 
 BSD3 by the [authors and contributors](https://github.com/haesleinhuepf/BioImageAnalysisNotebooks/contributors), unless mentioned otherwise.
 
 ## Contributing

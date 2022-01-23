@@ -31,6 +31,7 @@ chapters:
 #  - file: 12_image_analysis_basics/03_scikit_image
   - file: 12_image_analysis_basics/04_multi_channel_image_data
 #  - file: 12_image_analysis_basics/skeletonization
+# todo: https://github.com/jni/skan
 #  - file: 12_image_analysis_basics/analyse_banana_data_set
   
 - file: 15_gpu_acceleration/readme
@@ -74,6 +75,7 @@ chapters:
   - file: 20_image_segmentation/apoc_probability_mapper
   - file: 20_image_segmentation/cellpose
   - file: 20_image_segmentation/stardist
+# todo: potentially new section here
   - file: 20_image_segmentation/apoc_object_classifier
 
 - file: 22_feature_extraction/readme
