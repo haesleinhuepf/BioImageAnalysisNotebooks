@@ -87,8 +87,6 @@ chapters:
   - file: 20_image_segmentation/apoc_probability_mapper
   - file: 20_image_segmentation/cellpose
   - file: 20_image_segmentation/stardist
-# todo: potentially new section here
-  - file: 20_image_segmentation/apoc_object_classifier
 
 - file: 22_feature_extraction/readme
   sections:
@@ -96,7 +94,7 @@ chapters:
   - file: 22_feature_extraction/count_blobs
   - file: 22_feature_extraction/statistics_with_pyclesperanto
   - file: 22_feature_extraction/statistics_with_simpleitk
-#  - file: 22_feature_extraction/cell_classification
+
   - file: 22_feature_extraction/parametric_maps
   
 - file: 25_neighborhood_relationships_between_cells/readme
@@ -111,6 +109,12 @@ chapters:
   - file: 25_neighborhood_relationships_between_cells/other_proximal_labels_count
   - file: 25_neighborhood_relationships_between_cells/quantitative_neighbor_maps
   
+- file: 27_cell_classification/readme
+  sections:
+  - file: 27_cell_classification/apoc_object_classifier
+#  - file: 27_cell_classification/cell_classification
+  - file: 27_cell_classification/cell_classification_correction.ipynb
+
 - file: 28_colocalization/readme
   sections:
   - file: 28_colocalization/counting_nuclei_multichannel
