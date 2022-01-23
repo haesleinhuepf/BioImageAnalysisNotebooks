@@ -62,7 +62,7 @@ chapters:
   sections:
   - file: 19_spatial_transforms/affine_transforms_scikit_image
   - file: 19_spatial_transforms/affine_transforms_scipy
-#  - file: 19_spatial_transforms/affine_transforms_cupy
+  - file: 19_spatial_transforms/affine_transforms_cupy
   - file: 19_spatial_transforms/affine_transforms_clesperanto
 #  - file: 19_spatial_transforms/transpose
   
