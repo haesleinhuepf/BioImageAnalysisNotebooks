@@ -6,7 +6,7 @@
 
 Dr. rer. medic. Robert Haase\
 DFG Cluster of Excellence “Physics of Life”, TU Dresden\
-Am Tatzberg 47/49\
+Arnoldstrasse 18\
 01307 Dresden
 
 ### Kontakt
@@ -16,7 +16,7 @@ E-Mail: robert.haase (at] tu-dresden.de
 ### Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV:
 Dr. rer. medic. Robert Haase\
 DFG Cluster of Excellence “Physics of Life”, TU Dresden\
-Am Tatzberg 47/49\
+Arnoldstrasse 18\
 01307 Dresden
 
 # Haftungsausschluss

@@ -4,4 +4,4 @@ This repository contains a collection Python Jupyter notebooks exlaining bio-ima
 
 https://haesleinhuepf.github.io/BioImageAnalysisNotebooks
 
-It is build with [Jupyter book](https://jupyterbook.org/intro.html).
+It is maintained using [Jupyter lab](https://jupyterlab.readthedocs.io/en/stable/) and build using [Jupyter book](https://jupyterbook.org/intro.html).

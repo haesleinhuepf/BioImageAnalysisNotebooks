@@ -1,10 +1,19 @@
 # Bio-image Analysis Notebooks
 
 This collection of [Python](https://www.python.org/)
-[jupyter](https://jupyter.org/) notebooks are written for Python beginners who are interested in analysing images acquired using modern fluorescence microscopes. 
+[jupyter](https://jupyter.org/) notebooks are written for Python beginners who are interested in 
+analysing three dimensional images acquired using modern fluorescence microscopes. 
 The journey starts with Python basics and introduces general concepts of bio-image analysis. 
 Special emphasis is put on image data showing cells and nuclei forming tissues and organisms. 
-Demonstrations of basic principles are done in two-dimensional image data and more sophisticated examples demonstrate the basic principles in three-dimensional image data, potentially also over time.
+Demonstrations of basic principles are done in two-dimensional image data and more sophisticated examples demonstrate 
+the basic principles in three-dimensional image data, potentially also over time.
+
+The reader may note that we start with basic python, transit towards standard libraries for image processing such as 
+[scikit-image](http://scikit-image.org/) and [numpy](https://numpy.org/), and from there use increasingly GPU-acceleration libraries such as 
+[pyclesperanto](https://github.com/clEsperanto/pyclesperanto_prototype). 
+The more the content shifts towards three dimensional biological image processing and life-sciences specific quantiative analysis,
+the more we make use of custom open source libraries. These libraries are specialized for processing imaging data showing 
+cells and tissues acquired with fluorescence microscopy.
 
 ## Material origin
 
