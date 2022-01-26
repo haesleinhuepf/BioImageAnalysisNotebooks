@@ -1,7 +1,7 @@
 # Bio-Image Analysis Notebooks
 [![DOI](https://zenodo.org/badge/449194300.svg)](https://zenodo.org/badge/latestdoi/449194300)
 
-This repository contains a collection Python Jupyter notebooks exlaining bio-image analysis to a broad audience. The content is available at
+This repository contains a collection Python Jupyter notebooks explaining bio-image analysis to a broad audience. The content is available at
 
 https://haesleinhuepf.github.io/BioImageAnalysisNotebooks
 
