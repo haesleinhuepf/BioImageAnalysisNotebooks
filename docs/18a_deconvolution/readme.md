@@ -9,7 +9,7 @@ In this section, we will use [Redlionfish](https://github.com/rosalindfranklinin
 
 ```
 conda install reikna pyopencl -c conda-forge
-conda install redlionfish -c conda-forge
+pip install redlionfish
 pip install napari-simpleitk-image-processing
 ```
 
