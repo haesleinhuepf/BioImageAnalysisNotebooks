@@ -143,13 +143,18 @@ chapters:
 
 - file: 40_tabular_data_wrangling/readme
   sections:
-  - file: 40_tabular_data_wrangling/explot_dataset
-  - file: 40_tabular_data_wrangling/pandas
+  - file: 40_tabular_data_wrangling/introduction_dataframes
+  - file: 40_tabular_data_wrangling/explore_dataset
+  - file: 40_tabular_data_wrangling/descriptive_statistics
+  
+  - file: 40_tabular_data_wrangling/handling_NaNs
+  - file: 40_tabular_data_wrangling/pivot_tables
 #  - file: 40_tabular_data_wrangling/append_tables
   
-#- file: 51_plotting/readme
-#  sections:
-#  - file: 51_plotting/11_plotting
-#  - file: 51_plotting/bland_altman_analysis
+- file: 51_plotting/readme
+  sections:
+  - file: 51_plotting/plotting_seaborn
+  - file: 51_plotting/plotting_matplotlib
+  - file: 51_plotting/bland_altman_analysis
 
 - file: imprint
