@@ -99,7 +99,7 @@ chapters:
   - file: 22_feature_extraction/statistics_with_simpleitk
   - file: 22_feature_extraction/comparison_of_measurements_from_different_libraries
 
-  - file: 22_feature_extraction/parametric_maps
+
   
 - file: 25_neighborhood_relationships_between_cells/readme
   sections:
@@ -111,7 +111,6 @@ chapters:
   - file: 25_neighborhood_relationships_between_cells/distance_to_other_labels
   - file: 25_neighborhood_relationships_between_cells/label_neighbor_filters
   - file: 25_neighborhood_relationships_between_cells/other_proximal_labels_count
-  - file: 25_neighborhood_relationships_between_cells/quantitative_neighbor_maps
   
 - file: 27_cell_classification/readme
   sections:
@@ -129,6 +128,11 @@ chapters:
   sections:
   - file: 31_graphical_user_interfaces/napari_magicgui
   - file: 31_graphical_user_interfaces/napari_dask
+
+- file: 32_tiled_image_processing/readme
+  sections:
+  - file: 32_tiled_image_processing/tiling_images
+  - file: 32_tiled_image_processing/tiling_images_with_overlap
   
 - file: 33_batch_processing/readme
   sections: 
@@ -156,5 +160,11 @@ chapters:
   - file: 51_plotting/plotting_seaborn
   - file: 51_plotting/plotting_matplotlib
   - file: 51_plotting/bland_altman_analysis
+  
+- file: 60_data_visualization/readme
+  sections:
+  - file: 60_data_visualization/parametric_maps
+  - file: 60_data_visualization/quantitative_neighbor_maps
+
 
 - file: imprint
