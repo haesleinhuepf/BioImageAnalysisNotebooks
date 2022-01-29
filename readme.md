@@ -11,7 +11,7 @@ To edit this book, install depencencies like this:
 
 ```
 pip install jupyterlab
-pip install jupyterbook
+pip install jupyter-book
 pip install jupyterlab-spellchecker
 
 git clone https://github.com/haesleinhuepf/BioImageAnalysisNotebooks

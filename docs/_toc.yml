@@ -60,7 +60,7 @@ chapters:
 #  - file: 18_image_filtering/run_on_all_hyperslices
 
 - file: 18a_deconvolution/readme
-. sections:
+  sections:
   - file: 18a_deconvolution/introduction_deconvolution
   - file: 18a_deconvolution/extract_psf
   - file: 18a_deconvolution/richardson_lucy_deconvolution
