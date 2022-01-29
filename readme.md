@@ -6,3 +6,28 @@ This repository contains a collection Python Jupyter notebooks explaining bio-im
 https://haesleinhuepf.github.io/BioImageAnalysisNotebooks
 
 It is maintained using [Jupyter lab](https://jupyterlab.readthedocs.io/en/stable/) and build using [Jupyter book](https://jupyterbook.org/intro.html).
+
+To edit this book, install depencencies like this:
+
+```
+pip install jupyterlab
+pip install jupyterbook
+pip install jupyterlab-spellchecker
+
+git clone https://github.com/haesleinhuepf/BioImageAnalysisNotebooks
+cd BioImageAnalysisNotebooks
+jupyter lab
+```
+
+To build the book, you can run this from the same folder (tested on MacOS only):
+```
+chmod u+x ./build.sh
+./build.sh
+```
+
+To clear the build, e.g. before commiting using git, run this:
+```
+chmod u+x ./clean.sh
+./clean.sh
+```
+
