@@ -51,13 +51,12 @@ chapters:
 - file: 18_image_filtering/readme
   sections:
   - file: 18_image_filtering/01_Filtering
-#  - file: 18_image_filtering/convolution
-#  - file: 18_image_filtering/top_hat
+  - file: 18_image_filtering/convolution
+  - file: 18_image_filtering/02_noise_removal
+  - file: 18_image_filtering/03_background_removal
   - file: 18_image_filtering/edge_detection_and_enhancement
   - file: 18_image_filtering/simpleitk
-#  - file: 18_image_filtering/nsbatwm
   - file: 18_image_filtering/feature_stacks
-#  - file: 18_image_filtering/run_on_all_hyperslices
 
 - file: 18a_deconvolution/readme
   sections:
@@ -143,6 +142,7 @@ chapters:
 - file: 33_batch_processing/readme
   sections: 
   - file: 33_batch_processing/12_process_folders
+#  - file: 18_image_filtering/run_on_all_hyperslices
   
 #- file: 35_parameter_optimization/readme
 #  sections:
