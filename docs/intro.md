@@ -10,7 +10,7 @@ Demonstrations of basic principles are done in two-dimensional image data and mo
 
 ## Structure of this Jupyter book
 
-The sections of this book initially cover basics in Python and image processing. The order of the sections reflects typical image analysis workflows, starting at image filtering and segmentation, followed by feature extraction, tabular data wrangling, statistics, plotting and data visualization. At the beginning of every section, basic terminology is introduced and installation instructions for the required python libraries covered in this chapter are presented. The notebooks aim to be self-contained, self-explanatory and fully reproducible. Hence, the reader can download this Jupyter book and execute all notebooks as they are. As a general requirement, a conda environment should be present on the reader's computer as explained in the first section.
+The sections of this book initially cover basics in Python and image processing. The order of the sections reflects typical image analysis workflows, starting at image visualization, filtering and segmentation, followed by feature extraction, tabular data wrangling, statistics, plotting and data visualization. At the beginning of every section, basic terminology is introduced and installation instructions for the required Python libraries covered in this chapter are presented. The notebooks aim to be self-contained, self-explanatory and fully reproducible. Hence, the reader can download this Jupyter book and execute all notebooks as they are. As a general requirement, a conda environment should be present on the reader's computer as explained in the first section.
 
 ## Covered Python libraries
 The reader may note that we start with basic python, transit towards standard libraries for image processing such as 
@@ -19,6 +19,7 @@ The reader may note that we start with basic python, transit towards standard li
 The more the content shifts towards three dimensional biological image processing and life-sciences specific quantiative analysis,
 the more we make use of custom open source libraries. These libraries are specialized for processing imaging data showing cells and tissues acquired with fluorescence microscopy.
 
+* [apoc](https://github.com/haesleinhuepf/apoc)
 * [cupy](https://cupy.dev/)
 * [dask](https://dask.org/)
 * [matplotlib](https://matplotlib.org/)
@@ -60,7 +61,7 @@ Focusing on a variety of topics, there are YouTubers who upload videos about mic
 * [MicroCourses YouTube channel focusing on microscopy and image formation](https://www.youtube.com/c/Microcourses/about)
 * [NEUBIAS Academy YouTube channel about Bio-image Analysis tools](https://youtube.com/neubias)
 * [Robert Haase's YouTube lecture on Bio-image Analysis, (Python starting at lesson 9)](https://www.youtube.com/playlist?list=PL5ESQNfM5lc7SAMstEu082ivW4BDMvd0U)
-* [Sreeni's YouTube channel (formerl Python for Microscopists)](https://www.youtube.com/channel/UC34rW-HtPJulxr5wp2Xa04w)
+* [Sreeni's YouTube channel (formerly Python for Microscopists)](https://www.youtube.com/channel/UC34rW-HtPJulxr5wp2Xa04w)
 * [StatQuest with Josh Starmer YouTube channel about statistics and machine learning](https://www.youtube.com/channel/UCtYLUTtgS3k1Fg4y5tAhLbw)
 
 ## Material origin
