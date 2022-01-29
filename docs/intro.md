@@ -82,6 +82,18 @@ This repository contains Jupyter notebooks collected from multiple sources. They
 * [on_the_fly_image_processing_napari](https://github.com/BiAPoL/on_the_fly_image_processing_napari)
 * [pyclesperanto-prototype](https://github.com/clesperanto/pyclesperanto_prototype/)
 
+## Example image data
+
+We want to acknowledge the people who produced the images we are using for demonstration purposes in this Jupyter book.
+* Anne Carpenter, Broad Institute, Boston, MA, United States
+* Anne Esslinger, Alberti Lab, MPI-CBG, Germany
+* Daniela Vorkel, Myers Lab, MPI-CBG / CSBD, Dresden, Germany
+* David Legland, INRAE, UR BIA, Nantes, France
+* Jean-Karim Hériché, Cell Biology/Biophysics Unit, EMBL Heidelberg, Germany
+* Mauricio Rocha Martins, Norden Lab, MPI-CBG, Germany
+* Nasreddin Abolmaali, OncoRay, TU Dresden, Germany
+* Tony Collins, the creator of ImageJ for Microscopy
+
 ## License
 
 All contents of this jupyter book and the corresponding github repository are licensed [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/) and 
