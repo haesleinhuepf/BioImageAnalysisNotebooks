@@ -63,7 +63,7 @@ chapters:
   - file: 18a_deconvolution/introduction_deconvolution
   - file: 18a_deconvolution/extract_psf
   - file: 18a_deconvolution/richardson_lucy_deconvolution
-  - file: 18a_deconvolution/deconvolution_pycudadecon
+#  - file: 18a_deconvolution/deconvolution_pycudadecon
 
 - file: 19_spatial_transforms/readme
   sections:
