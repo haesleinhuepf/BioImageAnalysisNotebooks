@@ -13,6 +13,14 @@ pip install redlionfish
 pip install napari-simpleitk-image-processing
 ```
 
+## Installing optional dependencies
+
+In one notebook we will also use NVidia CUDA for deconvolution. If your graphics processing unit supports cuda, feel free to install [pycudadecon](https://github.com/tlambert03/pycudadecon).
+
+```
+conda install -c conda-forge pycudadecon
+```
+
 ## See also
 * [BioDIP Dresden, How to deconvolve images using Huygens](https://www.biodip.de/wiki/How_to_deconvolve_images_using_Huygens)
 

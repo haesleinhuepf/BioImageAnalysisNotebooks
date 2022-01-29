@@ -30,6 +30,7 @@ the more we make use of custom open source libraries. These libraries are specia
 * [numpy](https://numpy.org/)
 * [pandas](https://pandas.pydata.org/)
 * [pyclesperanto_prototype](https://github.com/clEsperanto/pyclesperanto_prototype)
+* [pycudadecon](https://github.com/tlambert03/pycudadecon)
 * [RedLionFish](https://github.com/rosalindfranklininstitute/RedLionfish/)
 * [scikit-image](http://scikit-image.org/)
 * [scikit-learn](https://scikit-learn.org)
