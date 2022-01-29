@@ -44,6 +44,9 @@ This is not the first collection of Python Jupyter notebooks and teaching materi
 ### Written resources
 For the readers who prefer written tutorials and executable Python Jupyter notebooks, the following list of resources might be of interest.
 
+* [Guillaume Witz' Deep Learning for imaging](https://github.com/guiwitz/DLImaging)
+* [Guillaume Witz' Introduction to Numpy and Pandas](https://github.com/guiwitz/NumpyPandas_course)
+* [Guillaume Witz' NEUBIAS Academy @HOME: Interactive Bioimage Analysis with Python and Jupyter](https://github.com/guiwitz/neubias_academy_biapy)
 * [Image Analysis Focused Interest Group of the Royal Microscopical Society (IAFIG-RMS) Python for Bioimage Analysis Course](https://github.com/IAFIG-RMS/Python-for-Bioimage-Analysis)
 * [Juan Nunez-Iglesias' Using Python for Science](https://github.com/jni/using-python-for-science)
 * [Robert Haase's lecture materials Applied Bio-image Analysis (2020)](https://git.mpi-cbg.de/rhaase/lecture_applied_bioimage_analysis_2020)
