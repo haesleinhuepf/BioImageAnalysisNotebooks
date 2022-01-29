@@ -32,6 +32,7 @@ the more we make use of custom open source libraries. These libraries are specia
 * [pyclesperanto_prototype](https://github.com/clEsperanto/pyclesperanto_prototype)
 * [RedLionFish](https://github.com/rosalindfranklininstitute/RedLionfish/)
 * [scikit-image](http://scikit-image.org/)
+* [scikit-learn](https://scikit-learn.org)
 * [scipy](https://scipy.org/)
 * [seaborn](https://seaborn.pydata.org/)
 * [SimpleITK](https://simpleitk.readthedocs.io/en/master/)

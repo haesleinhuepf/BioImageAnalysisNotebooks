@@ -52,7 +52,6 @@ chapters:
   sections:
   - file: 18_image_filtering/01_Filtering
 #  - file: 18_image_filtering/convolution
-# deconvolution
 #  - file: 18_image_filtering/top_hat
   - file: 18_image_filtering/edge_detection_and_enhancement
   - file: 18_image_filtering/simpleitk
@@ -60,11 +59,11 @@ chapters:
   - file: 18_image_filtering/feature_stacks
 #  - file: 18_image_filtering/run_on_all_hyperslices
 
-#- file: 18a_deconvolution/readme
-#. sections:
-#  - file: 18a_deconvolution/introduction_deconvolution
-#  - file: 18a_deconvolution/extract_psf
-#  - file: 18a_deconvolution/richardson_lucy_deconvolution
+- file: 18a_deconvolution/readme
+. sections:
+  - file: 18a_deconvolution/introduction_deconvolution
+  - file: 18a_deconvolution/extract_psf
+  - file: 18a_deconvolution/richardson_lucy_deconvolution
 
 - file: 19_spatial_transforms/readme
   sections:
