@@ -53,7 +53,7 @@ For the readers who prefer written tutorials and executable Python Jupyter noteb
 * [Stefan van der Walt's Python lecture materials](https://github.com/stefanv/teaching)
 * [Talley Lambert's Python introduction for microscopists](https://github.com/tlambert03/hms_pyintro2)
 
-### Video tutorial collections
+### Videos
 Focusing on a variety of topics, there are YouTubers who upload videos about microscopy, bio-image analysis, python programming and statistics.
 
 * [Dominik Waithe's YouTube channel about bio-image analysis and Python](https://www.youtube.com/user/odlogo)
