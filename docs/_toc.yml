@@ -79,7 +79,7 @@ chapters:
   - file: 20_image_segmentation/06_Introduction_to_image_segmentation
   - file: 20_image_segmentation/07_Thresholding
   - file: 20_image_segmentation/08_binary_mask_refinement
-  - file: 20_image_segmentation/08_split_touching_objects
+  - file: 20_image_segmentation/split_touching_objects
   - file: 20_image_segmentation/09_connected_component_labeling
   - file: 20_image_segmentation/10_touching_objects_labeling
   - file: 20_image_segmentation/11_voronoi_otsu_labeling
