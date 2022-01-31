@@ -22,6 +22,7 @@ the more we make use of custom open source libraries. These libraries are specia
 * [apoc](https://github.com/haesleinhuepf/apoc)
 * [cupy](https://cupy.dev/)
 * [dask](https://dask.org/)
+* [dask-image](http://image.dask.org/en/latest/)
 * [matplotlib](https://matplotlib.org/)
 * [napari](https://napari.org/)
 * [napari-cupy-image-processing](https://github.com/haesleinhuepf/napari-cupy-image-processing)
@@ -85,6 +86,7 @@ This repository contains Jupyter notebooks collected from multiple sources. They
 * [napari-workflows](https://github.com/haesleinhuepf/napari-workflows)
 * [on_the_fly_image_processing_napari](https://github.com/BiAPoL/on_the_fly_image_processing_napari)
 * [pyclesperanto-prototype](https://github.com/clesperanto/pyclesperanto_prototype/)
+* [zarr](https://zarr.readthedocs.io/en/stable/)
 
 ## Example image data
 
@@ -96,6 +98,7 @@ We want to acknowledge the people who produced the images we are using for demon
 * Jean-Karim Hériché, Cell Biology/Biophysics Unit, EMBL Heidelberg, Germany
 * Mauricio Rocha Martins, Norden Lab, MPI-CBG, Germany
 * Nasreddin Abolmaali, OncoRay, TU Dresden, Germany
+* Theresa Suckert, OncoRay, University Hospital Carl Gustav Carus, TU Dresden
 * Tony Collins, the creator of ImageJ for Microscopy
 
 ## License
