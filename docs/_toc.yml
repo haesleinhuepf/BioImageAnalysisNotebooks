@@ -113,14 +113,12 @@ chapters:
   
 - file: 25_neighborhood_relationships_between_cells/readme
   sections:
-  - file: 25_neighborhood_relationships_between_cells/neighborhood_definitions
-#  - file: 25_neighborhood_relationships_between_cells/mesh_between_centroids
-  - file: 25_neighborhood_relationships_between_cells/mesh_between_touching_neighbors
-  - file: 25_neighborhood_relationships_between_cells/mesh_nearest_neighbors
-#  - file: 25_neighborhood_relationships_between_cells/mesh_with_distances  
+  - file: 25_neighborhood_relationships_between_cells/01_neighborhood_definitions
+  - file: 25_neighborhood_relationships_between_cells/05_count_touching_neighbors
+  - file: 25_neighborhood_relationships_between_cells/06_mesh_with_distances  
   - file: 25_neighborhood_relationships_between_cells/distance_to_other_labels
-  - file: 25_neighborhood_relationships_between_cells/label_neighbor_filters
   - file: 25_neighborhood_relationships_between_cells/other_proximal_labels_count
+  - file: 25_neighborhood_relationships_between_cells/label_neighbor_filters
   
 - file: 27_cell_classification/readme
   sections:
