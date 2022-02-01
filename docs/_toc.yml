@@ -13,6 +13,10 @@ chapters:
   - file: 02_python_basics/02_Math_in_python
   - file: 02_python_basics/03_Dont_try_this_at_home
   - file: 02_python_basics/04_Basic_types
+  - file: 02_python_basics/05_lists_tuples
+  - file: 02_python_basics/05a_cropping_lists
+  - file: 02_python_basics/05b_sorting_lists
+  - file: 02_python_basics/06_Dictionaries_and_tables
   - file: 02_python_basics/07_Conditions
   - file: 02_python_basics/08_loops
   - file: 02_python_basics/09_custom_functions
