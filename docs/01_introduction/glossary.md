@@ -12,6 +12,8 @@ Intensity image
 
 Label image
 
+Labeling
+
 List
 
 Parametric image
