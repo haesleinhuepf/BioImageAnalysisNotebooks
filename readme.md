@@ -1,7 +1,7 @@
 # Bio-Image Analysis Notebooks
 [![DOI](https://zenodo.org/badge/449194300.svg)](https://zenodo.org/badge/latestdoi/449194300)
 
-This repository contains a collection Python Jupyter notebooks explaining bio-image analysis to a broad audience. The content is available at
+This repository contains a collection of Python Jupyter notebooks explaining bio-image analysis to a broad audience, focusing on life-scientists working with three dimensional fluorescence microscopy for analyzing cells and tissues. The content is available at
 
 https://haesleinhuepf.github.io/BioImageAnalysisNotebooks
 
@@ -25,7 +25,7 @@ chmod u+x ./build.sh
 ./build.sh
 ```
 
-To clear the build, e.g. before commiting using git, run this:
+To clear the build, e.g. before committing using git, run this:
 ```
 chmod u+x ./clean.sh
 ./clean.sh

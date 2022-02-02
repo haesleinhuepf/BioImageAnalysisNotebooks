@@ -3,8 +3,7 @@
 
 This collection of [Python](https://www.python.org/)
 [jupyter](https://jupyter.org/) notebooks are written for Python beginners who are interested in 
-analysing three dimensional images acquired using modern fluorescence microscopes. 
-The journey starts with Python basics and introduces general concepts of bio-image analysis. 
+analyzing three dimensional images of cells and tissues acquired using modern fluorescence microscopes. It is written for biologists, biochemists and biophysicists, introducing the technical language computer scientists use when describing image segmentation, scientific computing and image data science.
 Special emphasis is put on image data showing cells and nuclei forming tissues and organisms. 
 Demonstrations of basic principles are done in two-dimensional image data and more sophisticated examples demonstrate the basic principles in three-dimensional image data, potentially also over time.
 
@@ -16,7 +15,7 @@ The chapter of this book initially cover basics in Python and image processing. 
 The reader may note that we start with basic python, transit towards standard libraries for image processing such as 
 [scikit-image](http://scikit-image.org/) and [numpy](https://numpy.org/), and from there use increasingly GPU-acceleration libraries such as 
 [pyclesperanto](https://github.com/clEsperanto/pyclesperanto_prototype). 
-The more the content shifts towards three dimensional biological image processing and life-sciences specific quantiative analysis,
+The more the content shifts towards three dimensional biological image processing and life-sciences specific quantitative analysis,
 the more we make use of custom open source libraries. These libraries are specialized for processing imaging data showing cells and tissues acquired with fluorescence microscopy.
 
 * [apoc](https://github.com/haesleinhuepf/apoc)
@@ -41,7 +40,7 @@ the more we make use of custom open source libraries. These libraries are specia
 
 ## Related works
 
-This is not the first collection of Python Jupyter notebooks and teaching materials focusing on Bio-image Analysis and related fields. There are other amazing resources, where also we learnt from. Additionally, we also produced materials before which are available online and will certainly overlap with this Juypter book.
+This is not the first collection of Python Jupyter notebooks and teaching materials focusing on Bio-image Analysis and related fields. There are other amazing resources, where also we learned from. Additionally, we also produced materials before which are available online and will certainly overlap with this Jupyter book.
 
 ### Written resources
 For the readers who prefer written tutorials and executable Python Jupyter notebooks, the following list of resources might be of interest.
@@ -72,7 +71,7 @@ Focusing on a variety of topics, there are YouTubers who upload videos about mic
 
 ## Material origin
 
-This repository contains Jupyter notebooks collected from multiple sources. They are maintained here to produce course materials with more streamlinded relationships between contents. In case you are interested in specific topics, you may find more recent materials in the notebook source repositories.
+This repository contains Jupyter notebooks collected from multiple sources. They are maintained here to produce course materials with more streamlined relationships between contents. In case you are interested in specific topics, you may find more recent materials in the notebook source repositories.
 
 * [apoc](https://github.com/haesleinhuepf/apoc)
 * [BiaPol blog](https://github.com/biapol/blog)
@@ -103,12 +102,12 @@ We want to acknowledge the people who produced the images we are using for demon
 
 ## License
 
-All contents of this jupyter book and the corresponding github repository are licensed [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/) and 
+All contents of this Jupyter book and the corresponding Github repository are licensed [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/) and 
 BSD3 by the [authors and contributors](https://github.com/haesleinhuepf/BioImageAnalysisNotebooks/contributors), unless mentioned otherwise.
 
 ## Contributing
 
-If you see any issues in this book, have questions or suggestions, please open a [github issue](https://github.com/haesleinhuepf/BioImageAnalysisNotebooks/issues). Contributions of any kind (pull-requests, feedback, suggestions) are very welcome. If you send a pull-request, please make sure that you own the copyright of the materials you send. In case your materials are merged, and your contribution is more than just minor corrections and additions, you will be listed under authors and copyright holders. Also please make sure that the algorithms you present are well-explained and contain links to additional resources such as [Wikipedia](https://www.wikipedia.org/) pages, online videos and tutorials.
+If you see any issues in this book, have questions or suggestions, please open a [github issue](https://github.com/haesleinhuepf/BioImageAnalysisNotebooks/issues). Contributions of any kind (pull-requests, feedback, suggestions) are very welcome. If you send a pull-request, please make sure that you own the copyright of the materials you send. In case your materials are merged, and your contribution is more than just minor corrections and additions, you will be listed under authors and copyright holders. Also please make sure that the algorithms you present are well-explained, in the language of the target audience, and contain links to additional resources such as [Wikipedia](https://www.wikipedia.org/) pages, online videos and tutorials.
 
 ## Questions and answers
 
