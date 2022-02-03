@@ -175,6 +175,7 @@ chapters:
   - file: 51_plotting/plotting_seaborn
   - file: 51_plotting/plotting_matplotlib
   - file: 51_plotting/bland_altman_analysis
+# plotly
   
 - file: 60_data_visualization/readme
   sections:
