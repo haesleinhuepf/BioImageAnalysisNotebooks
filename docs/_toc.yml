@@ -127,6 +127,8 @@ chapters:
 - file: 27_cell_classification/readme
   sections:
   - file: 27_cell_classification/apoc_object_classifier
+#  - file: 27_cell_classification/forest_statistics
+  
 #  - file: 27_cell_classification/cell_classification
 #  - file: 27_cell_classification/cell_classification_correction.ipynb
 
@@ -184,6 +186,7 @@ chapters:
   
 - file: 60_data_visualization/readme
   sections:
+  - file: 60_data_visualization/overlay_text_on_image
   - file: 60_data_visualization/parametric_maps
   - file: 60_data_visualization/quantitative_neighbor_maps
 
