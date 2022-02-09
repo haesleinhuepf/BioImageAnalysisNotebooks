@@ -37,6 +37,7 @@ the more we make use of custom open source libraries. These libraries are specia
 * [scipy](https://scipy.org/)
 * [seaborn](https://seaborn.pydata.org/)
 * [SimpleITK](https://simpleitk.readthedocs.io/en/master/)
+* [zarr](https://zarr.readthedocs.io/en/stable/)
 
 ## Related works
 
@@ -85,7 +86,6 @@ This repository contains Jupyter notebooks collected from multiple sources. They
 * [napari-workflows](https://github.com/haesleinhuepf/napari-workflows)
 * [on_the_fly_image_processing_napari](https://github.com/BiAPoL/on_the_fly_image_processing_napari)
 * [pyclesperanto-prototype](https://github.com/clesperanto/pyclesperanto_prototype/)
-* [zarr](https://zarr.readthedocs.io/en/stable/)
 
 ## Example image data
 
