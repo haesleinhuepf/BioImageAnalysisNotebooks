@@ -144,7 +144,8 @@ chapters:
 
 - file: 32_tiled_image_processing/readme
   sections:
-  - file: 32_tiled_image_processing/tiling_images
+  - file: 32_tiled_image_processing/tiled_nuclei_counting_quick
+  - file: 32_tiled_image_processing/tiling_images_naive_approach
   - file: 32_tiled_image_processing/tiling_images_with_overlap
   - file: 32_tiled_image_processing/tiled_connected_component_labeling
   - file: 32_tiled_image_processing/tiled_object_measurements
