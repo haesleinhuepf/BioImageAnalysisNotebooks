@@ -98,19 +98,19 @@ chapters:
 
 - file: 20a_pixel_classification/readme
   sections:
-  - file: 20_image_segmentation/scikit_learn_random_forest_pixel_classifier
-  - file: 20_image_segmentation/apoc_object_segmenter
-  - file: 20_image_segmentation/apoc_pixel_classifier_continue_training
-  - file: 20_image_segmentation/apoc_probability_mapper
-  - file: 20_image_segmentation/apoc_train_on_folders
-  - file: 20_image_segmentation/feature_stacks
-  - file: 20_image_segmentation/selecting_features
+  - file: 20a_pixel_classification/scikit_learn_random_forest_pixel_classifier
+  - file: 20a_pixel_classification/apoc_object_segmenter
+  - file: 20a_pixel_classification/apoc_pixel_classifier_continue_training
+  - file: 20a_pixel_classification/apoc_probability_mapper
+  - file: 20a_pixel_classification/apoc_train_on_folders
+  - file: 20a_pixel_classification/feature_stacks
+  - file: 20a_pixel_classification/selecting_features
 
 
-#- file 2b_deep_learning
+#- file 20b_deep_learning/readme
 #  sections:
-#  - file: 20_image_segmentation/cellpose
-#  - file: 20_image_segmentation/stardist
+#  - file: 20b_deep_learning/cellpose
+#  - file: 20b_deep_learning/stardist
 
 - file: 22_feature_extraction/readme
   sections:
