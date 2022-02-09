@@ -1,0 +1,9 @@
+Image data source: Downloaded as PNG from the Image Data Resource
+https://idr.openmicroscopy.org/webclient/?show=project-2201
+
+Copyright: Esteban et al. licensed CC-BY 4.0 
+https://creativecommons.org/licenses/by/4.0/
+
+Data Link/DOI:
+https://doi.org/10.17867/10000174
+
