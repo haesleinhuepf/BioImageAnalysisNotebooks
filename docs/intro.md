@@ -97,6 +97,7 @@ We want to acknowledge the people who produced the images we are using for demon
 * Jean-Karim Hériché, Cell Biology/Biophysics Unit, EMBL Heidelberg, Germany
 * Mauricio Rocha Martins, Norden Lab, MPI-CBG, Germany
 * Nasreddin Abolmaali, OncoRay, TU Dresden, Germany
+* Sascha M. Kuhn, Nadler Lab, MPI-CBG Dresden, Germany
 * Theresa Suckert, OncoRay, University Hospital Carl Gustav Carus, TU Dresden
 * Tony Collins, the creator of ImageJ for Microscopy
 

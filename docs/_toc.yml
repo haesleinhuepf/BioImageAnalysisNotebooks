@@ -94,6 +94,7 @@ chapters:
   - file: 20_image_segmentation/15_sequential_labeling
   - file: 20_image_segmentation/segmentation_2d_membranes
   - file: 20_image_segmentation/nsbatwm
+  - file: 20_image_segmentation/refine_cell_segmentation
   - file: 20_image_segmentation/Segmentation_3D
 
 - file: 20a_pixel_classification/readme
