@@ -33,6 +33,8 @@ chapters:
   - file: 12_image_analysis_basics/01_Introduction_to_image_processing
   - file: 12_image_analysis_basics/02_Working_with_images
   - file: 12_image_analysis_basics/04_multi_channel_image_data
+  - file: 12_image_analysis_basics/image_file_formats
+  
 #  - file: 12_image_analysis_basics/skeletonization
 # todo: https://github.com/jni/skan
 #  - file: 12_image_analysis_basics/analyse_banana_data_set
