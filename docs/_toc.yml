@@ -109,7 +109,8 @@ chapters:
   sections:
   - file: 20a_pixel_classification/scikit_learn_random_forest_pixel_classifier
   - file: 20a_pixel_classification/apoc_object_segmenter
-  - file: 20a_pixel_classification/apoc_pixel_classifier_continue_training
+  - file: 20a_pixel_classification/apoc_pixel_classifier
+  - file: 20a_pixel_classification/mutlichannel_images
   - file: 20a_pixel_classification/apoc_probability_mapper
   - file: 20a_pixel_classification/apoc_train_on_folders
   - file: 20a_pixel_classification/feature_stacks
