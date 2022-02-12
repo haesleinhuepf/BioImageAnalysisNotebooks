@@ -87,15 +87,21 @@ chapters:
   - file: 20_image_segmentation/06_Introduction_to_image_segmentation
   - file: 20_image_segmentation/07_Thresholding
   - file: 20_image_segmentation/08_binary_mask_refinement
-  - file: 20_image_segmentation/split_touching_objects
+  - file: 20_image_segmentation/08a_split_touching_objects
   - file: 20_image_segmentation/09_connected_component_labeling
+  
+  - file: 20_image_segmentation/09a_gauss_otsu_labeling
+  
   - file: 20_image_segmentation/10_touching_objects_labeling
   - file: 20_image_segmentation/11_voronoi_otsu_labeling
-#  - file: 20_image_segmentation/12_watershed_objects_labeling
+  
+  - file: 20_image_segmentation/11a_object_splitting_otsu_labeling.ipynb
+  
+  - file: 20_image_segmentation/12_open_close_labels.ipynb
+
   - file: 20_image_segmentation/14_remove_labels_on_image_edges
   - file: 20_image_segmentation/15_sequential_labeling
   - file: 20_image_segmentation/segmentation_2d_membranes
-  - file: 20_image_segmentation/nsbatwm
   - file: 20_image_segmentation/refine_cell_segmentation
   - file: 20_image_segmentation/Segmentation_3D
 
