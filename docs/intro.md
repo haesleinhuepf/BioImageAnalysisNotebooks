@@ -101,6 +101,12 @@ We want to acknowledge the people who produced the images we are using for demon
 * Theresa Suckert, OncoRay, University Hospital Carl Gustav Carus, TU Dresden
 * Tony Collins, the creator of ImageJ for Microscopy
 
+## Funding
+
+R.H. acknowledges support by the Deutsche Forschungsgemeinschaft under Germany’s Excellence Strategy—EXC2068–Cluster of Excellence Physics of Life of TU Dresden.
+This project has been made possible in part by grant numbers 2021-240341 and 2021-237734 from the Chan Zuckerberg Initiative DAF, an advised fund of the Silicon Valley Community Foundation.
+
+
 ## License
 
 All contents of this Jupyter book and the corresponding Github repository are licensed [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/) and 

@@ -31,3 +31,9 @@ chmod u+x ./clean.sh
 ./clean.sh
 ```
 
+## Acknowledgements
+
+R.H. acknowledges support by the Deutsche Forschungsgemeinschaft under Germany’s Excellence Strategy—EXC2068–Cluster of Excellence Physics of Life of TU Dresden.
+This project has been made possible in part by grant numbers 2021-240341 and 2021-237734 from the Chan Zuckerberg Initiative DAF, an advised fund of the Silicon Valley Community Foundation.
+
+
