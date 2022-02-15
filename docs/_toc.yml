@@ -208,5 +208,6 @@ chapters:
   - file: 60_data_visualization/parametric_maps
   - file: 60_data_visualization/quantitative_neighbor_maps
 
+- file: 01_introduction/glossary
 
 - file: imprint
