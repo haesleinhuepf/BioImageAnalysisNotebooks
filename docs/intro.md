@@ -51,6 +51,7 @@ For the readers who prefer written tutorials and executable Python Jupyter noteb
 * [Guillaume Witz' NEUBIAS Academy @HOME: Interactive Bioimage Analysis with Python and Jupyter](https://github.com/guiwitz/neubias_academy_biapy)
 * [Image Analysis Focused Interest Group of the Royal Microscopical Society (IAFIG-RMS) Python for Bioimage Analysis Course](https://github.com/IAFIG-RMS/Python-for-Bioimage-Analysis)
 * [Juan Nunez-Iglesias' Using Python for Science](https://github.com/jni/using-python-for-science)
+* [NEUBIAS' training resources](https://neubias.github.io/training-resources/)  
 * [Robert Haase's lecture materials Applied Bio-image Analysis (2020)](https://git.mpi-cbg.de/rhaase/lecture_applied_bioimage_analysis_2020)
 * [Robert Haase's & Anna Poetsch lecture materials about Bio-image Analysis, Biostatistics, Programming and Machine Learning for Computational Biology (2021)](https://github.com/BiAPoL/Bio-image_Analysis_with_Python)
 * [Scikit-image's example galery](https://scikit-image.org/docs/stable/auto_examples/index.html)
