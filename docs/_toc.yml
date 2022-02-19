@@ -122,6 +122,12 @@ chapters:
 #  - file: 20b_deep_learning/cellpose
 #  - file: 20b_deep_learning/stardist
 
+- file: 21_segmentation_comparison/readme
+  sections:
+  - file: 21_segmentation_comparison/scenario_otsu_segmentation
+  - file: 21_segmentation_comparison/visual_comparison
+  - file: 21_segmentation_comparison/quantiative_comparison
+
 - file: 22_feature_extraction/readme
   sections:
   - file: 22_feature_extraction/quantitative_measurements
