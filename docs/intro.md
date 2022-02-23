@@ -115,7 +115,7 @@ BSD3 by the [authors and contributors](https://github.com/haesleinhuepf/BioImage
 
 ## Contributing
 
-If you see any issues in this book, have questions or suggestions, please open a [github issue](https://github.com/haesleinhuepf/BioImageAnalysisNotebooks/issues). Contributions of any kind (pull-requests, feedback, suggestions) are very welcome. If you send a pull-request, please make sure that you own the copyright of the materials you send. In case your materials are merged, and your contribution is more than just minor corrections and additions, you will be listed under authors and copyright holders. Also please make sure that the algorithms you present are well-explained, in the language of the target audience, and contain links to additional resources such as [Wikipedia](https://www.wikipedia.org/) pages, online videos and tutorials.
+Please see our [CONTRIBUTING](https://github.com/haesleinhuepf/BioImageAnalysisNotebooks/blob/main/CONTRIBUTING.md) guide for details.
 
 ## Questions and answers
 
