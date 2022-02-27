@@ -8,3 +8,4 @@ See also
 * [Dask documentation](https://docs.dask.org/en/stable/)
 * [Dask image documentation](http://image.dask.org/en/latest/)
 * [Dask examples: image processing](https://examples.dask.org/applications/image-processing.html)
+* https://github.com/VolkerH/DaskFusion
