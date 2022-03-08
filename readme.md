@@ -10,6 +10,7 @@ It is maintained using [Jupyter lab](https://jupyterlab.readthedocs.io/en/stable
 To edit this book, install depencencies like this:
 
 ```
+pip install pyclesperanto-prototype
 pip install jupyterlab
 pip install jupyter-book
 pip install jupyterlab-spellchecker
