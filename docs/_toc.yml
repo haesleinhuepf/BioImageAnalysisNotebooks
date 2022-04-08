@@ -166,6 +166,7 @@ chapters:
   sections:
   - file: 31_graphical_user_interfaces/napari
   - file: 31_graphical_user_interfaces/napari_magicgui
+  - file: 31_graphical_user_interfaces/napari-skimage-regionprops
   - file: 31_graphical_user_interfaces/napari_dask
   - file: 31_graphical_user_interfaces/napari_crop
 
