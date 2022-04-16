@@ -40,6 +40,12 @@ chapters:
 #  - file: 12_image_analysis_basics/skeletonization
 # todo: https://github.com/jni/skan
 #  - file: 12_image_analysis_basics/analyse_banana_data_set
+
+- file: 14_machine_learning_basics/readme
+  sections:
+  - file: 14_machine_learning_basics/supervised_machine_learning
+  - file: 14_machine_learning_basics/unsupervised_machine_learning
+  - file: 14_machine_learning_basics/scaling
   
 - file: 15_gpu_acceleration/readme
   sections:

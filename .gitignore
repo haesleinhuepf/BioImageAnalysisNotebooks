@@ -11,3 +11,4 @@ temp*
 docs/20a_pixel_classification/test.cl
 docs/20a_pixel_classification/my_model.cl
 docs/20a_pixel_classification/test2.cl
+*.pyc
