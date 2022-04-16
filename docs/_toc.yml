@@ -154,6 +154,8 @@ chapters:
   sections:
   - file: 27_cell_classification/apoc_object_classifier
   - file: 27_cell_classification/forest_statistics
+  - file: 27_cell_classification/sklearn_object_classification
+  - file: 27_cell_classification/apoc_simpleitk_object_classification
   
 #  - file: 27_cell_classification/cell_classification
 #  - file: 27_cell_classification/cell_classification_correction.ipynb
@@ -199,8 +201,8 @@ chapters:
   sections:
   - file: 40_tabular_data_wrangling/introduction_dataframes
   - file: 40_tabular_data_wrangling/explore_dataset
+  - file: 40_tabular_data_wrangling/select_rows_and_columns.ipynb
   - file: 40_tabular_data_wrangling/descriptive_statistics
-  
   - file: 40_tabular_data_wrangling/handling_NaNs
   - file: 40_tabular_data_wrangling/pivot_tables
 #  - file: 40_tabular_data_wrangling/append_tables

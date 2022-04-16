@@ -1,3 +1,4 @@
+(feature_extraction)=
 # Feature extraction
 
 Feature extraction is a term that refers to retrieving quantitative measurements from image data. This is the step where image data is turned into non-image data. Feature extraction can be applied to images directly, e.g. when measuring the mean average intensity in the image. Technically, counting all nuclei in an image is feature extraction.
