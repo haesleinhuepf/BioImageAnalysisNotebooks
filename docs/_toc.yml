@@ -145,7 +145,8 @@ chapters:
   - file: 22_feature_extraction/comparison_of_measurements_from_different_libraries
   - file: 22_feature_extraction/measure_intensity_on_label_edges
   - file: 22_feature_extraction/shape_descriptors_based_on_neighborhood_graphs 
-  
+  - file: 22_feature_extraction/distance_features
+    
 - file: 25_neighborhood_relationships_between_cells/readme
   sections:
   - file: 25_neighborhood_relationships_between_cells/01_neighborhood_definitions
