@@ -59,6 +59,7 @@ For the readers who prefer written tutorials and executable Python Jupyter noteb
 * [Sreeni's Python for Microscopists](https://github.com/bnsreenu/python_for_microscopists)
 * [Stefan van der Walt's Python lecture materials](https://github.com/stefanv/teaching)
 * [Talley Lambert's Python introduction for microscopists](https://github.com/tlambert03/hms_pyintro2)
+* [The Turing Way](https://the-turing-way.netlify.app/)
 
 ### Videos
 Focusing on a variety of topics, there are YouTubers who upload videos about microscopy, bio-image analysis, python programming and statistics.
