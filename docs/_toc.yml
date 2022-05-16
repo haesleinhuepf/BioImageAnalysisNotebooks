@@ -26,6 +26,7 @@ chapters:
   sections:
   - file: 03_advanced_python/custom_libraries
   - file: 03_advanced_python/functional_parameters
+  - file: 03_advanced_python/partial
   - file: 03_advanced_python/napari_workflows
   - file: 03_advanced_python/parallelization
 
