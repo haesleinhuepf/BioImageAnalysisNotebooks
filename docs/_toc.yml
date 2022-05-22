@@ -211,11 +211,18 @@ chapters:
   - file: 40_tabular_data_wrangling/introduction_dataframes
   - file: 40_tabular_data_wrangling/explore_dataset
   - file: 40_tabular_data_wrangling/select_rows_and_columns.ipynb
-  - file: 40_tabular_data_wrangling/descriptive_statistics
   - file: 40_tabular_data_wrangling/handling_NaNs
   - file: 40_tabular_data_wrangling/pivot_tables
 #  - file: 40_tabular_data_wrangling/append_tables
+
+- file: 41_descriptive_statistics/readme
+  sections:
+  - file: 41_descriptive_statistics/basic_descriptive_statistics
+  - file: 41_descriptive_statistics/descriptive_statistics_label_images
+  - file: 41_descriptive_statistics/Bland_altman_analysis
   
+
+
 - file: 51_plotting/readme
   sections:
   - file: 51_plotting/plotting_seaborn
