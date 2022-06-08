@@ -21,6 +21,7 @@ chapters:
   - file: 02_python_basics/07_Conditions
   - file: 02_python_basics/08_loops
   - file: 02_python_basics/09_custom_functions
+  - file: 02_python_basics/10_Import_packages
   
 - file: 03_advanced_python/readme
   sections:
