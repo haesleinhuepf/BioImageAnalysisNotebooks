@@ -112,6 +112,7 @@ chapters:
   - file: 20_image_segmentation/14_remove_labels_on_image_edges
   - file: 20_image_segmentation/15_sequential_labeling
   - file: 20_image_segmentation/segmentation_2d_membranes
+  - file: 20_image_segmentation/inner_and_outer_cell_borders
   - file: 20_image_segmentation/refine_cell_segmentation
   - file: 20_image_segmentation/Segmentation_3D
 
