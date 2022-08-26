@@ -234,11 +234,12 @@ chapters:
 
 - file: 47_clustering/readme
   sections:
-  #- file: 47_clustering/trailer
+  - file: 47_clustering/trailer
   #- file: 47_clustering/dimensionality_reduction
   #- file: 47_clustering/scaling
   - file: 47_clustering/umap
-  - file: 47_clustering/tissue_clustering
+  #- file: 47_clustering/dens_map
+  #- file: 47_clustering/tissue_clustering
 
 - file: 51_plotting/readme
   sections:
