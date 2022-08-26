@@ -222,8 +222,18 @@ chapters:
   - file: 41_descriptive_statistics/basic_descriptive_statistics
   - file: 41_descriptive_statistics/descriptive_statistics_label_images
   - file: 41_descriptive_statistics/Bland_altman_analysis
-  
 
+# - file: 44_hypothesis_testing/readme
+#   sections:
+#   - file: 44_hypothesis_testing/distibutions
+#   - file: 44_hypothesis_testing/Equivalence_testing
+#   - file: 44_hypothesis_testing/T-Test
+#   - file: 44_hypothesis_testing/Testing_curation_time
+#   - file: 44_hypothesis_testing/
+#   - file: 44_hypothesis_testing/
+
+- file: 47_clustering/readme
+  sections:
 
 - file: 51_plotting/readme
   sections:
@@ -239,6 +249,7 @@ chapters:
   - file: 60_data_visualization/quantitative_neighbor_maps
 
 - file: 98_snippets/readme
+  sections: 
   - file: 98_snippets/load_an_show_an_image
   - file: 98_snippets/load_image_and_measure_shape_of_nuclei_in_3d
   - file: 98_snippets/resave_skimage_example_data
