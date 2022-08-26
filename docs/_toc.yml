@@ -229,11 +229,16 @@ chapters:
 #   - file: 44_hypothesis_testing/Equivalence_testing
 #   - file: 44_hypothesis_testing/T-Test
 #   - file: 44_hypothesis_testing/Testing_curation_time
-#   - file: 44_hypothesis_testing/
-#   - file: 44_hypothesis_testing/
+#   - file: 44_hypothesis_testing/Testing_tomato_ripen_time
+#   - file: 44_hypothesis_testing/The_p-value
 
 - file: 47_clustering/readme
   sections:
+  #- file: 47_clustering/trailer
+  #- file: 47_clustering/dimensionality_reduction
+  #- file: 47_clustering/scaling
+  - file: 47_clustering/umap
+  - file: 47_clustering/tissue_clustering
 
 - file: 51_plotting/readme
   sections:
