@@ -238,6 +238,10 @@ chapters:
   - file: 60_data_visualization/parametric_maps
   - file: 60_data_visualization/quantitative_neighbor_maps
 
+- file: 98_snippets/readme
+  - file: 98_snippets/load_image_and_measure_shape_of_nuclei_in_3d
+  - file: 98_snippets/resave_skimage_example_data
+
 - file: 01_introduction/glossary
 
 - file: imprint
