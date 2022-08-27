@@ -166,7 +166,15 @@ chapters:
   - file: 27_cell_classification/forest_statistics
   - file: 27_cell_classification/sklearn_object_classification
   - file: 27_cell_classification/apoc_simpleitk_object_classification
-  
+
+- file: 47_clustering/readme
+  sections:
+  - file: 47_clustering/trailer
+  #- file: 47_clustering/feature_selection
+  - file: 47_clustering/umap
+  #- file: 47_clustering/dens_map
+  #- file: 47_clustering/tissue_clustering
+
 #  - file: 27_cell_classification/cell_classification
 #  - file: 27_cell_classification/cell_classification_correction.ipynb
 
@@ -232,14 +240,6 @@ chapters:
 #   - file: 44_hypothesis_testing/Testing_tomato_ripen_time
 #   - file: 44_hypothesis_testing/The_p-value
 
-- file: 47_clustering/readme
-  sections:
-  - file: 47_clustering/trailer
-  #- file: 47_clustering/dimensionality_reduction
-  #- file: 47_clustering/scaling
-  - file: 47_clustering/umap
-  #- file: 47_clustering/dens_map
-  #- file: 47_clustering/tissue_clustering
 
 - file: 51_plotting/readme
   sections:
