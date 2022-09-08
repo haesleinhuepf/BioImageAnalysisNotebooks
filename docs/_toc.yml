@@ -86,6 +86,7 @@ chapters:
 # slicing
   - file: 19_spatial_transforms/coordinate_systems
   - file: 19_spatial_transforms/cropping
+  - file: 19_spatial_transforms/scaling
   - file: 19_spatial_transforms/affine_transforms_scikit_image
   - file: 19_spatial_transforms/affine_transforms_scipy
   - file: 19_spatial_transforms/affine_transforms_cupy
