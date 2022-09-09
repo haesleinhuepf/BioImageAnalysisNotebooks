@@ -185,6 +185,10 @@ chapters:
   - file: 28_colocalization/differentiate_nuclei_intensity
   #- file: 28_colocalization/measure_overlap_between_label_images
   
+- file: 30_simulating_data/readme
+  sections:
+  - file: 31_graphical_user_interfaces/counting_cell_neighbors_in_tissues
+  
 - file: 31_graphical_user_interfaces/readme
   sections:
   - file: 31_graphical_user_interfaces/napari
