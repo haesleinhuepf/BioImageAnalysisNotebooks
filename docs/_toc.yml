@@ -106,10 +106,10 @@ chapters:
   - file: 20_image_segmentation/10_touching_objects_labeling
   - file: 20_image_segmentation/11_voronoi_otsu_labeling
   
-  - file: 20_image_segmentation/11a_object_splitting_otsu_labeling.ipynb
+  - file: 20_image_segmentation/11a_object_splitting_otsu_labeling
   
-  - file: 20_image_segmentation/12_open_close_labels.ipynb
-
+  - file: 20_image_segmentation/12_open_close_labels
+  - file: 20_image_segmentation/merge_labels
   - file: 20_image_segmentation/14_remove_labels_on_image_edges
   - file: 20_image_segmentation/15_sequential_labeling
   - file: 20_image_segmentation/segmentation_2d_membranes
