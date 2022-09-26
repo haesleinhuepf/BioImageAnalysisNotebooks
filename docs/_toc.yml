@@ -86,6 +86,7 @@ chapters:
 # slicing
   - file: 19_spatial_transforms/coordinate_systems
   - file: 19_spatial_transforms/cropping
+  - file: 19_spatial_transforms/scaling
   - file: 19_spatial_transforms/affine_transforms_scikit_image
   - file: 19_spatial_transforms/affine_transforms_scipy
   - file: 19_spatial_transforms/affine_transforms_cupy
@@ -105,10 +106,10 @@ chapters:
   - file: 20_image_segmentation/10_touching_objects_labeling
   - file: 20_image_segmentation/11_voronoi_otsu_labeling
   
-  - file: 20_image_segmentation/11a_object_splitting_otsu_labeling.ipynb
+  - file: 20_image_segmentation/11a_object_splitting_otsu_labeling
   
-  - file: 20_image_segmentation/12_open_close_labels.ipynb
-
+  - file: 20_image_segmentation/12_open_close_labels
+  - file: 20_image_segmentation/merge_labels
   - file: 20_image_segmentation/14_remove_labels_on_image_edges
   - file: 20_image_segmentation/15_sequential_labeling
   - file: 20_image_segmentation/segmentation_2d_membranes
@@ -166,7 +167,15 @@ chapters:
   - file: 27_cell_classification/forest_statistics
   - file: 27_cell_classification/sklearn_object_classification
   - file: 27_cell_classification/apoc_simpleitk_object_classification
-  
+
+- file: 47_clustering/readme
+  sections:
+  - file: 47_clustering/trailer
+  #- file: 47_clustering/feature_selection
+  - file: 47_clustering/umap
+  #- file: 47_clustering/dens_map
+  #- file: 47_clustering/tissue_clustering
+
 #  - file: 27_cell_classification/cell_classification
 #  - file: 27_cell_classification/cell_classification_correction.ipynb
 
@@ -175,6 +184,10 @@ chapters:
   - file: 28_colocalization/counting_nuclei_multichannel
   - file: 28_colocalization/differentiate_nuclei_intensity
   #- file: 28_colocalization/measure_overlap_between_label_images
+  
+- file: 30_simulating_data/readme
+  sections:
+  - file: 31_graphical_user_interfaces/counting_cell_neighbors_in_tissues
   
 - file: 31_graphical_user_interfaces/readme
   sections:
@@ -222,7 +235,15 @@ chapters:
   - file: 41_descriptive_statistics/basic_descriptive_statistics
   - file: 41_descriptive_statistics/descriptive_statistics_label_images
   - file: 41_descriptive_statistics/Bland_altman_analysis
-  
+
+# - file: 44_hypothesis_testing/readme
+#   sections:
+#   - file: 44_hypothesis_testing/distibutions
+#   - file: 44_hypothesis_testing/Equivalence_testing
+#   - file: 44_hypothesis_testing/T-Test
+#   - file: 44_hypothesis_testing/Testing_curation_time
+#   - file: 44_hypothesis_testing/Testing_tomato_ripen_time
+#   - file: 44_hypothesis_testing/The_p-value
 
 
 - file: 51_plotting/readme
@@ -237,6 +258,12 @@ chapters:
   - file: 60_data_visualization/overlay_text_on_image
   - file: 60_data_visualization/parametric_maps
   - file: 60_data_visualization/quantitative_neighbor_maps
+
+- file: 98_snippets/readme
+  sections: 
+  - file: 98_snippets/load_an_show_an_image
+  - file: 98_snippets/load_image_and_measure_shape_of_nuclei_in_3d
+  - file: 98_snippets/resave_skimage_example_data
 
 - file: 01_introduction/glossary
 
