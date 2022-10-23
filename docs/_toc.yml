@@ -227,10 +227,10 @@ chapters:
   sections:
   - file: 40_tabular_data_wrangling/introduction_dataframes
   - file: 40_tabular_data_wrangling/explore_dataset
+  - file: 40_tabular_data_wrangling/append_tables
   - file: 40_tabular_data_wrangling/select_rows_and_columns.ipynb
   - file: 40_tabular_data_wrangling/handling_NaNs
   - file: 40_tabular_data_wrangling/pivot_tables
-#  - file: 40_tabular_data_wrangling/append_tables
 
 - file: 41_descriptive_statistics/readme
   sections:
