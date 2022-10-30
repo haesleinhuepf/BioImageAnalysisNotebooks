@@ -185,6 +185,7 @@ chapters:
   sections:
   - file: 28_colocalization/counting_nuclei_multichannel
   - file: 28_colocalization/differentiate_nuclei_intensity
+  - file: 28_colocalization/distance-based_colocalization
   #- file: 28_colocalization/measure_overlap_between_label_images
   
 - file: 30_simulating_data/readme
