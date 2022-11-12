@@ -30,6 +30,7 @@ chapters:
   - file: 03_advanced_python/partial
   - file: 03_advanced_python/napari_workflows
   - file: 03_advanced_python/parallelization
+  - file: 03_advanced_python/owncloud
 
 - file: 12_image_analysis_basics/readme
   sections:
