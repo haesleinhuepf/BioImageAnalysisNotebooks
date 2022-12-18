@@ -40,10 +40,11 @@ chapters:
   - file: 12_image_analysis_basics/04_multi_channel_image_data
 - file: 12a_image_file_formats/readme
   sections:
-  - file: 12a_image_file_formats/image_file_formats
+  - file: 12a_image_file_formats/opening_images
   - file: 12a_image_file_formats/opening_czi_files
   - file: 12a_image_file_formats/opening_lif_files
   - file: 12a_image_file_formats/tiled_image_file_formats_zarr
+  - file: 12a_image_file_formats/image_file_formats
 
 
 #  - file: 12_image_analysis_basics/skeletonization
