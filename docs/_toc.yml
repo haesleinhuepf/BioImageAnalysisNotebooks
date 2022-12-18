@@ -272,8 +272,10 @@ chapters:
 
 - file: 51_plotting/readme
   sections:
-  - file: 51_plotting/plotting_seaborn
   - file: 51_plotting/plotting_matplotlib
+  - file: 51_plotting/plotting_seaborn
+  - file: 51_plotting/plotting_distributions
+  - file: 51_plotting/multivariate_views
   - file: 51_plotting/bland_altman_analysis
 # plotly
   
