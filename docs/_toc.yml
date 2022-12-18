@@ -168,7 +168,12 @@ chapters:
   - file: 22_feature_extraction/measure_intensity_on_label_edges
   - file: 22_feature_extraction/shape_descriptors_based_on_neighborhood_graphs 
   - file: 22_feature_extraction/distance_features
-    
+
+- file: 23_blob_detection/readme
+  sections:
+  - file: 23_blob_detection/local_maxima_detection
+  - file: 23_blob_detection/blog_dog_log_doh
+
 - file: 25_neighborhood_relationships_between_cells/readme
   sections:
   - file: 25_neighborhood_relationships_between_cells/01_neighborhood_definitions
