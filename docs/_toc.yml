@@ -123,7 +123,8 @@ chapters:
   - file: 20a_pixel_classification/scikit_learn_random_forest_pixel_classifier
   - file: 20a_pixel_classification/apoc_object_segmenter
   - file: 20a_pixel_classification/apoc_pixel_classifier
-  - file: 20a_pixel_classification/mutlichannel_images
+  - file: 20a_pixel_classification/interactive_pixel_classification/readme
+  - file: 20a_pixel_classification/multichannel_images
   - file: 20a_pixel_classification/apoc_probability_mapper
   - file: 20a_pixel_classification/apoc_train_on_folders
   - file: 20a_pixel_classification/feature_stacks
@@ -167,6 +168,7 @@ chapters:
 - file: 27_cell_classification/readme
   sections:
   - file: 27_cell_classification/apoc_object_classifier
+  - file: 27_cell_classification/interactive_object_classification/readme
   - file: 27_cell_classification/forest_statistics
   - file: 27_cell_classification/sklearn_object_classification
   - file: 27_cell_classification/apoc_simpleitk_object_classification
