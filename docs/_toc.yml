@@ -241,12 +241,11 @@ chapters:
   - file: 33_batch_processing/14_process_timelapse
 #  - file: 18_image_filtering/run_on_all_hyperslices
   
-#- file: 35_parameter_optimization/readme
-#  sections:
-#  - file: 35_parameter_optimization/optimize_blobs_segmentation
-#  - file: 35_parameter_optimization/label_image_optimizer
-#  - file: 35_parameter_optimization/sparse_label_image_optimizer
-#  - file: 35_parameter_optimization/membrane_segmentation
+- file: 35_parameter_optimization/readme
+  sections:
+  - file: 35_parameter_optimization/optimization_basics
+  - file: 35_parameter_optimization/label_image_optimizer
+  - file: 35_parameter_optimization/membrane_segmentation
 
 - file: 40_tabular_data_wrangling/readme
   sections:
