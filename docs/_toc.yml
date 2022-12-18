@@ -250,7 +250,9 @@ chapters:
   - file: 40_tabular_data_wrangling/append_tables
   - file: 40_tabular_data_wrangling/select_rows_and_columns.ipynb
   - file: 40_tabular_data_wrangling/handling_NaNs
+  - file: 40_tabular_data_wrangling/summarizing_subsets
   - file: 40_tabular_data_wrangling/pivot_tables
+  - file: 40_tabular_data_wrangling/tidy_data
 
 - file: 41_descriptive_statistics/readme
   sections:
