@@ -180,6 +180,7 @@ chapters:
   - file: 47_clustering/umap
   #- file: 47_clustering/dens_map
   #- file: 47_clustering/tissue_clustering
+  - file: 47_clustering/interactive_dimensionality_reduction_and_clustering/readme
 
 #  - file: 27_cell_classification/cell_classification
 #  - file: 27_cell_classification/cell_classification_correction.ipynb
