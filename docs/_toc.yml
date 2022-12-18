@@ -38,8 +38,14 @@ chapters:
   - file: 12_image_analysis_basics/02_Working_with_images
   - file: 12_image_analysis_basics/03_Cropping_images
   - file: 12_image_analysis_basics/04_multi_channel_image_data
-  - file: 12_image_analysis_basics/image_file_formats
-  
+- file: 12a_image_file_formats/readme
+  sections:
+  - file: 12a_image_file_formats/image_file_formats
+  - file: 12a_image_file_formats/opening_czi_files
+  - file: 12a_image_file_formats/opening_lif_files
+  - file: 12a_image_file_formats/tiled_image_file_formats_zarr
+
+
 #  - file: 12_image_analysis_basics/skeletonization
 # todo: https://github.com/jni/skan
 #  - file: 12_image_analysis_basics/analyse_banana_data_set
@@ -211,7 +217,6 @@ chapters:
   - file: 32_tiled_image_processing/tiling_images_with_overlap
   - file: 32_tiled_image_processing/tiled_connected_component_labeling
   - file: 32_tiled_image_processing/tiled_object_measurements
-  - file: 32_tiled_image_processing/tiled_image_file_formats_zarr
   - file: 32_tiled_image_processing/tiled_area_mapping
   - file: 32_tiled_image_processing/tiled_nuclei_counting
 

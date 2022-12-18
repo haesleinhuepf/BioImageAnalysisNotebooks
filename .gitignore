@@ -13,3 +13,4 @@ docs/20a_pixel_classification/my_model.cl
 docs/20a_pixel_classification/test2.cl
 *.pyc
 data/CalibZAPWfixed_000154_max_labels.tif
+data/y293-Gal4_vmat-GFP-f01.lif
