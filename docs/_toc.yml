@@ -41,6 +41,7 @@ chapters:
 - file: 12a_image_file_formats/readme
   sections:
   - file: 12a_image_file_formats/opening_images
+  - file: 12a_image_file_formats/opening_images_using_aicsimageio
   - file: 12a_image_file_formats/opening_czi_files
   - file: 12a_image_file_formats/opening_lif_files
   - file: 12a_image_file_formats/tiled_image_file_formats_zarr
