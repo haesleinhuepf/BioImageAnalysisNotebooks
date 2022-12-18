@@ -118,7 +118,9 @@ We also thank authors who shared their teaching materials openly so that we coul
 * Dominik Waithe (University of Oxford)
 * Guillaume Witz (University of Bern)
 * Johannes Müller (PoL, TU Dresden)
+* Laura Žigutytė (PoL, TU Dresden)
 * Pete Bankhead (University of Edinburgh)
+* Ryan George Savill (MPI-CBG Dresden / PoL, TU Dresden)
 
 We want to acknowledge the people who produced the images we are using for demonstration purposes in this Jupyter book.
 * Anne Carpenter, Broad Institute, Boston, MA, United States
