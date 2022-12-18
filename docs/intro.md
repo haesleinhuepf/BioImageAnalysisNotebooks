@@ -3,20 +3,31 @@
 
 This collection of [Python](https://www.python.org/)
 [jupyter](https://jupyter.org/) notebooks are written for Python beginners who are interested in 
-analyzing three dimensional images of cells and tissues acquired using modern fluorescence microscopes. It is written for biologists, biochemists and biophysicists, introducing the technical language computer scientists use when describing image segmentation, scientific computing and image data science.
-Special emphasis is put on image data showing cells and nuclei forming tissues and organisms. 
-Demonstrations of basic principles are done in two-dimensional image data and more sophisticated examples demonstrate the basic principles in three-dimensional image data, potentially also over time.
+analyzing three dimensional images of cells and tissues acquired using modern fluorescence microscopes. 
+It is written for biologists, biochemists and biophysicists. 
+We introduce the technical language computer scientists and data scientists use when describing image segmentation, scientific computing and image data science.
+Special emphasis is put on image data showing cells and nuclei forming tissues, organoids and organisms. 
+Basic principles are demonstrated in two-dimensional image data and more sophisticated examples demonstrate the basic principles in three-dimensional image data and time-lapse data sets.
 
 ## Structure of this Jupyter book
 
-The chapter of this book initially cover basics in Python and image processing. The order of the chapters reflects typical image analysis workflows, starting at image visualization, filtering and segmentation, followed by feature extraction, tabular data wrangling, statistics, plotting and data visualization. At the beginning of every chapter, basic terminology is introduced and installation instructions for the required Python libraries covered in this chapter are presented. The notebooks aim to be self-contained, self-explanatory and fully reproducible. Hence, the reader can download this Jupyter book and execute all notebooks as they are. As a general requirement, a conda environment should be present on the reader's computer as explained in the first chapter.
+The chapters of this book initially cover basics in Python, image processing and image analysis. 
+Afterwards more advanced topics are covered including machine learning and statistics.
+The order of the chapters reflects typical image analysis workflows, starting at image visualization, filtering and segmentation, followed by feature extraction, tabular data wrangling, statistics, plotting and data visualization. 
+At the beginning of every chapter, basic terminology is introduced and installation instructions for the required Python libraries covered in this chapter are presented. 
+The notebooks aim to be self-contained, self-explanatory and fully reproducible. 
+Hence, the reader can download this Jupyter book and execute all notebooks as they are. 
+As a general requirement, a conda environment should be present on the reader's computer as explained in the first chapter.
 
 ## Covered Python libraries
-The reader may note that we start with basic python, transit towards standard libraries for image processing such as 
-[scikit-image](http://scikit-image.org/) and [numpy](https://numpy.org/), and from there use increasingly GPU-acceleration libraries such as 
-[pyclesperanto](https://github.com/clEsperanto/pyclesperanto_prototype). 
-The more the content shifts towards three dimensional biological image processing and life-sciences specific quantitative analysis,
-the more we make use of custom open source libraries. These libraries are specialized for processing imaging data showing cells and tissues acquired with fluorescence microscopy.
+
+The notebooks cover basic python topics and afterwards transit towards standard libraries for image processing such as 
+[scikit-image](http://scikit-image.org/), [scipy](https://scipy.org) and [numpy](https://numpy.org/). 
+In the advanced topics we make use increasingly of GPU-acceleration libraries such as 
+[pyclesperanto](https://github.com/clEsperanto/pyclesperanto_prototype) and [apoc](https://github.com/haesleinhuepf/apoc). 
+The more the content shifts towards three-dimensional biological image processing and life-sciences specific quantitative analysis, 
+the more we make use of custom open source libraries maintained by us and our collaborators. 
+
 
 * [apoc](https://github.com/haesleinhuepf/apoc)
 * [cupy](https://cupy.dev/)
@@ -44,6 +55,7 @@ the more we make use of custom open source libraries. These libraries are specia
 This is not the first collection of Python Jupyter notebooks and teaching materials focusing on Bio-image Analysis and related fields. There are other amazing resources, where also we learned from. Additionally, we also produced materials before which are available online and will certainly overlap with this Jupyter book.
 
 ### Written resources
+
 For the readers who prefer written tutorials and executable Python Jupyter notebooks, the following list of resources might be of interest.
 
 * [Guillaume Witz' Deep Learning for imaging](https://github.com/guiwitz/DLImaging)
@@ -75,11 +87,15 @@ Focusing on a variety of topics, there are YouTubers who upload videos about mic
 
 ## Material origin
 
-This repository contains Jupyter notebooks collected from multiple sources. They are maintained here to produce course materials with more streamlined relationships between contents. In case you are interested in specific topics, you may find more recent materials in the notebook source repositories.
+This repository contains Jupyter notebooks collected from multiple sources. 
+They are maintained here to produce course materials with more streamlined relationships between contents. 
+In case you are interested in specific topics, you may find more recent materials in the source repositories.
 
 * [apoc](https://github.com/haesleinhuepf/apoc)
 * [BiaPol blog](https://github.com/biapol/blog)
 * [Bio-image_Analysis_with_Python](https://github.com/BiAPoL/Bio-image_Analysis_with_Python)
+* [Image analysis with Python and Napari - A Helmholtz Imaging Summer Academy 2022](https://github.com/BiAPoL/HIP_Introduction_to_Napari_and_image_processing_with_Python_2022)
+* [Image data science with Python and Napari course 2022 @EPFL](https://github.com/BiAPoL/Image-data-science-with-Python-and-Napari-EPFL2022)
 * [label_neighbor_filters](https://github.com/haesleinhuepf/label_neighbor_filters)
 * [lecture_applied_bioimage_analysis_2020](https://git.mpi-cbg.de/rhaase/lecture_applied_bioimage_analysis_2020)
 * [napari-cupy-image-processing](https://github.com/haesleinhuepf/napari-cupy-image-processing)
@@ -89,8 +105,20 @@ This repository contains Jupyter notebooks collected from multiple sources. They
 * [napari-workflows](https://github.com/haesleinhuepf/napari-workflows)
 * [on_the_fly_image_processing_napari](https://github.com/BiAPoL/on_the_fly_image_processing_napari)
 * [pyclesperanto-prototype](https://github.com/clesperanto/pyclesperanto_prototype/)
+* [Quantitative Bio-Image Analysis with Python Course 2022 at DIGS-BB / IMPRS](https://github.com/BiAPoL/Quantitative_Bio_Image_Analysis_with_Python_2022)
 
-## Example image data
+## Questions and answers
+
+If you want to discuss lessons in this Jupyter book, have feedback and/or suggestions, please open a thread on [image.sc](https://image.sc/) and tag @haesleinhuepf.
+
+## Acknowledgements
+
+We also thank authors who shared their teaching materials openly so that we could reuse and modify them:
+* Anna Poetsch (Biotec, TU Dresden)
+* Dominik Waithe (University of Oxford)
+* Guillaume Witz (University of Bern)
+* Johannes Müller (PoL, TU Dresden)
+* Pete Bankhead (University of Edinburgh)
 
 We want to acknowledge the people who produced the images we are using for demonstration purposes in this Jupyter book.
 * Anne Carpenter, Broad Institute, Boston, MA, United States
@@ -104,11 +132,8 @@ We want to acknowledge the people who produced the images we are using for demon
 * Theresa Suckert, OncoRay, University Hospital Carl Gustav Carus, TU Dresden
 * Tony Collins, the creator of ImageJ for Microscopy
 
-## Funding
-
-R.H. acknowledges support by the Deutsche Forschungsgemeinschaft under Germany’s Excellence Strategy—EXC2068–Cluster of Excellence Physics of Life of TU Dresden.
-This project has been made possible in part by grant numbers 2021-240341 and 2021-237734 from the Chan Zuckerberg Initiative DAF, an advised fund of the Silicon Valley Community Foundation.
-
+We acknowledge support by the Deutsche Forschungsgemeinschaft under Germany’s Excellence Strategy—EXC2068–Cluster of Excellence Physics of Life of TU Dresden.
+This project has been made possible in part by grant numbers 2021-240341, 2021-237734 and 2022-252520 from the Chan Zuckerberg Initiative DAF, an advised fund of the Silicon Valley Community Foundation.
 
 ## License
 
@@ -118,17 +143,3 @@ BSD3 by the [authors and contributors](https://github.com/haesleinhuepf/BioImage
 ## Contributing
 
 Please see our [CONTRIBUTING](https://github.com/haesleinhuepf/BioImageAnalysisNotebooks/blob/main/CONTRIBUTING.md) guide for details.
-
-## Questions and answers
-
-If you want to discuss lessons in this Jupyter book, have feedback and/or suggestions, please open a thread on [image.sc](https://image.sc/) and tag @haesleinhuepf.
-
-## Work-in-progress
-
-In January 2022 I just pulled together all these notebooks in one repository. I will now in the following months reorganize their content and streamline transitions between the topics. I'm doing this in the open because I like receiving feedback early on. If you have interesting notebooks that fit in the topic, your pull-request is very welcome. Also if you experience any issues, please [get in touch](https://github.com/haesleinhuepf/BioImageAnalysisNotebooks/issues). I'm just saying, this repository is work-in-progress and it will take some time. :-) 
-
-Cheers,
-
-Robert Haase
-
-[@haesleinhuepf](https://twitter.com/haesleinhuepf)
