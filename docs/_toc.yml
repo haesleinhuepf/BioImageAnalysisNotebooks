@@ -87,6 +87,7 @@ chapters:
   - file: 18_image_filtering/convolution
   - file: 18_image_filtering/02_noise_removal
   - file: 18_image_filtering/03_background_removal
+  - file: 18_image_filtering/divide_by_gaussian
   - file: 18_image_filtering/edge_detection_and_enhancement
   - file: 18_image_filtering/simpleitk
 
