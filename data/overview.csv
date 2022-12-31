@@ -1,0 +1,101 @@
+,experiment_name,Filename,time_after_exposure_in_s,number_of_cells
+0,High dose,image0.tif,0,96
+1,High dose,image0.tif,1,47
+2,High dose,image0.tif,2,32
+3,High dose,image0.tif,3,24
+4,High dose,image0.tif,4,19
+5,High dose,image0.tif,5,16
+6,High dose,image0.tif,6,13
+7,High dose,image0.tif,7,11
+8,High dose,image0.tif,8,10
+9,High dose,image0.tif,9,9
+10,High dose,image1.tif,0,151
+11,High dose,image1.tif,1,77
+12,High dose,image1.tif,2,51
+13,High dose,image1.tif,3,39
+14,High dose,image1.tif,4,31
+15,High dose,image1.tif,5,25
+16,High dose,image1.tif,6,21
+17,High dose,image1.tif,7,19
+18,High dose,image1.tif,8,17
+19,High dose,image1.tif,9,15
+20,High dose,image2.tif,0,97
+21,High dose,image2.tif,1,46
+22,High dose,image2.tif,2,31
+23,High dose,image2.tif,3,24
+24,High dose,image2.tif,4,17
+25,High dose,image2.tif,5,15
+26,High dose,image2.tif,6,13
+27,High dose,image2.tif,7,11
+28,High dose,image2.tif,8,10
+29,High dose,image2.tif,9,9
+30,Medium dose,image3.tif,0,158
+31,Medium dose,image3.tif,1,80
+32,Medium dose,image3.tif,2,54
+33,Medium dose,image3.tif,3,37
+34,Medium dose,image3.tif,4,32
+35,Medium dose,image3.tif,5,27
+36,Medium dose,image3.tif,6,23
+37,Medium dose,image3.tif,7,18
+38,Medium dose,image3.tif,8,17
+39,Medium dose,image3.tif,9,15
+40,Medium dose,image4.tif,0,76
+41,Medium dose,image4.tif,1,37
+42,Medium dose,image4.tif,2,26
+43,Medium dose,image4.tif,3,18
+44,Medium dose,image4.tif,4,15
+45,Medium dose,image4.tif,5,13
+46,Medium dose,image4.tif,6,11
+47,Medium dose,image4.tif,7,9
+48,Medium dose,image4.tif,8,8
+49,Medium dose,image4.tif,9,7
+50,Medium dose,image5.tif,0,147
+51,Medium dose,image5.tif,1,72
+52,Medium dose,image5.tif,2,50
+53,Medium dose,image5.tif,3,34
+54,Medium dose,image5.tif,4,29
+55,Medium dose,image5.tif,5,25
+56,Medium dose,image5.tif,6,21
+57,Medium dose,image5.tif,7,17
+58,Medium dose,image5.tif,8,16
+59,Medium dose,image5.tif,9,14
+60,Control,image6.tif,0,151
+61,Control,image6.tif,1,147
+62,Control,image6.tif,2,154
+63,Control,image6.tif,3,151
+64,Control,image6.tif,4,150
+65,Control,image6.tif,5,155
+66,Control,image6.tif,6,156
+67,Control,image6.tif,7,147
+68,Control,image6.tif,8,149
+69,Control,image6.tif,9,150
+70,Control,image7.tif,0,113
+71,Control,image7.tif,1,114
+72,Control,image7.tif,2,114
+73,Control,image7.tif,3,120
+74,Control,image7.tif,4,119
+75,Control,image7.tif,5,116
+76,Control,image7.tif,6,115
+77,Control,image7.tif,7,117
+78,Control,image7.tif,8,121
+79,Control,image7.tif,9,122
+80,Control,image8.tif,0,159
+81,Control,image8.tif,1,149
+82,Control,image8.tif,2,145
+83,Control,image8.tif,3,155
+84,Control,image8.tif,4,153
+85,Control,image8.tif,5,147
+86,Control,image8.tif,6,148
+87,Control,image8.tif,7,145
+88,Control,image8.tif,8,156
+89,Control,image8.tif,9,148
+90,Control,image9.tif,0,148
+91,Control,image9.tif,1,149
+92,Control,image9.tif,2,146
+93,Control,image9.tif,3,144
+94,Control,image9.tif,4,147
+95,Control,image9.tif,5,142
+96,Control,image9.tif,6,148
+97,Control,image9.tif,7,144
+98,Control,image9.tif,8,141
+99,Control,image9.tif,9,140

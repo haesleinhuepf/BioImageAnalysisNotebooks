@@ -267,6 +267,12 @@ chapters:
   - file: 40_tabular_data_wrangling/pivot_tables
   - file: 40_tabular_data_wrangling/tidy_data
 
+- file: 40a_sql/readme
+  sections:
+  - file: 40a_sql/select
+  - file: 40a_sql/join
+  - file: 40a_sql/group_by
+
 - file: 41_descriptive_statistics/readme
   sections:
   - file: 41_descriptive_statistics/basic_descriptive_statistics
