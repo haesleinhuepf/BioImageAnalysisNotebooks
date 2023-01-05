@@ -80,7 +80,7 @@ chapters:
   - file: 16_3d_image_visualization/10_nd_image_data
 # projections
   - file: 16_3d_image_visualization/inspecting_3d_images
-  - file: 16_3d_image_visualization/05_napari
+  - file: 16_3d_image_visualization/napari
 
 - file: 18_image_filtering/readme
   sections:
