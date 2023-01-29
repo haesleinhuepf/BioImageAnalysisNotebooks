@@ -1,5 +1,5 @@
 title: Bio-image Analysis Notebooks
-#author: Robert Haase, Guillaume Witz, Miguel Fernandes, Marcelo Leomil Zoccoler, Shannon Taylor & add-your-name-here-by-sending-a-pull-request-containing-a-notebook
+author: Robert Haase, Guillaume Witz, Miguel Fernandes, Marcelo Leomil Zoccoler, Shannon Taylor & add-your-name-here-by-sending-a-pull-request-containing-a-notebook
 logo: logo.png
 
 # Execute notebooks if the have one missing output
@@ -30,7 +30,7 @@ html:
   use_repository_button: true
   extra_footer: |
     <p>
-    Copyright: Licensed <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC-BY 4.0</a> unless mentioned otherwise by Robert Haase, Guillaume Witz, Miguel Fernandes, Marcelo Leomil Zoccoler, Shannon Taylor. 
+    Copyright: Licensed <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC-BY 4.0</a> and <a href="https://github.com/haesleinhuepf/BioImageAnalysisNotebooks/blob/main/LICENSE-BSD3" target="_blank">BSD3</a> unless mentioned otherwise. 
     <a href="https://github.com/haesleinhuepf/BioImageAnalysisNotebooks/blob/main/CONTRIBUTING.md" target="_blank">Contribution and feedback welcome.</a>
     </p>
 sphinx:
