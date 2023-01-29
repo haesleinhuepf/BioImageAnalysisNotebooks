@@ -1,0 +1,3 @@
+This image was kindly provided by Romina Piscitello-Gómez (MPI CBG).
+The sample is a wing of the fruit fly (Drosophila melanogaster) during the pupal stage with GFP labeled E-cadherin.
+Z slices are separated by 1um.

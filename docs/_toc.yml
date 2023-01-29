@@ -16,7 +16,6 @@ chapters:
   - file: 02_python_basics/05_lists_tuples
   - file: 02_python_basics/05a_cropping_lists
   - file: 02_python_basics/05b_sorting_lists
-  - file: 02_python_basics/05c_masking
   - file: 02_python_basics/06_Dictionaries_and_tables
   - file: 02_python_basics/07_Conditions
   - file: 02_python_basics/08_loops
@@ -30,15 +29,35 @@ chapters:
   - file: 03_advanced_python/partial
   - file: 03_advanced_python/napari_workflows
   - file: 03_advanced_python/parallelization
+  - file: 03_advanced_python/owncloud
+
+- file: 04_sustainable_code/readme
+  sections:
+  - file: 04_sustainable_code/readable_code
+  - file: 04_sustainable_code/magic_numbers
+  - file: 04_sustainable_code/divide_and_rule
+  - file: 04_sustainable_code/dont_repeat_yourself
+  - file: 04_sustainable_code/keep_it_short_and_simple.ipynb
 
 - file: 12_image_analysis_basics/readme
   sections:
-  - file: 12_image_analysis_basics/01_Introduction_to_image_processing
-  - file: 12_image_analysis_basics/02_Working_with_images
-  - file: 12_image_analysis_basics/03_Cropping_images
-  - file: 12_image_analysis_basics/04_multi_channel_image_data
-  - file: 12_image_analysis_basics/image_file_formats
-  
+  - file: 12_image_analysis_basics/01_Images_as_arrays
+  - file: 12_image_analysis_basics/02_Opening_visualizing_images
+  - file: 12_image_analysis_basics/03_Computing_with_images
+  - file: 12_image_analysis_basics/04_Cropping_images
+  - file: 12_image_analysis_basics/05_Masking_images.ipynb
+  - file: 12_image_analysis_basics/06_multi_channel_image_data
+
+- file: 12a_image_file_formats/readme
+  sections:
+  - file: 12a_image_file_formats/opening_images
+  - file: 12a_image_file_formats/opening_images_using_aicsimageio
+  - file: 12a_image_file_formats/opening_czi_files
+  - file: 12a_image_file_formats/opening_lif_files
+  - file: 12a_image_file_formats/opening_tif_folders
+  - file: 12a_image_file_formats/tiled_image_file_formats_zarr
+  - file: 12a_image_file_formats/image_file_formats
+
 #  - file: 12_image_analysis_basics/skeletonization
 # todo: https://github.com/jni/skan
 #  - file: 12_image_analysis_basics/analyse_banana_data_set
@@ -62,7 +81,7 @@ chapters:
   - file: 16_3d_image_visualization/10_nd_image_data
 # projections
   - file: 16_3d_image_visualization/inspecting_3d_images
-  - file: 16_3d_image_visualization/05_napari
+  - file: 16_3d_image_visualization/napari
 
 - file: 18_image_filtering/readme
   sections:
@@ -70,6 +89,7 @@ chapters:
   - file: 18_image_filtering/convolution
   - file: 18_image_filtering/02_noise_removal
   - file: 18_image_filtering/03_background_removal
+  - file: 18_image_filtering/divide_by_gaussian
   - file: 18_image_filtering/edge_detection_and_enhancement
   - file: 18_image_filtering/simpleitk
 
@@ -86,6 +106,7 @@ chapters:
 # slicing
   - file: 19_spatial_transforms/coordinate_systems
   - file: 19_spatial_transforms/cropping
+  - file: 19_spatial_transforms/scaling
   - file: 19_spatial_transforms/affine_transforms_scikit_image
   - file: 19_spatial_transforms/affine_transforms_scipy
   - file: 19_spatial_transforms/affine_transforms_cupy
@@ -105,14 +126,8 @@ chapters:
   - file: 20_image_segmentation/10_touching_objects_labeling
   - file: 20_image_segmentation/11_voronoi_otsu_labeling
   
-  - file: 20_image_segmentation/11a_object_splitting_otsu_labeling.ipynb
-  
-  - file: 20_image_segmentation/12_open_close_labels.ipynb
-
-  - file: 20_image_segmentation/14_remove_labels_on_image_edges
-  - file: 20_image_segmentation/15_sequential_labeling
+  - file: 20_image_segmentation/11a_eroded_otsu_labeling
   - file: 20_image_segmentation/segmentation_2d_membranes
-  - file: 20_image_segmentation/refine_cell_segmentation
   - file: 20_image_segmentation/Segmentation_3D
 
 - file: 20a_pixel_classification/readme
@@ -120,7 +135,8 @@ chapters:
   - file: 20a_pixel_classification/scikit_learn_random_forest_pixel_classifier
   - file: 20a_pixel_classification/apoc_object_segmenter
   - file: 20a_pixel_classification/apoc_pixel_classifier
-  - file: 20a_pixel_classification/mutlichannel_images
+  - file: 20a_pixel_classification/interactive_pixel_classification/readme
+  - file: 20a_pixel_classification/multichannel_images
   - file: 20a_pixel_classification/apoc_probability_mapper
   - file: 20a_pixel_classification/apoc_train_on_folders
   - file: 20a_pixel_classification/feature_stacks
@@ -132,6 +148,20 @@ chapters:
 #  - file: 20b_deep_learning/cellpose
 #  - file: 20b_deep_learning/stardist
 
+- file: 20h_segmentation_post_processing/readme
+  sections:
+
+  - file: 20h_segmentation_post_processing/open_close_labels
+  - file: 20h_segmentation_post_processing/merge_labels
+  - file: 20h_segmentation_post_processing/merge_annotated_labels
+  - file: 20h_segmentation_post_processing/merge_objects_using_machine_learning
+  - file: 20h_segmentation_post_processing/remove_labels_on_image_edges
+  - file: 20h_segmentation_post_processing/select_labels
+  - file: 20h_segmentation_post_processing/sequential_labeling
+  - file: 20h_segmentation_post_processing/inner_and_outer_cell_borders
+  - file: 20h_segmentation_post_processing/refine_cell_segmentation
+  - file: 20h_segmentation_post_processing/mimicking_imagej_watershed
+  
 - file: 21_segmentation_comparison/readme
   sections:
   - file: 21_segmentation_comparison/scenario_otsu_segmentation
@@ -148,12 +178,19 @@ chapters:
   - file: 22_feature_extraction/measure_intensity_on_label_edges
   - file: 22_feature_extraction/shape_descriptors_based_on_neighborhood_graphs 
   - file: 22_feature_extraction/distance_features
-    
+
+- file: 23_blob_detection/readme
+  sections:
+  - file: 23_blob_detection/local_maxima_detection
+  - file: 23_blob_detection/blog_dog_log_doh
+
 - file: 25_neighborhood_relationships_between_cells/readme
   sections:
   - file: 25_neighborhood_relationships_between_cells/01_neighborhood_definitions
   - file: 25_neighborhood_relationships_between_cells/05_count_touching_neighbors
+  - file: 25_neighborhood_relationships_between_cells/statistics_of_neighbors
   - file: 25_neighborhood_relationships_between_cells/06_mesh_with_distances  
+  - file: 25_neighborhood_relationships_between_cells/touch_portion_explained
   - file: 25_neighborhood_relationships_between_cells/distance_to_other_labels
   - file: 25_neighborhood_relationships_between_cells/other_proximal_labels_count
   - file: 25_neighborhood_relationships_between_cells/neighbor_meshes_in_3d
@@ -162,10 +199,27 @@ chapters:
 - file: 27_cell_classification/readme
   sections:
   - file: 27_cell_classification/apoc_object_classifier
+  - file: 27_cell_classification/interactive_object_classification/readme
   - file: 27_cell_classification/forest_statistics
   - file: 27_cell_classification/sklearn_object_classification
   - file: 27_cell_classification/apoc_simpleitk_object_classification
-  
+
+# - file: 28_colocalization/readme
+
+- file: 29_algorithm_validation/readme
+  sections:
+  - file: 29_algorithm_validation/segmentation_quality_estimation
+  - file: 29_algorithm_validation/validate-spot-counting
+
+- file: 47_clustering/readme
+  sections:
+  - file: 47_clustering/trailer
+  #- file: 47_clustering/feature_selection
+  - file: 47_clustering/umap
+  #- file: 47_clustering/dens_map
+  #- file: 47_clustering/tissue_clustering
+  - file: 47_clustering/interactive_dimensionality_reduction_and_clustering/readme
+
 #  - file: 27_cell_classification/cell_classification
 #  - file: 27_cell_classification/cell_classification_correction.ipynb
 
@@ -173,7 +227,12 @@ chapters:
   sections:
   - file: 28_colocalization/counting_nuclei_multichannel
   - file: 28_colocalization/differentiate_nuclei_intensity
+  - file: 28_colocalization/distance-based_colocalization
   #- file: 28_colocalization/measure_overlap_between_label_images
+  
+- file: 30_simulating_data/readme
+  sections:
+  - file: 31_graphical_user_interfaces/counting_cell_neighbors_in_tissues
   
 - file: 31_graphical_user_interfaces/readme
   sections:
@@ -190,7 +249,6 @@ chapters:
   - file: 32_tiled_image_processing/tiling_images_with_overlap
   - file: 32_tiled_image_processing/tiled_connected_component_labeling
   - file: 32_tiled_image_processing/tiled_object_measurements
-  - file: 32_tiled_image_processing/tiled_image_file_formats_zarr
   - file: 32_tiled_image_processing/tiled_area_mapping
   - file: 32_tiled_image_processing/tiled_nuclei_counting
 
@@ -200,34 +258,51 @@ chapters:
   - file: 33_batch_processing/14_process_timelapse
 #  - file: 18_image_filtering/run_on_all_hyperslices
   
-#- file: 35_parameter_optimization/readme
-#  sections:
-#  - file: 35_parameter_optimization/optimize_blobs_segmentation
-#  - file: 35_parameter_optimization/label_image_optimizer
-#  - file: 35_parameter_optimization/sparse_label_image_optimizer
-#  - file: 35_parameter_optimization/membrane_segmentation
+- file: 35_parameter_optimization/readme
+  sections:
+  - file: 35_parameter_optimization/optimization_basics
+  - file: 35_parameter_optimization/label_image_optimizer
+  - file: 35_parameter_optimization/membrane_segmentation
 
 - file: 40_tabular_data_wrangling/readme
   sections:
   - file: 40_tabular_data_wrangling/introduction_dataframes
   - file: 40_tabular_data_wrangling/explore_dataset
+  - file: 40_tabular_data_wrangling/append_tables
   - file: 40_tabular_data_wrangling/select_rows_and_columns.ipynb
   - file: 40_tabular_data_wrangling/handling_NaNs
+  - file: 40_tabular_data_wrangling/summarizing_subsets
   - file: 40_tabular_data_wrangling/pivot_tables
-#  - file: 40_tabular_data_wrangling/append_tables
+  - file: 40_tabular_data_wrangling/tidy_data
+
+- file: 40a_sql/readme
+  sections:
+  - file: 40a_sql/select
+  - file: 40a_sql/join
+  - file: 40a_sql/group_by
 
 - file: 41_descriptive_statistics/readme
   sections:
   - file: 41_descriptive_statistics/basic_descriptive_statistics
   - file: 41_descriptive_statistics/descriptive_statistics_label_images
   - file: 41_descriptive_statistics/Bland_altman_analysis
-  
+
+# - file: 44_hypothesis_testing/readme
+#   sections:
+#   - file: 44_hypothesis_testing/distibutions
+#   - file: 44_hypothesis_testing/Equivalence_testing
+#   - file: 44_hypothesis_testing/T-Test
+#   - file: 44_hypothesis_testing/Testing_curation_time
+#   - file: 44_hypothesis_testing/Testing_tomato_ripen_time
+#   - file: 44_hypothesis_testing/The_p-value
 
 
 - file: 51_plotting/readme
   sections:
-  - file: 51_plotting/plotting_seaborn
   - file: 51_plotting/plotting_matplotlib
+  - file: 51_plotting/plotting_seaborn
+  - file: 51_plotting/plotting_distributions
+  - file: 51_plotting/multivariate_views
   - file: 51_plotting/bland_altman_analysis
 # plotly
   
@@ -236,6 +311,12 @@ chapters:
   - file: 60_data_visualization/overlay_text_on_image
   - file: 60_data_visualization/parametric_maps
   - file: 60_data_visualization/quantitative_neighbor_maps
+
+- file: 98_snippets/readme
+  sections: 
+  - file: 98_snippets/load_an_show_an_image
+  - file: 98_snippets/load_image_and_measure_shape_of_nuclei_in_3d
+  - file: 98_snippets/resave_skimage_example_data
 
 - file: 01_introduction/glossary
 

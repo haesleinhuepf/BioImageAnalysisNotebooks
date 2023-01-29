@@ -1,102 +1,110 @@
 # Setting up your computer
 
-This chapter provides instructions for setting up your computer to run python to analyse images.
+This chapter provides instructions for setting up your computer to run Python to analyse images.
 
 # Setting up Python and Conda environments
 When working with Python, we will make use of many plugins and software libraries which need to be organized.
-One way of doing this, is by managing so called "Conda" environments.
-A conda environment can be seen as a virtual desktop, or virtual computer, accessible via the command line. 
-If you install some software into one conda environment, it may not be accessible from another environment.
+One way of doing this, is by managing *Conda* environments.
+A conda environment can be seen as a virtual desktop, or virtual computer, accessible via the terminal. 
+If you install some software into one Conda environment, it may not be accessible from another environment. 
+If a Conda environment breaks, e.g. incompatible software was installed, you can just make a new one and start over.
 
-See also 
-* [Python/Conda environments](https://mpicbg-scicomp.github.io/ipf_howtoguides/guides/Python_Conda_Environments)
-* [Scientific Data Analysis with Python](https://youtu.be/MOEPe9TGBK0).
+See also
+* [Managing Scientific Python environments using Conda, Mamba and friends](https://focalplane.biologists.com/2022/12/08/managing-scientific-python-environments-using-conda-mamba-and-friends/)
+* [Scientific Data Analysis with Python](https://youtu.be/MOEPe9TGBK0)
 
-## Step 1: Install Conda
-Download and install conda, for example mini-conda 
-[for Windows](https://docs.conda.io/en/latest/miniconda.html#windows-installers) or 
-[for Linux](https://docs.conda.io/en/latest/miniconda.html#linux-installers). MacOS users please follow the instructions on [this page](https://docs.conda.io/projects/continuumio-conda/en/latest/user-guide/install/macos.html) and make sure you download the "bash" installer. 
+## Step 1: Install Mambaforge
+Download and install Conda. We recommend the Conda distribution [Mambaforge](https://github.com/conda-forge/miniforge#mambaforge).
 
-For ease-of-use, it is recommended to add conda to the PATH variable during installtion, e.g. by checking this checkbox:
+For ease-of-use, it is recommended to install it for your use only and to add Conda to the PATH variable during installation.
 
-![](PATH.png)
+![img.png](install_mambaforge.png)
 
-### Step 1: Starting conda
+![img.png](install_mambaforge2.png)
 
-After installation, you can start conda from the terminal or command line like this:
+## Step 2: Install devbio-napari
+
+We recommend installing [devbio-napari](https://github.com/haesleinhuepf/devbio-napari), a distribution of napari with a set of plugins for bioimage analysis.
+
+Use this command from the terminal:
 
 ```
-conda activate
-```
-
-You will then see the term `(base)` at the beginning of each line:
-
-![](base_env.png)
-
-## Step 2: Creating a conda environment
-You can create a conda environment with this command:
-```
-conda create ––name env_exercise_9
-```
-
-In some projects, you may want to start using python right away. Thus, you can specify to install python in a given version to your new conda environment from the start:
-```
-conda create -n env_exercise_9 python=3.8
-```
-
-And afterwards you can enter the environment to work within it. 
-Whenever you want to work on the same project again, you should start a command line and enter this:
-```
-conda activate env_exercise_9
+mamba create --name devbio-napari-env python=3.9 devbio-napari -c conda-forge
 ```
 
 **Tip**: It is recommended to create one environment for every project you are executing. 
 In that way installed software libraries and tools cannot harm each other.
 
-![](create_env.png)
-
-Furthermore, configure [conda-forge](https://conda-forge.org/) to receive the most-recent updates from the data science community:
-```
-conda config --add channels conda-forge 
-conda config --set channel_priority strict 
-```
-
-## Step 3: Installing software tools and libraries
-We will use python mostly from [jupyter notebooks](https://www.jupyter.org). 
-Before we can do so, we need to install it. 
-We can do that using the `conda install` command:
-
-```
-conda install jupyter
-```
-
-As you can see, jupyter comes with many other libraries and tools it needs to execute.
-Check that you entered the right tool to install. E.g. take care that `jupyter` contains a `y` and no `i`.
-Enter `y` and hit ENTER to start the installation process. 
-As the `y` is pre-selected, as shown with the square brakets `[y]`, you can also just hit ENTER.
-
-![](install_jupyter.png)
-
 ## Step 3: Testing the installation
-To get started with Jupyter notebooks, start them from the command line in your activated environment using:
+
+Afterwards you can enter the environment to work with it. 
+Whenever you want to work on the same project again, you should start a command line and enter this:
 
 ```
-jupyter notebook
+conda activate devbio-napari-env
 ```
 
-A browser will open and show you the following web page. Click on "New" in the top right corner and select "Python 3":
-![](jupyter1.png)
+Start [Jupyter lab](https://jupyter.org/) from the terminal like this
 
-In the new tab, click in the first code cell, enter `print("Hello world")` and hit SHIFT+ENTER on your keyboard. 
+```
+jupyter lab
+```
+
+A browser will open and show you the following web page. In the sectiojn `Notebook` click on "Python 3 (ipykernel)" to create a new notebook:
+
+![img.png](start_jupyter_lab.png)
+
+In the new notebook, click in the first code cell, enter `print("Hello world")` and hit SHIFT+ENTER on your keyboard. 
 If everything is installed properly, it should look like this:
-![](jupyter2.png)
 
-E.g. if python is not installed yet, you need to install it using this command:
+![img.png](hello_world.png)
+
+To test if your graphics card driver is properly installed, enter this code:
+
 ```
-conda install python
+import pyclesperanto_prototype as cle
+
+cle.get_device()
 ```
 
-**Tip**: You will later need to install more packages and software. 
-However, while you are running jupyter notebooks, you cannot enter new commands in the command line.
-Thus, it is recommended to open two command line windows and activate the same conda environment at the same time. 
-In one windows, you run `jupyter notebook` and in the other `conda install name_of_the_software_that_isnt_installed_yet`.
+![img.png](test_opencl.png)
+
+## Troubleshooting: Graphics cards drivers
+
+In case error messages contains "ImportError: DLL load failed while importing cl: The specified procedure could not be found" [see also](https://github.com/clEsperanto/pyclesperanto_prototype/issues/55) or ""clGetPlatformIDs failed: PLATFORM_NOT_FOUND_KHR", please install recent drivers for your graphics card and/or OpenCL device. 
+
+Select the right driver source depending on your hardware from this list:
+
+* [AMD drivers](https://www.amd.com/en/support)
+* [NVidia drivers](https://www.nvidia.com/download/index.aspx)
+* [Intel GPU drivers]()(https://www.intel.com/content/www/us/en/download/726609/intel-arc-graphics-windows-dch-driver.html)
+* [Intel CPU OpenCL drivers](https://www.intel.com/content/www/us/en/developer/articles/tool/opencl-drivers.html#latest_CPU_runtime)
+* [Microsoft Windows OpenCL support](https://www.microsoft.com/en-us/p/opencl-and-opengl-compatibility-pack/9nqpsl29bfff)
+
+Sometimes, mac-users need to install this:
+
+    mamba install -c conda-forge ocl_icd_wrapper_apple
+
+Sometimes, linux users need to install this:
+
+    mamba install -c conda-forge ocl-icd-system
+
+## Troubleshooting: DLL load failed
+
+In case of error messages such as this one:
+```
+[...] _get_win_folder_with_pywin32
+from win32com.shell import shellcon, shell
+ImportError: DLL load failed while importing shell: The specified procedure could not be found.
+```
+
+Try this command, within the base environment:
+
+```
+conda activate base
+
+pip install --upgrade pywin32==228
+```
+
+[Source](https://github.com/conda/conda/issues/11503)
+
