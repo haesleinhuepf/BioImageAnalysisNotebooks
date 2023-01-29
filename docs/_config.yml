@@ -28,3 +28,10 @@ repository:
 html:
   use_issues_button: true
   use_repository_button: true
+  extra_footer: |
+    <p>
+    Copyright: Licensed [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/) unless mentioned otherwise by Robert Haase, Miguel Fernandes, Marcelo Leomil Zoccoler, Shannon Taylor. Contribution and feedback welcome.
+    </p>
+sphinx:
+  config:
+    html_show_copyright: false
