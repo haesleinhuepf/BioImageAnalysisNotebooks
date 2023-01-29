@@ -16,7 +16,6 @@ chapters:
   - file: 02_python_basics/05_lists_tuples
   - file: 02_python_basics/05a_cropping_lists
   - file: 02_python_basics/05b_sorting_lists
-  - file: 02_python_basics/05c_masking
   - file: 02_python_basics/06_Dictionaries_and_tables
   - file: 02_python_basics/07_Conditions
   - file: 02_python_basics/08_loops
@@ -42,10 +41,12 @@ chapters:
 
 - file: 12_image_analysis_basics/readme
   sections:
-  - file: 12_image_analysis_basics/01_Introduction_to_image_processing
-  - file: 12_image_analysis_basics/02_Working_with_images
-  - file: 12_image_analysis_basics/03_Cropping_images
-  - file: 12_image_analysis_basics/04_multi_channel_image_data
+  - file: 12_image_analysis_basics/01_Images_as_arrays
+  - file: 12_image_analysis_basics/02_Opening_visualizing_images
+  - file: 12_image_analysis_basics/03_Computing_with_images
+  - file: 12_image_analysis_basics/04_Cropping_images
+  - file: 12_image_analysis_basics/05_Masking_images.ipynb
+  - file: 12_image_analysis_basics/06_multi_channel_image_data
 
 - file: 12a_image_file_formats/readme
   sections:
