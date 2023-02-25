@@ -176,6 +176,7 @@ chapters:
   - file: 22_feature_extraction/statistics_with_simpleitk
   - file: 22_feature_extraction/comparison_of_measurements_from_different_libraries
   - file: 22_feature_extraction/measure_intensity_on_label_edges
+  - file: 22_feature_extraction/intensities_along_lines
   - file: 22_feature_extraction/shape_descriptors_based_on_neighborhood_graphs 
   - file: 22_feature_extraction/distance_features
 
