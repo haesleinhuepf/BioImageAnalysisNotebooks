@@ -196,8 +196,7 @@ chapters:
   - file: 24_surface_processing/surfaces_to_images
   - file: 24_surface_processing/tabular_quality_measurements
   - file: 24_surface_processing/quality_measurements
-
-  #- file: 24_surface_processing/surface_vertex_classification
+  - file: 24_surface_processing/surface_vertex_classification
 
 - file: 25_neighborhood_relationships_between_cells/readme
   sections:
