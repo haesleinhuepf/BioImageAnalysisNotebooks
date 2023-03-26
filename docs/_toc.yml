@@ -152,6 +152,7 @@ chapters:
   sections:
 
   - file: 20h_segmentation_post_processing/open_close_labels
+  - file: 20h_segmentation_post_processing/mode_filter
   - file: 20h_segmentation_post_processing/merge_labels
   - file: 20h_segmentation_post_processing/merge_annotated_labels
   - file: 20h_segmentation_post_processing/merge_objects_using_machine_learning
