@@ -25,15 +25,6 @@ parts:
       - file: 02_python_basics/09_custom_functions
       - file: 02_python_basics/10_Import_packages
 
-    - file: 03_advanced_python/readme
-      sections:
-      - file: 03_advanced_python/custom_libraries
-      - file: 03_advanced_python/functional_parameters
-      - file: 03_advanced_python/partial
-      - file: 03_advanced_python/napari_workflows
-      - file: 03_advanced_python/parallelization
-      - file: 03_advanced_python/owncloud
-
     - file: 04_sustainable_code/readme
       sections:
       - file: 04_sustainable_code/readable_code
@@ -70,14 +61,6 @@ parts:
       - file: 14_machine_learning_basics/supervised_machine_learning
       - file: 14_machine_learning_basics/unsupervised_machine_learning
       - file: 14_machine_learning_basics/scaling
-
-    - file: 15_gpu_acceleration/readme
-      sections:
-      - file: 15_gpu_acceleration/clesperanto
-      - file: 15_gpu_acceleration/why_GPU_acceleration
-      - file: 15_gpu_acceleration/cupy
-      - file: 15_gpu_acceleration/memory_management
-      - file: 15_gpu_acceleration/further_reading
 
     - file: 16_3d_image_visualization/readme
       sections:
@@ -249,6 +232,23 @@ parts:
   - caption: Advanced techniques
     chapters:
     
+    - file: 03_advanced_python/readme
+      sections:
+      - file: 03_advanced_python/custom_libraries
+      - file: 03_advanced_python/functional_parameters
+      - file: 03_advanced_python/partial
+      - file: 03_advanced_python/napari_workflows
+      - file: 03_advanced_python/parallelization
+      - file: 03_advanced_python/owncloud
+
+    - file: 15_gpu_acceleration/readme
+      sections:
+      - file: 15_gpu_acceleration/clesperanto
+      - file: 15_gpu_acceleration/why_GPU_acceleration
+      - file: 15_gpu_acceleration/cupy
+      - file: 15_gpu_acceleration/memory_management
+      - file: 15_gpu_acceleration/further_reading
+      
     - file: 31_graphical_user_interfaces/readme
       sections:
       - file: 31_graphical_user_interfaces/napari
