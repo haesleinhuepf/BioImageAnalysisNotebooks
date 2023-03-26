@@ -170,6 +170,19 @@ parts:
       - file: 20h_segmentation_post_processing/refine_cell_segmentation
       - file: 20h_segmentation_post_processing/mimicking_imagej_watershed
 
+    - file: 21_surface_processing/readme
+      sections:
+      - file: 21_surface_processing/creating_surfaces
+      - file: 21_surface_processing/visualizing_surfaces
+      - file: 21_surface_processing/saving_and_loading_surfaces
+      - file: 21_surface_processing/smoothing_and_simplifying_surfaces
+      - file: 21_surface_processing/connected_component_labeling
+      - file: 21_surface_processing/surfaces_and_point_clouds
+      - file: 21_surface_processing/surfaces_to_images
+      - file: 21_surface_processing/tabular_quality_measurements
+      - file: 21_surface_processing/quality_measurements
+      - file: 21_surface_processing/surface_vertex_classification
+      
   - caption: Quantiative analysis
     chapters:
 
@@ -189,19 +202,6 @@ parts:
       sections:
       - file: 23_blob_detection/local_maxima_detection
       - file: 23_blob_detection/blog_dog_log_doh
-
-    - file: 24_surface_processing/readme
-      sections:
-      - file: 24_surface_processing/creating_surfaces
-      - file: 24_surface_processing/visualizing_surfaces
-      - file: 24_surface_processing/saving_and_loading_surfaces
-      - file: 24_surface_processing/smoothing_and_simplifying_surfaces
-      - file: 24_surface_processing/connected_component_labeling
-      - file: 24_surface_processing/surfaces_and_point_clouds
-      - file: 24_surface_processing/surfaces_to_images
-      - file: 24_surface_processing/tabular_quality_measurements
-      - file: 24_surface_processing/quality_measurements
-      - file: 24_surface_processing/surface_vertex_classification
 
     - file: 25_neighborhood_relationships_between_cells/readme
       sections:
