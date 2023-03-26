@@ -188,7 +188,7 @@ parts:
       - file: 21_surface_processing/quality_measurements
       - file: 21_surface_processing/surface_vertex_classification
       
-  - caption: Quantiative analysis
+  - caption: Quantitative analysis
     chapters:
 
     - file: 22_feature_extraction/readme
