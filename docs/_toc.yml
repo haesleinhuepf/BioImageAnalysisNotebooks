@@ -170,12 +170,6 @@ parts:
       - file: 20h_segmentation_post_processing/refine_cell_segmentation
       - file: 20h_segmentation_post_processing/mimicking_imagej_watershed
 
-    - file: 21_segmentation_comparison/readme
-      sections:
-      - file: 21_segmentation_comparison/scenario_otsu_segmentation
-      - file: 21_segmentation_comparison/visual_comparison
-      - file: 21_segmentation_comparison/quantiative_comparison
-
   - caption: Quantiative analysis
     chapters:
 
@@ -231,10 +225,6 @@ parts:
 
     # - file: 28_colocalization/readme
 
-    - file: 29_algorithm_validation/readme
-      sections:
-      - file: 29_algorithm_validation/segmentation_quality_estimation
-      - file: 29_algorithm_validation/validate-spot-counting
 
     - file: 47_clustering/readme
       sections:
@@ -254,6 +244,15 @@ parts:
       - file: 28_colocalization/differentiate_nuclei_intensity
       - file: 28_colocalization/distance-based_colocalization
       #- file: 28_colocalization/measure_overlap_between_label_images
+
+      
+    - file: 29_algorithm_validation/readme
+      sections:
+      - file: 29_algorithm_validation/segmentation_quality_estimation
+      - file: 29_algorithm_validation/validate-spot-counting
+      - file: 29_algorithm_validation/scenario_otsu_segmentation
+      - file: 29_algorithm_validation/visual_comparison
+      - file: 29_algorithm_validation/quantiative_comparison
 
     - file: 30_simulating_data/readme
       sections:
