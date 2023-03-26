@@ -348,6 +348,8 @@ parts:
 #      - file: 98_snippets/load_image_and_measure_shape_of_nuclei_in_3d
 #      - file: 98_snippets/resave_skimage_example_data
 
-- file: 01_introduction/glossary
+  - caption: Appendix
+    chapters:
+    - file: 01_introduction/glossary
 
-- file: imprint
+    - file: imprint
