@@ -273,16 +273,6 @@ parts:
       - file: 33_batch_processing/14_process_timelapse
     #  - file: 18_image_filtering/run_on_all_hyperslices
 
-
-    - file: 47_clustering/readme
-      sections:
-      - file: 47_clustering/trailer
-      #- file: 47_clustering/feature_selection
-      - file: 47_clustering/umap
-      #- file: 47_clustering/dens_map
-      #- file: 47_clustering/tissue_clustering
-      - file: 47_clustering/interactive_dimensionality_reduction_and_clustering/readme
-
     #  - file: 27_cell_classification/cell_classification
     #  - file: 27_cell_classification/cell_classification_correction.ipynb
 
@@ -326,6 +316,15 @@ parts:
     #   - file: 44_hypothesis_testing/Testing_tomato_ripen_time
     #   - file: 44_hypothesis_testing/The_p-value
 
+
+    - file: 47_clustering/readme
+      sections:
+      - file: 47_clustering/trailer
+      #- file: 47_clustering/feature_selection
+      - file: 47_clustering/umap
+      #- file: 47_clustering/dens_map
+      #- file: 47_clustering/tissue_clustering
+      - file: 47_clustering/interactive_dimensionality_reduction_and_clustering/readme
 
     - file: 51_plotting/readme
       sections:
