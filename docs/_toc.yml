@@ -170,6 +170,11 @@ parts:
       - file: 20h_segmentation_post_processing/refine_cell_segmentation
       - file: 20h_segmentation_post_processing/mimicking_imagej_watershed
 
+    - file: 23_blob_detection/readme
+      sections:
+      - file: 23_blob_detection/local_maxima_detection
+      - file: 23_blob_detection/blog_dog_log_doh
+      
     - file: 21_surface_processing/readme
       sections:
       - file: 21_surface_processing/creating_surfaces
@@ -198,10 +203,6 @@ parts:
       - file: 22_feature_extraction/shape_descriptors_based_on_neighborhood_graphs 
       - file: 22_feature_extraction/distance_features
 
-    - file: 23_blob_detection/readme
-      sections:
-      - file: 23_blob_detection/local_maxima_detection
-      - file: 23_blob_detection/blog_dog_log_doh
 
     - file: 25_neighborhood_relationships_between_cells/readme
       sections:
@@ -225,19 +226,6 @@ parts:
 
     # - file: 28_colocalization/readme
 
-
-    - file: 47_clustering/readme
-      sections:
-      - file: 47_clustering/trailer
-      #- file: 47_clustering/feature_selection
-      - file: 47_clustering/umap
-      #- file: 47_clustering/dens_map
-      #- file: 47_clustering/tissue_clustering
-      - file: 47_clustering/interactive_dimensionality_reduction_and_clustering/readme
-
-    #  - file: 27_cell_classification/cell_classification
-    #  - file: 27_cell_classification/cell_classification_correction.ipynb
-
     - file: 28_colocalization/readme
       sections:
       - file: 28_colocalization/counting_nuclei_multichannel
@@ -258,7 +246,7 @@ parts:
       sections:
       - file: 31_graphical_user_interfaces/counting_cell_neighbors_in_tissues
 
-  - caption: Advanced workflows and tools
+  - caption: Advanced techniques
     chapters:
     
     - file: 31_graphical_user_interfaces/readme
@@ -284,6 +272,19 @@ parts:
       - file: 33_batch_processing/12_process_folders
       - file: 33_batch_processing/14_process_timelapse
     #  - file: 18_image_filtering/run_on_all_hyperslices
+
+
+    - file: 47_clustering/readme
+      sections:
+      - file: 47_clustering/trailer
+      #- file: 47_clustering/feature_selection
+      - file: 47_clustering/umap
+      #- file: 47_clustering/dens_map
+      #- file: 47_clustering/tissue_clustering
+      - file: 47_clustering/interactive_dimensionality_reduction_and_clustering/readme
+
+    #  - file: 27_cell_classification/cell_classification
+    #  - file: 27_cell_classification/cell_classification_correction.ipynb
 
     - file: 35_parameter_optimization/readme
       sections:
