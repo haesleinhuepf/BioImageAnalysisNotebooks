@@ -145,6 +145,7 @@ parts:
       - file: 20h_segmentation_post_processing/mode_filter
       - file: 20h_segmentation_post_processing/merge_labels
       - file: 20h_segmentation_post_processing/merge_annotated_labels
+      - file: 20h_segmentation_post_processing/merging_labels_based_on_centroid_distance
       - file: 20h_segmentation_post_processing/merge_objects_using_machine_learning
       - file: 20h_segmentation_post_processing/remove_labels_on_image_edges
       - file: 20h_segmentation_post_processing/select_labels
