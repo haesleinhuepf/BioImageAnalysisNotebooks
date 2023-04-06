@@ -5,6 +5,7 @@ In this chapter we will introduce procedures for comaparing segmentation algorit
 ## See also
 * [%he Analysis of Method Comparison Studies (D.G. Altman and J.M. Bland 1983)](https://www-users.york.ac.uk/~mb55/meas/ab83.pdf)
 * [Method comparison and Bland-Altman plots](https://www.youtube.com/watch?v=PbSrSupnZFQ)
+* [Sklearn: Metrics and scoring](https://scikit-learn.org/stable/modules/model_evaluation.html)
 
 ## Installation of requirements
 
@@ -17,3 +18,4 @@ conda install -c conda-forge statsmodels
 ```
 pip install statsmodels
 ```
+

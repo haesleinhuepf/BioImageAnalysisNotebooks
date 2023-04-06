@@ -15,3 +15,8 @@ docs/20a_pixel_classification/test2.cl
 data/CalibZAPWfixed_000154_max_labels.tif
 data/y293-Gal4_vmat-GFP-f01.lif
 data/tif_folder/*
+schematics/Jaccard_index_sparse.png
+schematics/Jaccard_index_binary.png
+docs/29_algorithm_validation/ideas.ipynb
+docs/29_algorithm_validation/solution for exercise - metrics to investigate segmentation results.ipynb
+*.png
