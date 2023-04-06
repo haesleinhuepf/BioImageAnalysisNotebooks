@@ -18,3 +18,5 @@ data/tif_folder/*
 schematics/Jaccard_index_sparse.png
 schematics/Jaccard_index_binary.png
 docs/29_algorithm_validation/ideas.ipynb
+docs/29_algorithm_validation/solution for exercise - metrics to investigate segmentation results.ipynb
+*.png
