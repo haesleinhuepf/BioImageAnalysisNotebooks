@@ -150,6 +150,7 @@ parts:
       - file: 20h_segmentation_post_processing/merging_labels_based_on_edge_to_edge_distance.ipynb
       - file: 20h_segmentation_post_processing/merge_objects_using_machine_learning
       - file: 20h_segmentation_post_processing/remove_labels_on_image_edges
+      - file: 20h_segmentation_post_processing/select_labels_based_on_size
       - file: 20h_segmentation_post_processing/select_labels
       - file: 20h_segmentation_post_processing/sequential_labeling
       - file: 20h_segmentation_post_processing/inner_and_outer_cell_borders
