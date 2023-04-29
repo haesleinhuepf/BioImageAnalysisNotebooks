@@ -158,6 +158,7 @@ parts:
       - file: 20h_segmentation_post_processing/select_labels
       - file:  20h_segmentation_post_processing/identify_labels_touching_background
       - file: 20h_segmentation_post_processing/sequential_labeling
+      
       - file: 20h_segmentation_post_processing/inner_and_outer_cell_borders
       - file: 20h_segmentation_post_processing/refine_cell_segmentation
       - file: 20h_segmentation_post_processing/mimicking_imagej_watershed
