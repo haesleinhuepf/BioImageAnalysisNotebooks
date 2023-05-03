@@ -6,5 +6,5 @@ It is however more common to apply some form of image segmentation in advance an
 
 See also
 * [Feature extraction (video)](https://youtu.be/dria4wCiaz0)
-* [Feature extraction blogpost](https://focalplane.biologists.com/2023/05/03/feature-extraction/)
+* [Feature extraction blogpost](https://focalplane.biologists.com/2023/05/03/feature-extraction-in-napari/)
 
