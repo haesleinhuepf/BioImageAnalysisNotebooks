@@ -181,6 +181,7 @@ parts:
       - file: 22_feature_extraction/quantitative_measurements
       - file: 22_feature_extraction/count_blobs
       - file: 22_feature_extraction/statistics_with_pyclesperanto
+      - file: 22_feature_extraction/statistics_with_scikit_image
       - file: 22_feature_extraction/statistics_with_simpleitk
       - file: 22_feature_extraction/comparison_of_measurements_from_different_libraries
       - file: 22_feature_extraction/measure_intensity_on_label_edges
