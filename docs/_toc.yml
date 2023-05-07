@@ -294,6 +294,12 @@ parts:
       - file: 35_parameter_optimization/optimization_basics
       - file: 35_parameter_optimization/label_image_optimizer
       - file: 35_parameter_optimization/membrane_segmentation
+      
+    - file: 07_prompt_engineering/readme
+      sections:
+      - file: 07_prompt_engineering/01_prompting
+      - file: 07_prompt_engineering/02_generating_images
+      - file: 07_prompt_engineering/03_generating_code
 
   - caption: Tabular data, plots and statistics
     chapters:
