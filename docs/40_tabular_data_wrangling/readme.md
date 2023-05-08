@@ -8,3 +8,6 @@ In this chapter, we will work with [pandas](https://pandas.pydata.org/) which ca
 ```
 conda install pandas
 ```
+
+See also
+* [Pandas Cheat Sheet](https://pandas.pydata.org/Pandas_Cheat_Sheet.pdf)
