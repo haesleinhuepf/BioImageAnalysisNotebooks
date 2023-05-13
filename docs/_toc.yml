@@ -300,6 +300,9 @@ parts:
       - file: 07_prompt_engineering/01_prompting
       - file: 07_prompt_engineering/02_generating_images
       - file: 07_prompt_engineering/03_generating_code
+      - file: 07_prompt_engineering/04_generating_code_for_processing_images
+      - file: 07_prompt_engineering/05_generating_advanced_image_processing_code
+      - file: 07_prompt_engineering/20_langchain
 
   - caption: Tabular data, plots and statistics
     chapters:
