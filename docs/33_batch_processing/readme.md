@@ -1,1 +1,5 @@
 # Batch processing
+
+[Batch processing](https://www.investopedia.com/terms/b/batch-processing.asp) comes into play when we want to process multiple images in the same way.
+One example of batch processing would be to loop over a folder of images using a for-loop to apply a segmentation-workflow.
+
