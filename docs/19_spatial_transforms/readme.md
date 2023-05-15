@@ -4,3 +4,4 @@ Whenever we need to change the voxel size of images or move/rotate their content
 
 See also
 * [Image registration (video)](https://youtu.be/3CGC-5vwraM)
+* [Rescaling images and pixel (an)isotropy blog post](https://focalplane.biologists.com/2023/03/02/rescaling-images-and-pixel-anisotropy/)
