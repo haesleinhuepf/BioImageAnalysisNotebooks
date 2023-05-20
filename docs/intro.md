@@ -3,11 +3,11 @@
 
 This collection of [Python](https://www.python.org/)
 [jupyter](https://jupyter.org/) notebooks are written for Python beginners who are interested in 
-analyzing three dimensional images of cells and tissues acquired using modern fluorescence microscopes. 
-It is written for biologists, biochemists and biophysicists. 
+analyzing three dimensional images of cells, tissues, organoids and organisms acquired using modern fluorescence microscopes. 
+Basic principles are demonstrated in two-dimensional image data and more sophisticated examples applied to three-dimensional image data and time-lapse data sets.
+This book is written for biologists, biochemists and biophysicists. 
 We introduce the technical language computer scientists and data scientists use when describing image segmentation, scientific computing and image data science.
-Special emphasis is put on image data showing cells and nuclei forming tissues, organoids and organisms. 
-Basic principles are demonstrated in two-dimensional image data and more sophisticated examples demonstrate the basic principles in three-dimensional image data and time-lapse data sets.
+In case you see room for improvement, please [create a github issue](https://github.com/haesleinhuepf/BioImageAnalysisNotebooks/issues) and/or consider [contributing](https://github.com/haesleinhuepf/BioImageAnalysisNotebooks/blob/main/CONTRIBUTING.md).
 
 ## Structure of this Jupyter book
 
