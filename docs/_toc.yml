@@ -137,10 +137,10 @@ parts:
       - file: 20a_pixel_classification/selecting_features
 
 
-    #- file 20b_deep_learning/readme
-    #  sections:
-    #  - file: 20b_deep_learning/cellpose
-    #  - file: 20b_deep_learning/stardist
+    - file 20b_deep_learning/readme
+      sections:
+      - file: 20b_deep_learning/cellpose
+      - file: 20b_deep_learning/stardist
 
     - file: 20h_segmentation_post_processing/readme
       sections:
