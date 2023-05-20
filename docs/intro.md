@@ -123,6 +123,7 @@ We also thank authors who shared their teaching materials openly so that we coul
 * Ryan George Savill (MPI-CBG Dresden / PoL, TU Dresden)
 
 We want to acknowledge the people who produced the images we are using for demonstration purposes in this Jupyter book.
+* Alexandr Khrapichev, University of Oxford, UK
 * Anne Carpenter, Broad Institute, Boston, MA, United States
 * Anne Esslinger, Alberti Lab, MPI-CBG, Germany
 * Daniela Vorkel, Myers Lab, MPI-CBG / CSBD, Dresden, Germany

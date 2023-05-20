@@ -1,3 +1,4 @@
 jupyter-book>=0.7.0b
+sphinx-book-theme<1.0.0
 matplotlib
 numpy
