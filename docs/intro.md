@@ -43,6 +43,7 @@ the more we make use of custom open source libraries maintained by us and our co
 * [napari-process-points-and-surfaces](https://github.com/haesleinhuepf/napari-process-points-and-surfaces)
 * [napari-simpleitk-image-processing](https://github.com/haesleinhuepf/napari-simpleitk-image-processing)
 * [numpy](https://numpy.org/)
+* [Nyxus](https://nyxus.readthedocs.io/en/latest/)
 * [OpenAI API](https://openai.com/blog/openai-api)
 * [pandas](https://pandas.pydata.org/)
 * [pandasql](https://github.com/yhat/pandasql/)
