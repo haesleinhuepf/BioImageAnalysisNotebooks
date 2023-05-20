@@ -28,26 +28,40 @@ In the advanced topics we make use increasingly of GPU-acceleration libraries su
 The more the content shifts towards three-dimensional biological image processing and life-sciences specific quantitative analysis, 
 the more we make use of custom open source libraries maintained by us and our collaborators. 
 
-
+* [aicsimageio](https://github.com/AllenCellModeling/aicsimageio)
 * [apoc](https://github.com/haesleinhuepf/apoc)
 * [cupy](https://cupy.dev/)
+* [czifile](https://pypi.org/project/czifile/)
 * [dask](https://dask.org/)
 * [dask-image](http://image.dask.org/en/latest/)
+* [hdbscan](https://hdbscan.readthedocs.io/en/latest/how_hdbscan_works.html)
+* [langchain](https://python.langchain.com/en/latest/index.html)
 * [matplotlib](https://matplotlib.org/)
 * [napari](https://napari.org/)
 * [napari-cupy-image-processing](https://github.com/haesleinhuepf/napari-cupy-image-processing)
 * [napari-segment-blobs-and-things-with-membranes](https://github.com/haesleinhuepf/napari-segment-blobs-and-things-with-membranes)
+* [napari-process-points-and-surfaces](https://github.com/haesleinhuepf/napari-process-points-and-surfaces)
 * [napari-simpleitk-image-processing](https://github.com/haesleinhuepf/napari-simpleitk-image-processing)
 * [numpy](https://numpy.org/)
+* [OpenAI API](https://openai.com/blog/openai-api)
 * [pandas](https://pandas.pydata.org/)
+* [pandasql](https://github.com/yhat/pandasql/)
 * [pyclesperanto_prototype](https://github.com/clEsperanto/pyclesperanto_prototype)
 * [pycudadecon](https://github.com/tlambert03/pycudadecon)
+* [pyncclient](https://github.com/pragmaticindustries/pyncclient)
+* [pyocclient](https://github.com/owncloud/pyocclient)
+* [readlif](https://github.com/nimne/readlif)
 * [RedLionFish](https://github.com/rosalindfranklininstitute/RedLionfish/)
 * [scikit-image](http://scikit-image.org/)
 * [scikit-learn](https://scikit-learn.org)
 * [scipy](https://scipy.org/)
 * [seaborn](https://seaborn.pydata.org/)
 * [SimpleITK](https://simpleitk.readthedocs.io/en/master/)
+* [stackview](https://github.com/haesleinhuepf/stackview)
+* [statsmodels](https://www.statsmodels.org/stable/index.html)
+* [the-segmentation-game](https://github.com/haesleinhuepf/the-segmentation-game)
+* [umap-learn](https://umap-learn.readthedocs.io/en/latest/)
+* [vedo](https://vedo.embl.es/)
 * [zarr](https://zarr.readthedocs.io/en/stable/)
 
 ## Related works
@@ -114,26 +128,29 @@ If you want to discuss lessons in this Jupyter book, have feedback and/or sugges
 ## Acknowledgements
 
 We also thank authors who shared their teaching materials openly so that we could reuse and modify them:
-* Anna Poetsch (Biotec, TU Dresden)
-* Dominik Waithe (University of Oxford)
-* Guillaume Witz (University of Bern)
-* Johannes Müller (PoL, TU Dresden)
-* Laura Žigutytė (PoL, TU Dresden)
-* Pete Bankhead (University of Edinburgh)
-* Ryan George Savill (MPI-CBG Dresden / PoL, TU Dresden)
+* Anna Poetsch, Biotec, TU Dresden
+* Dominik Waithe, University of Oxford
+* Guillaume Witz, University of Bern
+* Johannes Müller, PoL, TU Dresden
+* Laura Žigutytė, PoL, TU Dresden
+* Pete Bankhead, University of Edinburgh
+* Ryan George Savill, MPI-CBG Dresden / PoL, TU Dresden
 
 We want to acknowledge the people who produced the images we are using for demonstration purposes in this Jupyter book.
+* Alba Villaronga Luque, MPI-CBG Dresden
 * Alexandr Khrapichev, University of Oxford, UK
 * Anne Carpenter, Broad Institute, Boston, MA, United States
 * Anne Esslinger, Alberti Lab, MPI-CBG, Germany
 * Daniela Vorkel, Myers Lab, MPI-CBG / CSBD, Dresden, Germany
 * David Legland, INRAE, UR BIA, Nantes, France
 * Jean-Karim Hériché, Cell Biology/Biophysics Unit, EMBL Heidelberg, Germany
+* Jesse Veenvliet, MPI-CBG Dresden
 * Mauricio Rocha Martins, Norden Lab, MPI-CBG, Germany
 * Nasreddin Abolmaali, OncoRay, TU Dresden, Germany
 * Sascha M. Kuhn, Nadler Lab, MPI-CBG Dresden, Germany
 * Theresa Suckert, OncoRay, University Hospital Carl Gustav Carus, TU Dresden
 * Tony Collins, the creator of ImageJ for Microscopy
+
 
 We acknowledge support by the Deutsche Forschungsgemeinschaft under Germany’s Excellence Strategy—EXC2068–Cluster of Excellence Physics of Life of TU Dresden.
 This project has been made possible in part by grant numbers 2021-240341, 2021-237734 and 2022-252520 from the Chan Zuckerberg Initiative DAF, an advised fund of the Silicon Valley Community Foundation.

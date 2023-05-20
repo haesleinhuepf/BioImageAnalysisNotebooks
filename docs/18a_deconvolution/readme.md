@@ -8,7 +8,7 @@ We will demonstrate the principles in two dimensional images. It shall be highli
 We will use [RedLionFish](https://github.com/rosalindfranklininstitute/RedLionfish) and [SimpleITK](https://simpleitk.readthedocs.io/) for deconvolving images. For the ease-of-use, we will work with the latter via a convenience layer, [napari-simpleitk-image-processing](https://github.com/haesleinhuepf/napari-simpleitk-image-processing). Enter these commands inn the terminal to install everything:
 
 ```
-conda install reikna pyopencl -c conda-forge
+mamba install reikna pyopencl -c conda-forge
 pip install redlionfish
 pip install napari-simpleitk-image-processing
 ```
@@ -19,7 +19,7 @@ pip install napari-simpleitk-image-processing
 In one notebook we will also use NVidia CUDA for deconvolution. If your graphics processing unit supports cuda, feel free to install [pycudadecon](https://github.com/tlambert03/pycudadecon).
 
 ```
-conda install -c conda-forge pycudadecon
+mamba install -c conda-forge pycudadecon
 ```
 -->
 
