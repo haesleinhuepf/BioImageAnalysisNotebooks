@@ -292,6 +292,7 @@ parts:
     - file: 34_timelapse_analysis/readme
       sections:
       - file: 34_timelapse_analysis/intensity_over_time
+      - file: 34_timelapse_analysis/tracking
       
     - file: 35_parameter_optimization/readme
       sections:
