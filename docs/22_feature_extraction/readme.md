@@ -5,4 +5,3 @@ It is however more common to apply some form of image segmentation in advance an
 
 See also
 * [Feature extraction (video)](https://youtu.be/dria4wCiaz0)
-* [Feature extraction in napari blog post](Feature extraction in napari)
