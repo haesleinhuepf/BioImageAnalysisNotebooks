@@ -10,8 +10,8 @@ The presented methods such as dimensionality reduction, scaling and clustering a
 
 ## Installation
 We will use the libraries [scikit-learn](https://scikit-learn.org/), [umap_learn](https://umap-learn.readthedocs.io/) and [hdbscan](https://hdbscan.readthedocs.io/). For data visualization we will be using [seaborn](https://seaborn.pydata.org/).
-All can be installed using conda.
+All can be installed using mamba/conda.
 
 ```
-conda install scikit-learn umap-learn hdbscan seaborn
+mamba install scikit-learn umap-learn hdbscan seaborn
 ```

@@ -16,8 +16,7 @@ sudo apt install ocl-icd-opencl-dev
 
 Afterwards, installation can proceed using conda _and_ pip:
 ```
-conda install -c conda-forge pyopencl
-pip install pyclesperanto-prototype
+mamba install -c conda-forge l pyclesperanto-prototype
 ```
 
 Afterwards, you can test it for example by executing these commands in a python script or jupyter notebook:
@@ -34,8 +33,8 @@ Also feel free to install the [napari-pyclesperanto-assistant plugin in napari](
 In this chapter, we will also take a look at [cupy](https://cupy.dev), an [NVidia CUDA](https://en.wikipedia.org/wiki/CUDA) based GPU-accelerated processing library and [napari-cupy-image-processing](https://github.com/haesleinhuepf/napari-cupy-image-processing), a scriptable napari plugin. These two can be installed using the following commands. This will however only work on computers that have a CUDA-compatible NVidia graphics card.
 
 ```
-conda install -c conda-forge cupy cudatoolkit=10.2
-conda install -c conda-forge napari
+mamba install -c conda-forge cupy cudatoolkit=10.2
+mamba install -c conda-forge napari
 pip install napari-cupy-image-processing
 ```
 

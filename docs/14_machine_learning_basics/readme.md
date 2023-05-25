@@ -7,5 +7,5 @@ To get a wider perspective on available algorithms and methods, the reader is re
 ## Python libraries used in this chapter
 We will use [scikit-learn](https://scikit-learn.org/) which can be installed like this:
 ```
-conda install scikit-learn
+mamba install scikit-learn
 ```

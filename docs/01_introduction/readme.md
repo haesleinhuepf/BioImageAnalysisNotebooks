@@ -10,6 +10,7 @@ If you install some software into one Conda environment, it may not be accessibl
 If a Conda environment breaks, e.g. incompatible software was installed, you can just make a new one and start over.
 
 See also
+* [Getting started with Mambaforge and Python](https://biapol.github.io/blog/mara_lampert/getting_started_with_mambaforge_and_python/readme.html)
 * [Managing Scientific Python environments using Conda, Mamba and friends](https://focalplane.biologists.com/2022/12/08/managing-scientific-python-environments-using-conda-mamba-and-friends/)
 * [Scientific Data Analysis with Python](https://youtu.be/MOEPe9TGBK0)
 
@@ -41,7 +42,7 @@ Afterwards you can enter the environment to work with it.
 Whenever you want to work on the same project again, you should start a command line and enter this:
 
 ```
-conda activate devbio-napari-env
+mamba activate devbio-napari-env
 ```
 
 Start [Jupyter lab](https://jupyter.org/) from the terminal like this
