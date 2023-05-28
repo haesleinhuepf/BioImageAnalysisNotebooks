@@ -291,6 +291,11 @@ parts:
     #  - file: 27_cell_classification/cell_classification
     #  - file: 27_cell_classification/cell_classification_correction.ipynb
 
+    - file: 34_timelapse_analysis/readme
+      sections:
+      - file: 34_timelapse_analysis/intensity_over_time
+      - file: 34_timelapse_analysis/tracking
+      
     - file: 35_parameter_optimization/readme
       sections:
       - file: 35_parameter_optimization/optimization_basics
