@@ -338,6 +338,7 @@ parts:
       - file: 41_descriptive_statistics/basic_descriptive_statistics
       - file: 41_descriptive_statistics/descriptive_statistics_label_images
       - file: 41_descriptive_statistics/Bland_altman_analysis
+      - file: 41_descriptive_statistics/docs/41_descriptive_statistics/bland_altman_simulated_data
       - file: 41_descriptive_statistics/bland_altman_on_folders_of_images
 
     # - file: 44_hypothesis_testing/readme
