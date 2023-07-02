@@ -239,6 +239,7 @@ parts:
       - file: 29_algorithm_validation/scenario_otsu_segmentation
       - file: 29_algorithm_validation/visual_comparison
       - file: 29_algorithm_validation/quantiative_comparison
+      - file: 29_algorithm_validation/jaccard_index_versus_accuracy
 
     - file: 30_simulating_data/readme
       sections:
