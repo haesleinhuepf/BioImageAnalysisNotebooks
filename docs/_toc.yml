@@ -120,6 +120,7 @@ parts:
 
       - file: 20_image_segmentation/10_touching_objects_labeling
       - file: 20_image_segmentation/11_voronoi_otsu_labeling
+      - file: 20_image_segmentation/voronoi_otsu_labeling_for_binary_images.ipynb
 
       - file: 20_image_segmentation/11a_eroded_otsu_labeling
       - file: 20_image_segmentation/segmentation_2d_membranes
