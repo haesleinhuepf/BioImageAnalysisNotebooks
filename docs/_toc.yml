@@ -314,6 +314,7 @@ parts:
       - file: 07_prompt_engineering/04_generating_code_for_processing_images
       - file: 07_prompt_engineering/05_generating_advanced_image_processing_code
       - file: 07_prompt_engineering/20_langchain
+      - file: 07_prompt_engineering/30_langchain_bia.ipynb
 
   - caption: Tabular data, plots and statistics
     chapters:
