@@ -322,7 +322,7 @@ parts:
     chapters:
     - file: 70_workflows/readme
       sections:
-      - file: 70_workflows/napari-assitant
+      - file: 70_workflows/napari-assistant
       - file: 70_workflows/notebook_export
       - file: 70_workflows/napari_workflows
     
