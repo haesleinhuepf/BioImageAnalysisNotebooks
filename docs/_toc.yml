@@ -256,7 +256,6 @@ parts:
       - file: 03_advanced_python/custom_libraries
       - file: 03_advanced_python/functional_parameters
       - file: 03_advanced_python/partial
-      - file: 03_advanced_python/napari_workflows
       - file: 03_advanced_python/parallelization
       - file: 03_advanced_python/owncloud
 
@@ -317,7 +316,17 @@ parts:
       - file: 07_prompt_engineering/20_langchain
       - file: 07_prompt_engineering/30_langchain_bia
       - file: 07_prompt_engineering/30_langchain_bia_choosing_algorithms
-
+      
+      
+  - caption: Workflow automation
+    chapters:
+    - file: 70_workflows/readme
+      sections:
+      - file: 70_workflows/napari-assitant
+      - file: 70_workflows/notebook_export
+      - file: 70_workflows/napari_workflows
+    
+    
   - caption: Tabular data, plots and statistics
     chapters:
     - file: 40_tabular_data_wrangling/readme
