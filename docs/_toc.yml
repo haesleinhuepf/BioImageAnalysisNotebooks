@@ -316,6 +316,7 @@ parts:
       - file: 07_prompt_engineering/20_langchain
       - file: 07_prompt_engineering/30_langchain_bia
       - file: 07_prompt_engineering/30_langchain_bia_choosing_algorithms
+      - file: 07_prompt_engineering/80_llm_fine_tuning
       
       
   - caption: Workflow automation
