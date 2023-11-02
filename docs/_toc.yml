@@ -99,6 +99,8 @@ parts:
       - file: 19_spatial_transforms/affine_transforms_scipy
       - file: 19_spatial_transforms/affine_transforms_cupy
       - file: 19_spatial_transforms/affine_transforms_clesperanto
+      - file: 19_spatial_transforms/scaling_coordinate_lists
+      - file: 19_spatial_transforms/downsampling_with_denoising
     #  - file: 19_spatial_transforms/transpose
 
   - caption: Image Segmentation
@@ -118,6 +120,7 @@ parts:
 
       - file: 20_image_segmentation/10_touching_objects_labeling
       - file: 20_image_segmentation/11_voronoi_otsu_labeling
+      - file: 20_image_segmentation/voronoi_otsu_labeling_for_binary_images.ipynb
 
       - file: 20_image_segmentation/11a_eroded_otsu_labeling
       - file: 20_image_segmentation/segmentation_2d_membranes
@@ -238,6 +241,7 @@ parts:
       - file: 29_algorithm_validation/scenario_otsu_segmentation
       - file: 29_algorithm_validation/visual_comparison
       - file: 29_algorithm_validation/quantiative_comparison
+      - file: 29_algorithm_validation/jaccard_index_versus_accuracy
 
     - file: 30_simulating_data/readme
       sections:
@@ -252,7 +256,6 @@ parts:
       - file: 03_advanced_python/custom_libraries
       - file: 03_advanced_python/functional_parameters
       - file: 03_advanced_python/partial
-      - file: 03_advanced_python/napari_workflows
       - file: 03_advanced_python/parallelization
       - file: 03_advanced_python/owncloud
 
@@ -311,7 +314,20 @@ parts:
       - file: 07_prompt_engineering/04_generating_code_for_processing_images
       - file: 07_prompt_engineering/05_generating_advanced_image_processing_code
       - file: 07_prompt_engineering/20_langchain
-
+      - file: 07_prompt_engineering/30_langchain_bia
+      - file: 07_prompt_engineering/30_langchain_bia_choosing_algorithms
+      - file: 07_prompt_engineering/80_llm_fine_tuning
+      
+      
+  - caption: Workflow automation
+    chapters:
+    - file: 70_workflows/readme
+      sections:
+      - file: 70_workflows/napari-assistant
+      - file: 70_workflows/notebook_export
+      - file: 70_workflows/napari_workflows
+    
+    
   - caption: Tabular data, plots and statistics
     chapters:
     - file: 40_tabular_data_wrangling/readme
@@ -336,6 +352,8 @@ parts:
       - file: 41_descriptive_statistics/basic_descriptive_statistics
       - file: 41_descriptive_statistics/descriptive_statistics_label_images
       - file: 41_descriptive_statistics/Bland_altman_analysis
+      - file: 41_descriptive_statistics/docs/41_descriptive_statistics/bland_altman_simulated_data
+      - file: 41_descriptive_statistics/bland_altman_on_folders_of_images
 
     # - file: 44_hypothesis_testing/readme
     #   sections:
@@ -362,7 +380,6 @@ parts:
       - file: 51_plotting/plotting_seaborn
       - file: 51_plotting/plotting_distributions
       - file: 51_plotting/multivariate_views
-      - file: 51_plotting/bland_altman_analysis
     # plotly
 
     - file: 60_data_visualization/readme

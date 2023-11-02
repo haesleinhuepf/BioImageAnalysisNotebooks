@@ -10,7 +10,7 @@ The OpenAI API and LangChain can be installed using pip.
 
 ```
 pip install openai
-pip install langchain
+pip install langchain>=0.0.251
 ```
 
 In order to make it to work, you need to get a [paid] subscription to the [openAI API](https://openai.com/blog/openai-api). Note: Executing the notebooks in this chapter may cost actual money.
