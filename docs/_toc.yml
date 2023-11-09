@@ -202,6 +202,7 @@ parts:
       - file: 22_feature_extraction/shape_descriptors_based_on_neighborhood_graphs 
       - file: 22_feature_extraction/distance_features
       - file: 22_feature_extraction/distance_from_center
+      - file: 22_feature_extraction/distance_along_line
 
 
     - file: 25_neighborhood_relationships_between_cells/readme
