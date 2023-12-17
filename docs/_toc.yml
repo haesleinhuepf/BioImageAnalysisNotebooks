@@ -310,6 +310,7 @@ parts:
     - file: 07_prompt_engineering/readme
       sections:
       - file: 07_prompt_engineering/01_prompting
+      - file: 07_prompt_engineering/01_use_cases
       - file: 07_prompt_engineering/02_generating_images
       - file: 07_prompt_engineering/02_generating_mri_images.ipynb
       - file: 07_prompt_engineering/03_generating_code
@@ -318,7 +319,16 @@ parts:
       - file: 07_prompt_engineering/20_langchain
       - file: 07_prompt_engineering/30_langchain_bia
       - file: 07_prompt_engineering/30_langchain_bia_choosing_algorithms
+      - file: 07_prompt_engineering/40_bia_bob
+      - file: 07_prompt_engineering/41_bug_fixing
+      - file: 07_prompt_engineering/42_documenting_code
+      - file: 07_prompt_engineering/45_prompting_pandas
+      - file: 07_prompt_engineering/50_inpainting_darth_d
+      - file: 07_prompt_engineering/50_inpainting_huggingface
+      - file: 07_prompt_engineering/60_image_variations_huggingface
+      - file: 07_prompt_engineering/60_image_variations_darth_d
       - file: 07_prompt_engineering/80_llm_fine_tuning
+      - file: 07_prompt_engineering/99_versions
       
       
   - caption: Workflow automation
