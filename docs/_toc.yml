@@ -327,6 +327,7 @@ parts:
       - file: 07_prompt_engineering/50_inpainting_darth_d
       - file: 07_prompt_engineering/50_inpainting_huggingface
       - file: 07_prompt_engineering/60_image_variations_huggingface
+      - file: 07_prompt_engineering/60_image_variations_pix2pix
       - file: 07_prompt_engineering/60_image_variations_darth_d
       - file: 07_prompt_engineering/80_llm_fine_tuning
       - file: 07_prompt_engineering/99_versions
