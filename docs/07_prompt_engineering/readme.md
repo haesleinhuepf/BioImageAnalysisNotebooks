@@ -9,7 +9,7 @@ Note: Generated text/code/images are not always reproducible. I had to execute s
 The OpenAI API and LangChain can be installed using mamba and pip.
 
 ```
-mamba install openai==1.5.0
+mamba install openai==1.5.0 -c conda-forge
 ```
 
 ```
