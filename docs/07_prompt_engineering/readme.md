@@ -26,13 +26,13 @@ mamba install pytorch torchvision torchaudio pytorch-cuda=11.8 -c pytorch -c nvi
 ```
 
 ```
-mamba install diffusers==0.24.0
+pip install diffusers==0.24.0
 ```
 
 Darth-d can be installed using mamba:
 
 ```
-mamba install darth-d==0.4.0
+mamba install darth-d==0.4.0 -c conda-forge
 ```
 
 
