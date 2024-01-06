@@ -65,6 +65,10 @@ the more we make use of custom open source libraries maintained by us and our co
 * [vedo](https://vedo.embl.es/)
 * [zarr](https://zarr.readthedocs.io/en/stable/)
 
+## Bio-image Analysis GPT
+
+This collection of Jupyter notebooks serves to create the [Bio-image Analysis GPT](https://chat.openai.com/g/g-psAohb1OY-bio-image-analysis), some chatGPT based chat bot specialized in Bio-image Analysis using Python.
+
 ## Related works
 
 This is not the first collection of Python Jupyter notebooks and teaching materials focusing on Bio-image Analysis and related fields. There are other amazing resources, where also we learned from. Additionally, we also produced materials before which are available online and will certainly overlap with this Jupyter book.
