@@ -210,6 +210,7 @@ parts:
       - file: 25_neighborhood_relationships_between_cells/01_neighborhood_definitions
       - file: 25_neighborhood_relationships_between_cells/05_count_touching_neighbors
       - file: 25_neighborhood_relationships_between_cells/statistics_of_neighbors
+      - file: 25_neighborhood_relationships_between_cells/regional_properties.ipynb
       - file: 25_neighborhood_relationships_between_cells/06_mesh_with_distances  
       - file: 25_neighborhood_relationships_between_cells/touch_portion_explained
       - file: 25_neighborhood_relationships_between_cells/distance_to_other_labels
