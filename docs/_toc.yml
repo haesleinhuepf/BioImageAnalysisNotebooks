@@ -53,6 +53,13 @@ parts:
       - file: 12a_image_file_formats/tiled_image_file_formats_zarr
       - file: 12a_image_file_formats/image_file_formats
 
+    - file: 12b_remote_files/readme
+      sections: 
+      - file: 12b_remote_files/nextcloud
+      - file: 12b_remote_files/exploring_bioimage_archive
+      - file: 12b_remote_files/exploring_idr
+
+
     #  - file: 12_image_analysis_basics/skeletonization
     # todo: https://github.com/jni/skan
     #  - file: 12_image_analysis_basics/analyse_banana_data_set
@@ -261,7 +268,6 @@ parts:
       - file: 03_advanced_python/functional_parameters
       - file: 03_advanced_python/partial
       - file: 03_advanced_python/parallelization
-      - file: 03_advanced_python/owncloud
 
     - file: 15_gpu_acceleration/readme
       sections:
