@@ -58,6 +58,8 @@ parts:
       - file: 12b_remote_files/nextcloud
       - file: 12b_remote_files/exploring_bioimage_archive
       - file: 12b_remote_files/exploring_idr
+      - file: 12b_remote_files/exploring_zenodo
+      - file: 12b_remote_files/exploring_doi
 
 
     #  - file: 12_image_analysis_basics/skeletonization
