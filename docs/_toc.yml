@@ -110,6 +110,7 @@ parts:
       - file: 19_spatial_transforms/affine_transforms_clesperanto
       - file: 19_spatial_transforms/scaling_coordinate_lists
       - file: 19_spatial_transforms/downsampling_with_denoising
+      - file: 19_spatial_transforms/stitching_linear_blending
     #  - file: 19_spatial_transforms/transpose
 
   - caption: Image Segmentation
