@@ -154,7 +154,10 @@ parts:
       sections:
       - file: 20b_deep_learning/cellpose
       - file: 20b_deep_learning/stardist
-      - file: 20b_deep_learning/vision_models
+      
+    - file: 20b_deep_learning/readme
+      sections:      
+      - file: docs/20c_vision_models/vision_models.ipynb
 
     - file: 20h_segmentation_post_processing/readme
       sections:
