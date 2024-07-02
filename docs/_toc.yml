@@ -281,7 +281,6 @@ parts:
       sections:
       - file: 15_gpu_acceleration/clesperanto
       - file: 15_gpu_acceleration/why_GPU_acceleration
-      - file: 15_gpu_acceleration/cupy
       - file: 15_gpu_acceleration/memory_management
       - file: 15_gpu_acceleration/further_reading
       
