@@ -82,6 +82,7 @@ parts:
     - file: 18_image_filtering/readme
       sections:
       - file: 18_image_filtering/image_filtering
+      - file: 18_image_filtering/filter_overview
       #- file: 18_image_filtering/01_Filtering # obsolete
       - file: 18_image_filtering/convolution
       - file: 18_image_filtering/02_noise_removal
