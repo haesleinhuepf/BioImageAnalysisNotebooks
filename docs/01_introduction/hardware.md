@@ -2,7 +2,7 @@
 
 Though Python is runnable on most of modern operating systems (OS) including Windows, MacOS and Linux, it is beneficial to keep scripting under *nix environment. Here we provide a guide for beginners to choose your computing hardwares.
 
-This guide is intentionally written for programming beginners to code locally. For advance research units equips with python servers we will cover a series of remote coding techniques to unleash more complex bioimage analysis.
+This guide is intentionally written for programming beginners to code locally. For advance research units equip with python servers, we will cover a series of remote coding techniques to unleash more complex bioimage analysis.
 
 ## Shell Scripting
 For historical reason the command line (CLI) batch scripting is divided into unix-like bash (MacOS, Linux) and DOS-like Powershell (Windows). For Windows users it is always recommended to run Python alongside with Git bash (https://git-scm.com/downloads) that maximally mimic the running *nix running environment.
@@ -21,7 +21,7 @@ With the seamless integration of bash terminal, remote SSH and Jupyter extension
   <p><em>Architecture of Apple Silcon M1 SoC</em></p>
 </div>
 
-Modern days computer CPUs are more lean to a System-on-a-Chip (SoC) then integrates all major components of a computing device including CPU, GPU, NPU and RAM. The physically compactness brings shorter communication route among each computing units, hence facilitate computing performance.
+Modern days computer CPUs are more lean to a System-on-a-Chip (SoC) that integrates all major components of a computing device including CPU, GPU, NPU and RAM. The physically compactness brings shorter communication route among each computing units, hence facilitate computing performance.
 
 However the SoCs may still classified by the CPUs instruction sets, mainly x86 and ARM. Python libraries natively built on one of the architecture may not be directly runnable on the other, unless with OS layer translation or code compilation from source. i.e. Legacy x86 Python libraries may not be runnable on ARM computers. For power performance reason we see chipset manufacturers are releasing new SoCs in ARM architecture, yet most of the existing bioimage analysis software are pre-compiled in x86. With the effort of Apple Rosetta 2, the issue is more relieved yet not 100% compatible. So bare in mind in choosing the adequate CPU for your analysis work.
 
