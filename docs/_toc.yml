@@ -8,6 +8,7 @@ parts:
   - caption: Basics
     chapters:
     - file: 01_introduction/trailer
+    - file: 01_introduction/hardware
     - file: 01_introduction/readme
 
     - file: 02_python_basics/readme
