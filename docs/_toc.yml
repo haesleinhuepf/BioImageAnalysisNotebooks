@@ -8,7 +8,6 @@ parts:
   - caption: Basics
     chapters:
     - file: 01_introduction/trailer
-    - file: 01_introduction/hardware
     - file: 01_introduction/readme
 
     - file: 02_python_basics/readme
@@ -278,6 +277,7 @@ parts:
       - file: 03_advanced_python/partial
       - file: 03_advanced_python/parallelization
       - file: 03_advanced_python/numba
+      - file: 03_advanced_python/shell_scripting
 
     - file: 15_gpu_acceleration/readme
       sections:
@@ -285,7 +285,7 @@ parts:
       - file: 15_gpu_acceleration/why_GPU_acceleration
       - file: 15_gpu_acceleration/memory_management
       - file: 15_gpu_acceleration/further_reading
-      
+
     - file: 31_graphical_user_interfaces/readme
       sections:
       - file: 31_graphical_user_interfaces/napari
@@ -428,5 +428,10 @@ parts:
   - caption: Appendix
     chapters:
     - file: 01_introduction/glossary
-
     - file: imprint
+    file: 80_hardware/readme
+    sections:
+      - file: 15_gpu_acceleration/hardware
+      - file: 15_gpu_acceleration/arch
+      - file: 15_gpu_acceleration/gpu
+      - file: 15_gpu_acceleration/npu
