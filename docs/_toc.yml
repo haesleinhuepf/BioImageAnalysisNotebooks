@@ -429,7 +429,7 @@ parts:
     chapters:
     - file: 01_introduction/glossary
     - file: imprint
-    file: 80_hardware/readme
+    - file: 80_hardware/readme
     sections:
       - file: 15_gpu_acceleration/hardware
       - file: 15_gpu_acceleration/arch
