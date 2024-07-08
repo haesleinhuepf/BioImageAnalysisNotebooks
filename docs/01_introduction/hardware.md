@@ -17,8 +17,8 @@ With the seamless integration of bash terminal, remote SSH and Jupyter extension
 
 ## Processor Chipset Architecture
 <div style="text-align: center;">
-  <img src="./Apple-M1-Chip.jpg" alt="Placeholder Image" style="width:50%;">
-  <p><em>Architecture of Apple Silcon M1 SoC</em></p>
+  <img src="./SoC.png" alt="Placeholder Image" style="width:50%;">
+  <p><em>Intel Meteror Lake processor architecture. Modern day IC vendors tends to integrate various computation components on one single chipset to facilitate performance. When performing bioimage analysis we often utilise the processor's different computational units. Certain processor architectures facilitate more one specific tasks, e.g. image decode/encode tasks can take advantage of Intel Integrated Performance Primitives (IPP) library with hardware level accelerations.</em></p>
 </div>
 
 Modern days computer CPUs are more lean to a System-on-a-Chip (SoC) that integrates all major components of a computing device including CPU, GPU, NPU and RAM. The physically compactness brings shorter communication route among each computing units, hence facilitate computing performance.
@@ -48,8 +48,8 @@ Though all SoC manufacturers embeds GPU in the chipset, the AI based analysis is
 Machine learning algorithms consists of two parts: model training and inference. The computation resources for a fixed AI model to be implemented in new data are much smaller than training from scratch. On smaller AI tasks non-CUDA chipsets bring larger options for bioimage analysis. The inference of neural network based AI can be physically accelerated with specifically designed circuits. Such designs are often referred as neural processing units (NPU). NVidia, specifically added Tensor Core in bundle with optimised packages like cuDNN and Transformer Engine, to their later GPU products. We will cover this topic on the later of the article.
 
 <div style="text-align: center;">
-  <img src="./tensor_core.gif" alt="Placeholder Image" style="width:50%;">
-  <p><em>NVidia Tensor Core for neural network acceleration</em></p>
+  <img src="./npu.png" alt="Placeholder Image" style="width:50%;">
+  <p><em>General Matrix Multiplication (GEMM) as the fundamental building block of neural network (NN) operations. The math basis of NNs and image manipulation are similar embarrassingly parallel tasks involving matrices, leading GPU widely used in many machine learning tasks.</em></p>
 </div>
 
 ### GPGPU Acceleration
@@ -59,8 +59,8 @@ One high level analysis package [py-clesperanto](https://github.com/clEsperanto/
 
 ## Neural Processing Unit (NPU)
 <div style="text-align: center;">
-  <img src="./tpu.png" alt="Placeholder Image" style="width:50%;">
-  <p><em>Google Carol TPU AI  chipset on Raspberry Pi. Enables edge computing acceleration like smart microscopy that requires automated bioimage analysis during image acquisition.</em></p>
+  <img src="./npu_2.png" alt="Placeholder Image" style="width:50%;">
+  <p><em>Schematic depiction of the outter matrix product AB of two matrices A and B. NPUs implement GEMMs by partitioning the output matrix into tiles, which are then parallel loaded from memory buffer, multiplied and accumulated into output. </em></p>
 </div>
 
 A Neural Processing Unit (NPU) is a specialized hardware accelerator designed to efficiently handle the computational demands of AI and machine learning tasks, particularly neural network inference and training. NPUs are optimized for the types of operations commonly used in deep learning, such as matrix multiplications, convolutions, and activation functions. In mid-2024 the NPUs are embedded in various SoCs, allowing a wider choice in AI applications.
