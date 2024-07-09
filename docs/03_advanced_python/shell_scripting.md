@@ -1,9 +1,14 @@
 # Shell Scripting
-Shell scripting involves writing scripts for the command-line interpreter, known as the shell, on Unix-based systems and Windows. These scripts automate tasks such as file manipulation, program execution, and text processing. Common Unix shells include Bash, Zsh, and Ksh, while Windows uses Command Prompt (cmd) and PowerShell. Shell scripts start with a shebang (`#!`) on Unix or a suitable extension like `.bat` or `.ps1` on Windows. They use variables, loops, and conditionals to control flow. Commands like `echo`, `grep`, and `awk` are common on Unix, while `Write-Output`, `Get-Content`, and `ForEach-Object` are used in PowerShell. This is very often used together with Python scripts to automate batch analysis.
+Shell scripting involves writing scripts for the command-line interpreter, known as the shell, on Unix-based systems and Windows. These scripts automate tasks such as file manipulation, program execution, and text processing. Common Unix shells include `Bash`, `Zsh`, and `Ksh`, while Windows uses Command Prompt (`cmd`) and PowerShell. 
+
+Shell scripts start with a shebang (`#!`) and extensions of `sh` on Unix and `.bat` or `.ps1` on Windows. Commands like `echo`, `grep`, and `awk` are common on Unix, while `Write-Output`, `Get-Content`, and `ForEach-Object` are used in PowerShell. This is very often used together with Python scripts and Jupyter notebook magics to automate batch analysis.
+
+```python
+# Running Python pip installation from Jupyter notebook with shell command
+%pip install matplotlib
+```
 
 For Windows users it is highly recommended to run Python alongside with Git bash (https://git-scm.com/downloads) that maximally mimic the running *nix running environment.
-
-With the seamless integration of bash terminal, remote SSH and Jupyter extension in VSCode, the experience of different operating systems does not differ very much. But under certain special occasions like 2FA security login to computing clusters, Linux or MacOS can retain a better experience with *nix specialised functions like SSH sockets for connection persistence.
 
 ## Summary Table on OS and Shell Scipts
 | Operating System | Terminal Emulator            | Default Shell    | Additional Shells                   | Pros                                                                         | Cons                                                               |
