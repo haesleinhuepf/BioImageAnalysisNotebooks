@@ -108,7 +108,7 @@ For example an algorithm that takes manually generated image annotations from hu
 
 ## Matrix
 
-Multi-dimensional array of values. Two-dimensional matrices can be interpreted as images. Three dimensional matrices are commonly called image stacks. Matrices of higher dimensionalty are also called hyperstacks. 
+Multi-dimensional array of values. Two-dimensional matrices can be interpreted as images. Three dimensional matrices are commonly called image stacks. Matrices of higher dimensionality are also called hyperstacks. 
 
 ## Parametric image
 

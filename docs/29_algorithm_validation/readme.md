@@ -1,6 +1,6 @@
 # Algorithm validation
 
-In this chapter we will explore techniques for determining seqmentation quality and quality of spot detection algorithms.
+In this chapter we will explore techniques for determining segmentation quality and quality of spot detection algorithms.
 
 ## See also
 * [The Analysis of Method Comparison Studies (D.G. Altman and J.M. Bland 1983)](https://www-users.york.ac.uk/~mb55/meas/ab83.pdf)

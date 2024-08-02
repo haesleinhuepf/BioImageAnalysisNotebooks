@@ -1,6 +1,6 @@
 # Cell classification
 
-For classifying object such as cells and nuclei, a common procedure is to use feature extraction and afterwards machine learning algorithms such as Random Forest Classifiers for differentiating objects.
+For classifying objects such as cells and nuclei, a common procedure is to use feature extraction and afterwards machine learning algorithms such as Random Forest Classifiers for differentiating objects.
 
 ## Installation of required libraries
 
