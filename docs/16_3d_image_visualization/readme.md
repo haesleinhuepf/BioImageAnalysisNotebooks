@@ -1,6 +1,6 @@
 # Image visualization in 3D
 
-Visualizing three dimensional image data on a flat computer screen is challenging, especially when working with scripting languages such as Python. In this chapter we will introduce the concepts of slicing and projecting image data. Furthermore, we will start using the n-dimensional image viewer [napari](https://napari.org).
+Visualizing three-dimensional image data on a flat computer screen is challenging, especially when working with scripting languages such as Python. In this chapter, we will introduce the concepts of slicing and projecting image data. Furthermore, we will start using the n-dimensional image viewer [napari](https://napari.org).
 
 ## Installation of requirements
 

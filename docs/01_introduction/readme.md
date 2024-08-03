@@ -51,7 +51,7 @@ Start [Jupyter lab](https://jupyter.org/) from the terminal like this
 jupyter lab
 ```
 
-A browser will open and show you the following web page. In the sectiojn `Notebook` click on "Python 3 (ipykernel)" to create a new notebook:
+A browser will open and show you the following web page. In the section `Notebook` click on "Python 3 (ipykernel)" to create a new notebook:
 
 ![img.png](start_jupyter_lab.png)
 
@@ -108,4 +108,3 @@ pip install --upgrade pywin32==228
 ```
 
 [Source](https://github.com/conda/conda/issues/11503)
-
