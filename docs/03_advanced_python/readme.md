@@ -15,5 +15,5 @@ pip install napari-workflows
 In one example we will also use [numba](https://numba.pydata.org/) for compiling python code to speedup execution. 
 
 ```
-conda install numbar
+conda install numba
 ```
