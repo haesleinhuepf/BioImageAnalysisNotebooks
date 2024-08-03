@@ -1,6 +1,6 @@
 # Deep Learning based image segmentation
 
-In this chaper, we will use deep learning based algorithms for image segmentation. 
+In this chapter, we will use deep learning based algorithms for image segmentation. 
 
 ## Installation of requirements
 
