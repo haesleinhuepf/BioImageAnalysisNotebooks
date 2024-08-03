@@ -7,7 +7,7 @@ https://haesleinhuepf.github.io/BioImageAnalysisNotebooks
 
 It is maintained using [Jupyter lab](https://jupyterlab.readthedocs.io/en/stable/) and build using [Jupyter book](https://jupyterbook.org/intro.html).
 
-To edit this book, install depencencies like this:
+To edit this book, install dependencies like this:
 
 ```
 pip install pyclesperanto-prototype
@@ -36,5 +36,3 @@ chmod u+x ./clean.sh
 
 R.H. acknowledges support by the Deutsche Forschungsgemeinschaft under Germany’s Excellence Strategy—EXC2068–Cluster of Excellence Physics of Life of TU Dresden.
 This project has been made possible in part by grant numbers 2021-240341, 2021-237734 and 2022-252520 from the Chan Zuckerberg Initiative DAF, an advised fund of the Silicon Valley Community Foundation.
-
-
