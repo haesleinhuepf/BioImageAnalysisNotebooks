@@ -5,7 +5,7 @@ We will demonstrate the principles in two dimensional images. It shall be highli
 
 ## Installing requirements
 
-We will use [RedLionFish](https://github.com/rosalindfranklininstitute/RedLionfish) and [SimpleITK](https://simpleitk.readthedocs.io/) for deconvolving images. For the ease-of-use, we will work with the latter via a convenience layer, [napari-simpleitk-image-processing](https://github.com/haesleinhuepf/napari-simpleitk-image-processing). Enter these commands inn the terminal to install everything:
+We will use [RedLionFish](https://github.com/rosalindfranklininstitute/RedLionfish) and [SimpleITK](https://simpleitk.readthedocs.io/) for deconvolving images. For the ease-of-use, we will work with the latter via a convenience layer, [napari-simpleitk-image-processing](https://github.com/haesleinhuepf/napari-simpleitk-image-processing). Enter these commands in the terminal to install everything:
 
 ```
 mamba install reikna pyopencl -c conda-forge
@@ -25,5 +25,3 @@ mamba install -c conda-forge pycudadecon
 
 ## See also
 * [BioDIP Dresden, How to deconvolve images using Huygens](https://www.biodip.de/wiki/How_to_deconvolve_images_using_Huygens)
-
-
