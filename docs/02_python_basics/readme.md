@@ -10,4 +10,3 @@ See also
 * [Talley Lambert's introduction to Python (video)](https://nic.med.harvard.edu/python/)
 * [Talley Lambert's introduction to Python (github repository)](https://github.com/tlambert03/hms_pyintro2)
 * [Robert Haase's introduction to Scientific data analysis with Python (video)](https://youtu.be/MOEPe9TGBK0)
-
