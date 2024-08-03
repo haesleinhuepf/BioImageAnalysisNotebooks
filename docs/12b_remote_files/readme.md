@@ -1,5 +1,5 @@
 # Remote files
-In this section we will use the nextcloud client and the bia-explorer to download and upload data from/to the cloud.
+In this section we will use the Nextcloud client and the BIA-Explorer to download and upload data from/to the cloud.
 
 ## Installation of required libraries
 
