@@ -1,4 +1,4 @@
-# Writing substainable code
+# Writing sustainable code
 In this chapter we will learn how to write sustainable code.
 Sustainability comes from readability, maintainability and reusability.
 
