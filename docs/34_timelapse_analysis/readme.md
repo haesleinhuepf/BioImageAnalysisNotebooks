@@ -1,6 +1,6 @@
 # Timelapse analysis
 
-In this chapter we will analyse timelapse data. We start by processing data frame-by-frame and extracting features.
+In this chapter we will analyze timelapse data. We start by processing data frame-by-frame and extracting features.
 
 ## Installation of requirements
 
