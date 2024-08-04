@@ -28,7 +28,7 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install git-bob==0.1.1
+        pip install git-bob==0.1.2
 
     - name: Run Python
       env:
@@ -36,6 +36,7 @@ jobs:
         GIT_BOB_LLM_NAME: "gpt-4o-2024-05-13"
         OPENAI_API_KEY: "${{ secrets.OPENAI_API_KEY }}"
         GITHUB_API_KEY: "${{ secrets.GITHUB_TOKEN }}"
+        GITHUB_RUN_ID: "${{ github.run_id }}"
       run: |
         git-bob review-pull-request-action ${{ github.repository }} ${{ github.event.pull_request.number }}
 
