@@ -1,11 +1,9 @@
-name: deploy-book
+name: test-deploy-book
 
-# Only run this when the master branch changes
+# Only run this when the pull-request is coming
 on:
-  push:
-    branches:
-    - master
-    - main
+  pull_request:
+    types: [opened, synchronize]
 
 # This job installs dependencies, build the book, and pushes it to `gh-pages`
 jobs:
@@ -30,9 +28,3 @@ jobs:
       run: |
         jupyter-book build docs/
 
-    # Push the book's HTML to github-pages
-    - name: GitHub Pages action
-      uses: peaceiris/actions-gh-pages@v3.5.9
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./docs/_build/html
