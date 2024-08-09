@@ -155,6 +155,7 @@ parts:
       sections:
       - file: 20b_deep_learning/cellpose
       - file: 20b_deep_learning/stardist
+      - file: 20b_deep_learning/tensor_core
       
     - file: 20c_vision_models/readme
       sections:      
@@ -278,6 +279,7 @@ parts:
       - file: 03_advanced_python/partial
       - file: 03_advanced_python/parallelization
       - file: 03_advanced_python/numba
+      - file: 03_advanced_python/shell_scripting
 
     - file: 15_gpu_acceleration/readme
       sections:
@@ -285,7 +287,7 @@ parts:
       - file: 15_gpu_acceleration/why_GPU_acceleration
       - file: 15_gpu_acceleration/memory_management
       - file: 15_gpu_acceleration/further_reading
-      
+
     - file: 31_graphical_user_interfaces/readme
       sections:
       - file: 31_graphical_user_interfaces/napari
@@ -428,5 +430,10 @@ parts:
   - caption: Appendix
     chapters:
     - file: 01_introduction/glossary
-
     - file: imprint
+    - file: 80_hardware/readme
+    sections:
+      - file: 15_gpu_acceleration/hardware
+      - file: 15_gpu_acceleration/arch
+      - file: 15_gpu_acceleration/gpu
+      - file: 15_gpu_acceleration/npu
