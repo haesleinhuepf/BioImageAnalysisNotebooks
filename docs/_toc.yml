@@ -308,6 +308,7 @@ parts:
       sections: 
       - file: 33_batch_processing/12_process_folders
       - file: 33_batch_processing/14_process_timelapse
+      - file: 33_batch_processing/16_zip_folders.ipynb
     #  - file: 18_image_filtering/run_on_all_hyperslices
 
     #  - file: 27_cell_classification/cell_classification
