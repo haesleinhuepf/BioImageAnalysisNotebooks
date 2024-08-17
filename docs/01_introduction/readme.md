@@ -14,8 +14,8 @@ See also
 * [Managing Scientific Python environments using Conda, Mamba and friends](https://focalplane.biologists.com/2022/12/08/managing-scientific-python-environments-using-conda-mamba-and-friends/)
 * [Scientific Data Analysis with Python](https://youtu.be/MOEPe9TGBK0)
 
-## Step 1: Install Mambaforge
-Download and install Conda. We recommend the Conda distribution [Mambaforge](https://github.com/conda-forge/miniforge#mambaforge).
+## Step 1: Install Mini-conda
+Download and install Conda. We recommend the Conda distribution [mini-conda](https://docs.anaconda.com/miniconda/).
 
 For ease-of-use, it is recommended to install it for your use only and to add Conda to the PATH variable during installation.
 
@@ -30,7 +30,7 @@ We recommend installing [devbio-napari](https://github.com/haesleinhuepf/devbio-
 Use this command from the terminal:
 
 ```
-mamba create --name devbio-napari-env python=3.9 devbio-napari -c conda-forge
+conda create --name devbio-napari-env python=3.9 devbio-napari -c conda-forge
 ```
 
 **Tip**: It is recommended to create one environment for every project you are executing. 
@@ -42,7 +42,7 @@ Afterwards you can enter the environment to work with it.
 Whenever you want to work on the same project again, you should start a command line and enter this:
 
 ```
-mamba activate devbio-napari-env
+conda activate devbio-napari-env
 ```
 
 Start [Jupyter lab](https://jupyter.org/) from the terminal like this
@@ -84,11 +84,11 @@ Select the right driver source depending on your hardware from this list:
 
 Sometimes, mac-users need to install this:
 
-    mamba install -c conda-forge ocl_icd_wrapper_apple
+    conda install -c conda-forge ocl_icd_wrapper_apple
 
 Sometimes, linux users need to install this:
 
-    mamba install -c conda-forge ocl-icd-system
+    conda install -c conda-forge ocl-icd-system
 
 ## Troubleshooting: DLL load failed
 
