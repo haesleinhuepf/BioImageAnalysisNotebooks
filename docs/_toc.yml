@@ -405,6 +405,7 @@ parts:
       #- file: 47_clustering/dens_map
       #- file: 47_clustering/tissue_clustering
       - file: 47_clustering/interactive_dimensionality_reduction_and_clustering/readme
+      - file: 47_clustering/interpolating_between_feature_spaces
 
     - file: 51_plotting/readme
       sections:
