@@ -61,7 +61,6 @@ parts:
       - file: 12b_remote_files/exploring_zenodo
       - file: 12b_remote_files/exploring_doi
 
-
     #  - file: 12_image_analysis_basics/skeletonization
     # todo: https://github.com/jni/skan
     #  - file: 12_image_analysis_basics/analyse_banana_data_set
@@ -150,7 +149,6 @@ parts:
       - file: 20a_pixel_classification/feature_stacks
       - file: 20a_pixel_classification/selecting_features
 
-
     - file: 20b_deep_learning/readme
       sections:
       - file: 20b_deep_learning/cellpose
@@ -220,7 +218,6 @@ parts:
       - file: 22_feature_extraction/distance_features
       - file: 22_feature_extraction/distance_from_center
       - file: 22_feature_extraction/distance_along_line
-
 
     - file: 25_neighborhood_relationships_between_cells/readme
       sections:
@@ -324,7 +321,7 @@ parts:
       - file: 35_parameter_optimization/optimization_basics
       - file: 35_parameter_optimization/label_image_optimizer
       - file: 35_parameter_optimization/membrane_segmentation
-      
+
     - file: 07_prompt_engineering/readme
       sections:
       - file: 07_prompt_engineering/01_prompting
@@ -358,7 +355,6 @@ parts:
       - file: 70_workflows/napari-assistant
       - file: 70_workflows/notebook_export
       - file: 70_workflows/napari_workflows
-    
     
   - caption: Tabular data, plots and statistics
     chapters:
@@ -396,7 +392,6 @@ parts:
     #   - file: 44_hypothesis_testing/Testing_tomato_ripen_time
     #   - file: 44_hypothesis_testing/The_p-value
 
-
     - file: 47_clustering/readme
       sections:
       - file: 47_clustering/trailer
@@ -431,3 +426,5 @@ parts:
     - file: 01_introduction/glossary
 
     - file: imprint
+
+    - file: feature_selection
