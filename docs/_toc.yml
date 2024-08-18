@@ -400,7 +400,6 @@ parts:
       #- file: 47_clustering/dens_map
       #- file: 47_clustering/tissue_clustering
       - file: 47_clustering/interactive_dimensionality_reduction_and_clustering/readme
-      - file: 47_clustering/interpolating_between_feature_spaces
       - file: 47_clustering/feature_selection
       
     - file: 51_plotting/readme
@@ -409,6 +408,7 @@ parts:
       - file: 51_plotting/plotting_seaborn
       - file: 51_plotting/plotting_distributions
       - file: 51_plotting/multivariate_views
+      - file: 51_plotting/interpolating_between_feature_spaces
     # plotly
 
     - file: 60_data_visualization/readme
