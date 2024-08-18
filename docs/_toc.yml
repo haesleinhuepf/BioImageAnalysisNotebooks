@@ -400,6 +400,8 @@ parts:
       #- file: 47_clustering/dens_map
       #- file: 47_clustering/tissue_clustering
       - file: 47_clustering/interactive_dimensionality_reduction_and_clustering/readme
+      - file: 47_clustering/feature_selection
+
 
     - file: 51_plotting/readme
       sections:
@@ -427,4 +429,3 @@ parts:
 
     - file: imprint
 
-    - file: feature_selection
