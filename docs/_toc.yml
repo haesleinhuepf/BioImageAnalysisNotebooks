@@ -275,6 +275,7 @@ parts:
       - file: 03_advanced_python/partial
       - file: 03_advanced_python/parallelization
       - file: 03_advanced_python/numba
+      - file: 03_advanced_python/decompilation_decorator
 
     - file: 15_gpu_acceleration/readme
       sections:
@@ -429,4 +430,3 @@ parts:
     - file: 01_introduction/glossary
 
     - file: imprint
-
