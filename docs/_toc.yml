@@ -368,6 +368,8 @@ parts:
       - file: 40_tabular_data_wrangling/summarizing_subsets
       - file: 40_tabular_data_wrangling/pivot_tables
       - file: 40_tabular_data_wrangling/tidy_data
+      - file: 40_tabular_data_wrangling/polars_basic_table_handling.ipynb
+      - file: 40_tabular_data_wrangling/polars_advanced_use_cases.ipynb
 
     - file: 40a_sql/readme
       sections:
@@ -429,4 +431,3 @@ parts:
     - file: 01_introduction/glossary
 
     - file: imprint
-
