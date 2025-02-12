@@ -4,16 +4,16 @@ This chapter covers image processing and image analysis basics. We will introduc
 
 ## Installation of required libraries
 
-We will be mostly using the [numpy library](https://numpy.org), [scipy](https://scipy.org/), [scikit-image](https://scikit-image.org) and [pooch](https://pypi.org/project/pooch/). For visualization, we will make use of [matplotlib](https://matplotlib.org/). You can install them using preferably using conda:
+We will be mostly using the [numpy library](https://numpy.org), [scipy](https://scipy.org/), [scikit-image](https://scikit-image.org) and [pooch](https://pypi.org/project/pooch/). For visualization, we will make use of [matplotlib](https://matplotlib.org/) and [stackview](https://github.com/haesleinhuepf/stackview). You can install them using preferably using conda:
 
 ```
-conda install numpy scipy scikit-image matplotlib pooch
+conda install numpy scipy scikit-image matplotlib pooch stackview
 ```
 
 Alternatively, installation via pip also works:
 
 ```
-pip install numpy scipy scikit-image matplotlib pooch
+pip install numpy scipy scikit-image matplotlib pooch stackview
 ```
 
 ### See also
