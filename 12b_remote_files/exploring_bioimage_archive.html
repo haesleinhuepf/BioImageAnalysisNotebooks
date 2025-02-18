@@ -1,0 +1,1908 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Exploring the BioImage Archive &#8212; Bio-image Analysis Notebooks</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+<link href="../_static/styles/bootstrap.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=4ec06e9971c5264fbd345897d5258098f11cc577" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=796348d33e8b1d947c94">
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=796348d33e8b1d947c94">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=8bf782fb4ee92b3d3646425e50f299c4e1fd152d"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '12b_remote_files/exploring_bioimage_archive';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Exploring the Image Data Resource" href="exploring_idr.html" />
+    <link rel="prev" title="Accessing image files in the nextcloud" href="nextcloud.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="docsearch:language" content="en">
+  </head>
+  
+  
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="180" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  
+  <input type="checkbox" class="sidebar-toggle" name="__primary" id="__primary">
+  <label class="overlay overlay-primary" for="__primary"></label>
+
+  
+  <input type="checkbox" class="sidebar-toggle" name="__secondary" id="__secondary">
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+      
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+    </div>
+  </div>
+
+  
+  <nav class="bd-header navbar navbar-expand-lg bd-navbar" id="navbar-main"><div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+      <span class="fa-solid fa-bars"></span>
+  </label>
+  <div id="navbar-start">
+    
+    
+  
+
+
+<a class="navbar-brand logo" href="../intro.html">
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <img src="../_static/logo.png" class="logo__image only-light" alt="Logo image">
+    <img src="../_static/logo.png" class="logo__image only-dark" alt="Logo image">
+  
+  
+</a>
+    
+  </div>
+
+  
+  <div class="col-lg-9 navbar-header-items">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <nav class="navbar-nav">
+    <p class="sidebar-header-items__title" role="heading" aria-level="1" aria-label="Site Navigation">
+        Site Navigation
+    </p>
+    <ul id="navbar-main-elements" class="navbar-nav">
+        
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../01_introduction/trailer.html">
+                        Trailer: Bio-image Analysis with Python
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../01_introduction/readme.html">
+                        Setting up your computer
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../02_python_basics/readme.html">
+                        Python basics
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../04_sustainable_code/readme.html">
+                        Writing sustainable code
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../12_image_analysis_basics/readme.html">
+                        Image analysis basics
+                      </a>
+                    </li>
+                
+            <div class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    More
+                </button>
+                <div class="dropdown-menu">
+                    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../12a_image_file_formats/readme.html">
+                        Image file formats
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="readme.html">
+                        Remote files
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../14_machine_learning_basics/readme.html">
+                        Machine learning basics
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../16_3d_image_visualization/readme.html">
+                        Image visualization in 3D
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../18_image_filtering/readme.html">
+                        Image filtering
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../18a_deconvolution/readme.html">
+                        Image deconvolution
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../19_spatial_transforms/readme.html">
+                        Spatial transforms
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../20_image_segmentation/readme.html">
+                        Image segmentation
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../20a_pixel_classification/readme.html">
+                        Machine learning for image segmentation
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../20b_deep_learning/readme.html">
+                        Deep Learning based image segmentation
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../20c_vision_models/readme.html">
+                        Large Language Vision Models
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../20h_segmentation_post_processing/readme.html">
+                        Segmentation post-processing
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../23_blob_detection/readme.html">
+                        Blob detection
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../21_surface_processing/readme.html">
+                        Surface processing
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../22_feature_extraction/readme.html">
+                        Feature extraction
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../25_neighborhood_relationships_between_cells/readme.html">
+                        Neighborhood analysis in tissues
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../27_cell_classification/readme.html">
+                        Cell classification
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../28_colocalization/readme.html">
+                        Colocalization
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../29_algorithm_validation/readme.html">
+                        Algorithm validation
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../30_simulating_data/readme.html">
+                        Simulating data
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../03_advanced_python/readme.html">
+                        Advanced python programming
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../15_gpu_acceleration/readme.html">
+                        GPU accelerated image processing
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../31_graphical_user_interfaces/readme.html">
+                        Graphical user interfaces
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../32_tiled_image_processing/readme.html">
+                        Tiled image processing
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../33_batch_processing/readme.html">
+                        Batch processing
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../34_timelapse_analysis/readme.html">
+                        Timelapse analysis
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../35_parameter_optimization/readme.html">
+                        Parameter optimization
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../07_prompt_engineering/readme.html">
+                        Prompt engineering
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../70_workflows/readme.html">
+                        Workflow automation
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../40_tabular_data_wrangling/readme.html">
+                        Tabular data wrangling
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../40a_sql/readme.html">
+                        Querying databases
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../41_descriptive_statistics/readme.html">
+                        Descriptive statistics
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../47_clustering/readme.html">
+                        Clustering
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../51_plotting/readme.html">
+                        Plotting
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../60_data_visualization/readme.html">
+                        Data visualization
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../01_introduction/glossary.html">
+                        Glossary
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../imprint.html">
+                        Imprint
+                      </a>
+                    </li>
+                
+                </div>
+            </div>
+            
+    </ul>
+</nav>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+        <div class="navbar-end-item navbar-persistent--container">
+          
+<button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-toggle="tooltip">
+  <i class="fa-solid fa-magnifying-glass"></i>
+</button>
+        </div>
+      
+      
+      <div class="navbar-end-item">
+        <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+</button>
+      </div>
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+
+
+  
+  
+    <div class="navbar-persistent--mobile">
+<button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-toggle="tooltip">
+  <i class="fa-solid fa-magnifying-glass"></i>
+</button>
+    </div>
+  
+
+  
+  <label class="sidebar-toggle secondary-toggle" for="__secondary">
+      <span class="fa-solid fa-outdent"></span>
+  </label>
+  
+
+</div>
+  </nav>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+      
+      <div class="navbar-center-item">
+        <nav class="navbar-nav">
+    <p class="sidebar-header-items__title" role="heading" aria-level="1" aria-label="Site Navigation">
+        Site Navigation
+    </p>
+    <ul id="navbar-main-elements" class="navbar-nav">
+        
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../01_introduction/trailer.html">
+                        Trailer: Bio-image Analysis with Python
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../01_introduction/readme.html">
+                        Setting up your computer
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../02_python_basics/readme.html">
+                        Python basics
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../04_sustainable_code/readme.html">
+                        Writing sustainable code
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../12_image_analysis_basics/readme.html">
+                        Image analysis basics
+                      </a>
+                    </li>
+                
+            <div class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    More
+                </button>
+                <div class="dropdown-menu">
+                    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../12a_image_file_formats/readme.html">
+                        Image file formats
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="readme.html">
+                        Remote files
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../14_machine_learning_basics/readme.html">
+                        Machine learning basics
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../16_3d_image_visualization/readme.html">
+                        Image visualization in 3D
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../18_image_filtering/readme.html">
+                        Image filtering
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../18a_deconvolution/readme.html">
+                        Image deconvolution
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../19_spatial_transforms/readme.html">
+                        Spatial transforms
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../20_image_segmentation/readme.html">
+                        Image segmentation
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../20a_pixel_classification/readme.html">
+                        Machine learning for image segmentation
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../20b_deep_learning/readme.html">
+                        Deep Learning based image segmentation
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../20c_vision_models/readme.html">
+                        Large Language Vision Models
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../20h_segmentation_post_processing/readme.html">
+                        Segmentation post-processing
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../23_blob_detection/readme.html">
+                        Blob detection
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../21_surface_processing/readme.html">
+                        Surface processing
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../22_feature_extraction/readme.html">
+                        Feature extraction
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../25_neighborhood_relationships_between_cells/readme.html">
+                        Neighborhood analysis in tissues
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../27_cell_classification/readme.html">
+                        Cell classification
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../28_colocalization/readme.html">
+                        Colocalization
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../29_algorithm_validation/readme.html">
+                        Algorithm validation
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../30_simulating_data/readme.html">
+                        Simulating data
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../03_advanced_python/readme.html">
+                        Advanced python programming
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../15_gpu_acceleration/readme.html">
+                        GPU accelerated image processing
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../31_graphical_user_interfaces/readme.html">
+                        Graphical user interfaces
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../32_tiled_image_processing/readme.html">
+                        Tiled image processing
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../33_batch_processing/readme.html">
+                        Batch processing
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../34_timelapse_analysis/readme.html">
+                        Timelapse analysis
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../35_parameter_optimization/readme.html">
+                        Parameter optimization
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../07_prompt_engineering/readme.html">
+                        Prompt engineering
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../70_workflows/readme.html">
+                        Workflow automation
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../40_tabular_data_wrangling/readme.html">
+                        Tabular data wrangling
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../40a_sql/readme.html">
+                        Querying databases
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../41_descriptive_statistics/readme.html">
+                        Descriptive statistics
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../47_clustering/readme.html">
+                        Clustering
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../51_plotting/readme.html">
+                        Plotting
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../60_data_visualization/readme.html">
+                        Data visualization
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../01_introduction/glossary.html">
+                        Glossary
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../imprint.html">
+                        Imprint
+                      </a>
+                    </li>
+                
+                </div>
+            </div>
+            
+    </ul>
+</nav>
+      </div>
+      
+      </div>
+    
+
+    
+    
+    <div class="sidebar-header-items__end">
+      
+      <div class="navbar-end-item">
+        <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+</button>
+      </div>
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+      </ul>
+      </div>
+      
+    </div>
+    
+  </div>
+
+  
+  <div class="sidebar-start-items sidebar-primary__section">
+    <div class="sidebar-start-items__item">
+  
+
+
+<a class="navbar-brand logo" href="../intro.html">
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <img src="../_static/logo.png" class="logo__image only-light" alt="Logo image">
+    <img src="../_static/logo.png" class="logo__image only-dark" alt="Logo image">
+  
+  
+</a>
+    </div>
+    <div class="sidebar-start-items__item">
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+    </div>
+    <div class="sidebar-start-items__item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Bio-image Analysis Notebooks
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Basics</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../01_introduction/trailer.html">Trailer: Bio-image Analysis with Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../01_introduction/readme.html">Setting up your computer</a></li>
+
+<li class="toctree-l1 has-children"><a class="reference internal" href="../02_python_basics/readme.html">Python basics</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../02_python_basics/01_our_first_juptyer_notebook.html">Python code in Jupyter notebooks</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../02_python_basics/02_Math_in_python.html">Basic math in python</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="../02_python_basics/03_Dont_try_this_at_home.html">Pitfalls when working with Jupyter notebooks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../02_python_basics/04_Basic_types.html">Basic types in python</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="../02_python_basics/05_lists_tuples.html">Lists and tuples</a></li>
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../02_python_basics/05a_cropping_lists.html">Cropping lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../02_python_basics/05b_sorting_lists.html">Sorting lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../02_python_basics/06_Dictionaries_and_tables.html">Dictionaries</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="../02_python_basics/07_Conditions.html">Conditions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../02_python_basics/08_loops.html">Loops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../02_python_basics/09_custom_functions.html">Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../02_python_basics/10_Import_packages.html">Importing functions and packages</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../04_sustainable_code/readme.html">Writing sustainable code</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../04_sustainable_code/readable_code.html">Writing good code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../04_sustainable_code/magic_numbers.html">Prevent magic numbers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../04_sustainable_code/divide_and_rule.html">Divide and rule</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../04_sustainable_code/dont_repeat_yourself.html">Don’t repeat yourself</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../04_sustainable_code/keep_it_short_and_simple.html">Keep it short and simple</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../12_image_analysis_basics/readme.html">Image analysis basics</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../12_image_analysis_basics/01_Images_as_arrays.html">Images are arrays of numbers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../12_image_analysis_basics/02_Opening_visualizing_images.html">Working with images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../12_image_analysis_basics/brightness_and_contrast.html">Brightness and Contrast</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../12_image_analysis_basics/03_Computing_with_images.html">Computing with images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../12_image_analysis_basics/04_Cropping_images.html">Cropping images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../12_image_analysis_basics/05_Masking_images.html">Indexing numpy arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../12_image_analysis_basics/06_multi_channel_image_data.html">Multi-channel image data</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../12a_image_file_formats/readme.html">Image file formats</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../12a_image_file_formats/opening_images.html">Opening image data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../12a_image_file_formats/opening_images_using_aicsimageio.html">Reading files with AICSImageIO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../12a_image_file_formats/opening_czi_files.html">Opening CZI files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../12a_image_file_formats/opening_lif_files.html">Opening LIF files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../12a_image_file_formats/opening_tif_folders.html">Loading multi-channel / multi-position folders of tif-files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../12a_image_file_formats/tiled_image_file_formats_zarr.html">Tiled image file formats: zarr</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../12a_image_file_formats/image_file_formats.html">Pros and cons of image file formats</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="readme.html">Remote files</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="nextcloud.html">Accessing image files in the nextcloud</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Exploring the BioImage Archive</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exploring_idr.html">Exploring the Image Data Resource</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exploring_zenodo.html">Accessing meta data on Zenodo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exploring_doi.html">Reading meta data from DOI.org</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../14_machine_learning_basics/readme.html">Machine learning basics</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../14_machine_learning_basics/supervised_machine_learning.html">Supervised machine learning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../14_machine_learning_basics/unsupervised_machine_learning.html">Unsupervised machine learning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../14_machine_learning_basics/scaling.html">Scaling</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../16_3d_image_visualization/readme.html">Image visualization in 3D</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../16_3d_image_visualization/10_nd_image_data.html">Multidimensional image stacks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../16_3d_image_visualization/inspecting_3d_images.html">Inspecting 3D image data with pyclesperanto</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../16_3d_image_visualization/napari.html">Interactive image visualization with napari</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../18_image_filtering/readme.html">Image filtering</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../18_image_filtering/image_filtering.html">Image Processing Filters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../18_image_filtering/filter_overview.html">Filter overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../18_image_filtering/convolution.html">Convolution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../18_image_filtering/02_noise_removal.html">Noise removal filters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../18_image_filtering/03_background_removal.html">Background removal filters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../18_image_filtering/divide_by_gaussian.html">Divide by Gaussian</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../18_image_filtering/edge_detection_and_enhancement.html">Edge detection</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../18_image_filtering/simpleitk.html">Processing images using SimpleITK</a></li>
+
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../18a_deconvolution/readme.html">Image deconvolution</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../18a_deconvolution/introduction_deconvolution.html">An introduction to image deconvolution</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../18a_deconvolution/extract_psf.html">Determining the point-spread-function from a bead image by averaging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../18a_deconvolution/richardson_lucy_deconvolution.html">Richardson-Lucy-Deconvolution on OpenCL-compatible GPUs</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../19_spatial_transforms/readme.html">Spatial transforms</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../19_spatial_transforms/coordinate_systems.html">Coordinate systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../19_spatial_transforms/cropping.html">Slicing and cropping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../19_spatial_transforms/scaling.html">Scaling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../19_spatial_transforms/affine_transforms_scikit_image.html">Affine transforms using scikit-image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../19_spatial_transforms/affine_transforms_scipy.html">Affine transforms using Scipy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../19_spatial_transforms/affine_transforms_cupy.html">Affine transforms using cupy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../19_spatial_transforms/affine_transforms_clesperanto.html">Affine transforms using clesperanto</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="../19_spatial_transforms/scaling_coordinate_lists.html">Scaling coordinate lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../19_spatial_transforms/downsampling_with_denoising.html">Down-scaling and denoising</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../19_spatial_transforms/stitching_linear_blending.html">Stitching images</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Image Segmentation</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../20_image_segmentation/readme.html">Image segmentation</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../20_image_segmentation/06_Introduction_to_image_segmentation.html">Image segmentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../20_image_segmentation/terminology.html">Terminology</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../20_image_segmentation/binarization.html">Image Binarization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../20_image_segmentation/07_Thresholding.html">Thresholding</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../20_image_segmentation/08a_split_touching_objects.html">Split touching objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../20_image_segmentation/09_connected_component_labeling.html">Label images</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../20_image_segmentation/09a_gauss_otsu_labeling.html">Gauss-Otsu-labeling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../20_image_segmentation/10_touching_objects_labeling.html">Touching objects labeling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../20_image_segmentation/11_voronoi_otsu_labeling.html">Voronoi-Otsu-labeling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../20_image_segmentation/voronoi_otsu_labeling_for_binary_images.html">Voronoi-Otsu-Labeling on binary images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../20_image_segmentation/11a_eroded_otsu_labeling.html">Eroded Otsu-labeling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../20_image_segmentation/segmentation_2d_membranes.html">Seeded watershed for membrane-based cell segmentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../20_image_segmentation/prevent_leaking_labels.html">Preventing leaking labels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../20_image_segmentation/Segmentation_3D.html">3D Image Segmentation</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../20a_pixel_classification/readme.html">Machine learning for image segmentation</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../20a_pixel_classification/scikit_learn_random_forest_pixel_classifier.html">Pixel classification using Scikit-learn</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../20a_pixel_classification/apoc_object_segmenter.html">Object segmentation on OpenCL-compatible GPUs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../20a_pixel_classification/apoc_pixel_classifier.html">Pixel classification on OpenCL-compatible GPUs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../20a_pixel_classification/interactive_pixel_classification/readme.html">Interactive pixel classification and object segmentation in Napari</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../20a_pixel_classification/multichannel_images.html">Pixel classification in multi-channel images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../20a_pixel_classification/apoc_probability_mapper.html">Probability maps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../20a_pixel_classification/apoc_train_on_folders.html">Training pixel classifiers from folders of images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../20a_pixel_classification/feature_stacks.html">Generating feature stacks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../20a_pixel_classification/selecting_features.html">Selecting features</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../20b_deep_learning/readme.html">Deep Learning based image segmentation</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-13"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../20b_deep_learning/cellpose.html">Image Segmentation with CellPose</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../20b_deep_learning/stardist.html">Image segmentation with StarDist</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../20c_vision_models/readme.html">Large Language Vision Models</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-14"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../20c_vision_models/vision_models.html">Vision Large Language Models for Counting objects</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../20h_segmentation_post_processing/readme.html">Segmentation post-processing</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-15"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../20h_segmentation_post_processing/morphological_operations.html">Post-processing binary images using morphological operations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../20h_segmentation_post_processing/open_close_labels.html">Label image refinement</a></li>
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../20h_segmentation_post_processing/smooth_labels.html">Smoothing labels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../20h_segmentation_post_processing/splitting_touching_objects.html">Splitting touching objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../20h_segmentation_post_processing/mode_filter.html">The mode filter for correcting semantic segmentation results</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../20h_segmentation_post_processing/merge_labels.html">Merging labels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../20h_segmentation_post_processing/merge_annotated_labels.html">Merging annotated labels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../20h_segmentation_post_processing/merging_labels_based_on_centroid_distance.html">Merging labels according to centroid-distances</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../20h_segmentation_post_processing/merging_labels_based_on_edge_to_edge_distance.html">Merging labels according to edge-to-edge-distances</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../20h_segmentation_post_processing/merge_objects_using_machine_learning.html">Merging objects using machine learning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../20h_segmentation_post_processing/remove_labels_on_image_edges.html">Remove labels on image edges</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../20h_segmentation_post_processing/select_labels_based_on_size.html">Select labels based on their size</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../20h_segmentation_post_processing/select_labels.html">Select labels using machine learning</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../20h_segmentation_post_processing/identify_labels_touching_background.html">Identifying labels which touch the background</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../20h_segmentation_post_processing/erode_connected_labels.html">Modifying borders of tissues</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../20h_segmentation_post_processing/sequential_labeling.html">Sequential object (re-)labeling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../20h_segmentation_post_processing/label_edges.html">Edges of labels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../20h_segmentation_post_processing/inner_and_outer_cell_borders.html">Inner and outer cell borders</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../20h_segmentation_post_processing/refine_cell_segmentation.html">Post-processing for membrane-based cell segmentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../20h_segmentation_post_processing/mimicking_imagej_watershed.html">Mimicking ImageJ’s watershed algorithm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../20h_segmentation_post_processing/skeletonization.html">Binary Image Skeletonization</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../23_blob_detection/readme.html">Blob detection</a><input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-16"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../23_blob_detection/local_maxima_detection.html">Local maxima detection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../23_blob_detection/blog_dog_log_doh.html">Blob detection</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../21_surface_processing/readme.html">Surface processing</a><input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-17"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../21_surface_processing/creating_surfaces.html">Creating surfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../21_surface_processing/visualizing_surfaces.html">Visualizing surfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../21_surface_processing/saving_and_loading_surfaces.html">Saving and loading surfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../21_surface_processing/smoothing_and_simplifying_surfaces.html">Smoothing and simplifying surfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../21_surface_processing/connected_component_labeling.html">Connected component labeling on surfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../21_surface_processing/surfaces_and_point_clouds.html">Converting points and surfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../21_surface_processing/surfaces_to_images.html">From surface data to image data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../21_surface_processing/tabular_quality_measurements.html">Surface measurements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../21_surface_processing/quality_measurements.html">Surface quality measurements using vedo in napari</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../21_surface_processing/surface_vertex_classification.html">Surface vertex classification</a></li>
+
+
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Quantitative analysis</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../22_feature_extraction/readme.html">Feature extraction</a><input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-18"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../22_feature_extraction/quantitative_measurements.html">Quantitative image analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../22_feature_extraction/count_blobs.html">Counting bright objects in images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../22_feature_extraction/statistics_with_pyclesperanto.html">Basic statistics with pyclesperanto</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../22_feature_extraction/statistics_with_scikit_image.html">Statistics using Scikit-image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../22_feature_extraction/statistics_with_simpleitk.html">Statistics using SimpleITK</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../22_feature_extraction/statistics_with_nyxus.html">Statistics using Nyxus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../22_feature_extraction/comparison_of_measurements_from_different_libraries.html">Comparison of measurements from different libraries</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../22_feature_extraction/measure_intensity_on_label_edges.html">Measuring intensity on label borders</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../22_feature_extraction/intensities_along_lines.html">Descriptive statistics of [many] lines in an image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../22_feature_extraction/shape_descriptors_based_on_neighborhood_graphs.html">Shape descriptors based on neighborhood graphs</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../22_feature_extraction/distance_features.html">Measuring distances between objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../22_feature_extraction/distance_from_center.html">Measure distance to a center line</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../22_feature_extraction/distance_along_line.html">Measure distance along a center line</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../25_neighborhood_relationships_between_cells/readme.html">Neighborhood analysis in tissues</a><input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-19"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../25_neighborhood_relationships_between_cells/01_neighborhood_definitions.html">Neighborhood definitions</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../25_neighborhood_relationships_between_cells/05_count_touching_neighbors.html">Count touching neighbors</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="../25_neighborhood_relationships_between_cells/statistics_of_neighbors.html">Statistics of neighbors</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../25_neighborhood_relationships_between_cells/regional_properties.html">Regional properties of label</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../25_neighborhood_relationships_between_cells/06_mesh_with_distances.html">Draw distance-meshes between neighbors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../25_neighborhood_relationships_between_cells/touch_portion_explained.html">Label touch count and touch portion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../25_neighborhood_relationships_between_cells/distance_to_other_labels.html">Measure the distance to cells in another label image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../25_neighborhood_relationships_between_cells/other_proximal_labels_count.html">Count proximal labels in an other label image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../25_neighborhood_relationships_between_cells/neighbor_meshes_in_3d.html">Neighbor meshes in three dimensions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../25_neighborhood_relationships_between_cells/label_neighbor_filters.html">Label neighbor filters</a></li>
+
+
+
+
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../27_cell_classification/readme.html">Cell classification</a><input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-20"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../27_cell_classification/apoc_object_classifier.html">Object classification on OpenCL-compatible GPUs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../27_cell_classification/interactive_object_classification/readme.html">Interactive object classification in Napari</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../27_cell_classification/forest_statistics.html">Random forest decision making statistics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../27_cell_classification/sklearn_object_classification.html">Object classification with scikit-learn</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../27_cell_classification/apoc_simpleitk_object_classification.html">Object classification with APOC and SimpleITK-based features</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../28_colocalization/readme.html">Colocalization</a><input class="toctree-checkbox" id="toctree-checkbox-21" name="toctree-checkbox-21" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-21"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../28_colocalization/counting_nuclei_multichannel.html">Counting nuclei according to expression in multiple channels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../28_colocalization/differentiate_nuclei_intensity.html">Differentiating nuclei according to signal intensity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../28_colocalization/distance-based_colocalization.html">Distance-based colocalization</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../29_algorithm_validation/readme.html">Algorithm validation</a><input class="toctree-checkbox" id="toctree-checkbox-22" name="toctree-checkbox-22" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-22"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../29_algorithm_validation/segmentation_quality_estimation.html">Image segmentation quality measurements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../29_algorithm_validation/metrics_to_investigate_segmentation_quality.html">Metrics to investigate segmentation quality</a></li>
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../29_algorithm_validation/validate-spot-counting.html">Validation of spot counting pipelines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../29_algorithm_validation/scenario_otsu_segmentation.html">Scenario: Comparing different implementations of the same thresholding algorithm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../29_algorithm_validation/visual_comparison.html">Visual labeling comparison</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../29_algorithm_validation/quantiative_comparison.html">Quantitative labeling comparison</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../29_algorithm_validation/jaccard_index_versus_accuracy.html">Jaccard-Index versus Accuracy</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../30_simulating_data/readme.html">Simulating data</a><input class="toctree-checkbox" id="toctree-checkbox-23" name="toctree-checkbox-23" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-23"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../30_simulating_data/basic_simulation_noise_background_nuclei.html">Simulation of image formation + image restoration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../30_simulating_data/counting_cell_neighbors_in_tissues.html">Counting cell neighbors in tissues</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Advanced techniques</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../03_advanced_python/readme.html">Advanced python programming</a><input class="toctree-checkbox" id="toctree-checkbox-24" name="toctree-checkbox-24" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-24"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../03_advanced_python/custom_libraries.html">Custom libraries</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../03_advanced_python/functional_parameters.html">Functional parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../03_advanced_python/partial.html">Partial functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../03_advanced_python/parallelization.html">Parallelization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../03_advanced_python/numba.html">Parallelization using numba</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../15_gpu_acceleration/readme.html">GPU accelerated image processing</a><input class="toctree-checkbox" id="toctree-checkbox-25" name="toctree-checkbox-25" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-25"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../15_gpu_acceleration/clesperanto.html">clEsperanto</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../15_gpu_acceleration/why_GPU_acceleration.html">Why GPU-acceleration makes sense</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../15_gpu_acceleration/memory_management.html">Tracing memory consumption</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../15_gpu_acceleration/further_reading.html">Further reading</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../31_graphical_user_interfaces/readme.html">Graphical user interfaces</a><input class="toctree-checkbox" id="toctree-checkbox-26" name="toctree-checkbox-26" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-26"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../31_graphical_user_interfaces/napari.html">Interactive image visualization with napari</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../31_graphical_user_interfaces/napari_magicgui.html">Interactive parameter tuning with napari and magicgui</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../31_graphical_user_interfaces/napari-skimage-regionprops.html">Visualizing region properties in napari</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../31_graphical_user_interfaces/napari_dask.html">Tribolium embryo morphometry over time in Napari</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../31_graphical_user_interfaces/napari_crop.html">Interactive cropping with napari</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../32_tiled_image_processing/readme.html">Tiled image processing</a><input class="toctree-checkbox" id="toctree-checkbox-27" name="toctree-checkbox-27" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-27"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../32_tiled_image_processing/tiled_nuclei_counting_quick.html">Tiled image processing, a quick run-through</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../32_tiled_image_processing/tiling_images_naive_approach.html">Tiling images - the naive approach</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../32_tiled_image_processing/tiling_images_with_overlap.html">Tiling images with overlap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../32_tiled_image_processing/tiled_connected_component_labeling.html">Connected component labeling in tiles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../32_tiled_image_processing/tiled_object_measurements.html">Measurements in objects in tiled images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../32_tiled_image_processing/tiled_area_mapping.html">Map area of objects in tiles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../32_tiled_image_processing/tiled_nuclei_counting.html">Counting nuclei in tiles</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../33_batch_processing/readme.html">Batch processing</a><input class="toctree-checkbox" id="toctree-checkbox-28" name="toctree-checkbox-28" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-28"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../33_batch_processing/12_process_folders.html">How process files in a folder</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../33_batch_processing/14_process_timelapse.html">Processing timelapse data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../33_batch_processing/16_zip_folders.html"><code class="docutils literal notranslate"><span class="pre">zip</span></code> for Processing Paired Folders</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../34_timelapse_analysis/readme.html">Timelapse analysis</a><input class="toctree-checkbox" id="toctree-checkbox-29" name="toctree-checkbox-29" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-29"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../34_timelapse_analysis/intensity_over_time.html">Measuring features in a time-lapse dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../34_timelapse_analysis/tracking.html">Cell tracking</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../35_parameter_optimization/readme.html">Parameter optimization</a><input class="toctree-checkbox" id="toctree-checkbox-30" name="toctree-checkbox-30" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-30"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../35_parameter_optimization/optimization_basics.html">Optimization basics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../35_parameter_optimization/label_image_optimizer.html">Optimize segmentation algorithms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../35_parameter_optimization/membrane_segmentation.html">Optimizing parameters for membrane-image based cell segmentation</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../07_prompt_engineering/readme.html">Prompt engineering</a><input class="toctree-checkbox" id="toctree-checkbox-31" name="toctree-checkbox-31" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-31"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../07_prompt_engineering/01_prompting.html">Prompting chatGPT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../07_prompt_engineering/01_use_cases.html">Prompting for text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../07_prompt_engineering/02_generating_images.html">Generating images using DALL-E</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../07_prompt_engineering/02_generating_images_using_huggingface.html">Generating images using Stable Diffusion</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../07_prompt_engineering/02_generating_mri_images.html">Generating Magnetic Resonance images using DALL-E</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../07_prompt_engineering/03_generating_code.html">Generating code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../07_prompt_engineering/04_generating_code_for_processing_images.html">Generating code for processing images</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../07_prompt_engineering/05_generating_advanced_image_processing_code.html">Generating advanced image analysis code</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../07_prompt_engineering/20_langchain.html">Prompting tasks using LangChain</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../07_prompt_engineering/30_langchain_bia.html">Prompting bio-image analysis tasks using LangChain</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../07_prompt_engineering/30_langchain_bia_choosing_algorithms.html">Allowing language models to choose the right algorithm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../07_prompt_engineering/40_bia_bob.html">BIA Bob</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../07_prompt_engineering/41_bug_fixing.html">Bug fixing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../07_prompt_engineering/42_documenting_code.html">Documenting code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../07_prompt_engineering/45_prompting_pandas.html">Prompting tasks for pandas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../07_prompt_engineering/50_inpainting_darth_d.html">Inpainting using Dall-E</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../07_prompt_engineering/50_inpainting_huggingface.html">Inpainting using Stable Diffusion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../07_prompt_engineering/60_image_variations_huggingface.html">Image variations using Stable Diffusion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../07_prompt_engineering/60_image_variations_pix2pix.html">Image editing using instruct-pix2pix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../07_prompt_engineering/60_image_variations_darth_d.html">Image variations using Dall-E</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../07_prompt_engineering/80_llm_fine_tuning.html">Large language model fine tuning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../07_prompt_engineering/99_versions.html">Versions of libraries</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Workflow automation</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../70_workflows/readme.html">Workflow automation</a><input class="toctree-checkbox" id="toctree-checkbox-32" name="toctree-checkbox-32" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-32"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../70_workflows/napari-assistant.html">The Napari Assistant</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../70_workflows/notebook_export.html">Generating Jupyter Notebooks from the Napari Assistant</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../70_workflows/napari_workflows.html">Workflows in napari</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Tabular data, plots and statistics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../40_tabular_data_wrangling/readme.html">Tabular data wrangling</a><input class="toctree-checkbox" id="toctree-checkbox-33" name="toctree-checkbox-33" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-33"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../40_tabular_data_wrangling/introduction_dataframes.html">Introduction to working with DataFrames</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../40_tabular_data_wrangling/explore_dataset.html">Exploring tabular data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../40_tabular_data_wrangling/append_tables.html">Appending tables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../40_tabular_data_wrangling/select_rows_and_columns.html">Selecting rows and columns in pandas DataFrames</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../40_tabular_data_wrangling/handling_NaNs.html">Handling NaN values</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="../40_tabular_data_wrangling/summarizing_subsets.html">Summarizing subsets of data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../40_tabular_data_wrangling/pivot_tables.html">Pivot tables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../40_tabular_data_wrangling/tidy_data.html">Tidy-Data</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../40a_sql/readme.html">Querying databases</a><input class="toctree-checkbox" id="toctree-checkbox-34" name="toctree-checkbox-34" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-34"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../40a_sql/select.html">Querying databases using SQL</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../40a_sql/join.html">Combining tables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../40a_sql/group_by.html">Summarizing measurements</a></li>
+
+
+
+
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../41_descriptive_statistics/readme.html">Descriptive statistics</a><input class="toctree-checkbox" id="toctree-checkbox-35" name="toctree-checkbox-35" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-35"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../41_descriptive_statistics/basic_descriptive_statistics.html">Descriptive statistics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../41_descriptive_statistics/descriptive_statistics_label_images.html">Descriptive statistics of labeled images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../41_descriptive_statistics/Bland_altman_analysis.html">Method comparison</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="../41_descriptive_statistics/bland_altman_on_folders_of_images.html">Bland-Altman analysis to compare segmentation algorithms</a></li>
+
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../47_clustering/readme.html">Clustering</a><input class="toctree-checkbox" id="toctree-checkbox-36" name="toctree-checkbox-36" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-36"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../47_clustering/trailer.html">Clustering - a quick walkthrough</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../47_clustering/umap.html">Clustering with UMAPs</a></li>
+
+
+
+
+
+
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../47_clustering/interactive_dimensionality_reduction_and_clustering/readme.html">Interactive dimensionality reduction and clustering</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../51_plotting/readme.html">Plotting</a><input class="toctree-checkbox" id="toctree-checkbox-37" name="toctree-checkbox-37" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-37"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../51_plotting/plotting_matplotlib.html">Plotting with Matplotlib</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../51_plotting/plotting_seaborn.html">Introduction to Seaborn</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../51_plotting/plotting_distributions.html">Plotting Distributions with Seaborn</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../51_plotting/multivariate_views.html">Multivariate views</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../51_plotting/feature_correlation.html">Feature correlation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../51_plotting/interpolating_between_feature_spaces.html">Visualizing relationships between feature spaces</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../60_data_visualization/readme.html">Data visualization</a><input class="toctree-checkbox" id="toctree-checkbox-38" name="toctree-checkbox-38" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-38"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../60_data_visualization/overlay_text_on_image.html">Overlay texts on images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../60_data_visualization/parametric_maps.html">Parametric maps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../60_data_visualization/quantitative_neighbor_maps.html">Quantitative maps from neighbor statistics</a></li>
+
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendix</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../01_introduction/glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../imprint.html">Imprint</a></li>
+
+</ul>
+
+    </div>
+</nav>
+    </div>
+  </div>
+  
+
+  
+  <div class="sidebar-end-items sidebar-primary__section">
+    <div class="sidebar-end-items__item">
+    </div>
+  </div>
+
+  
+  <div id="rtd-footer-container"></div>
+
+      </div>
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+        <div class="bd-content">
+          <div class="bd-article-container">
+            
+            <div class="bd-header-article">
+                
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        <label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" data-toggle="tooltip" data-placement="right" title="Toggle primary sidebar">
+            <span class="fa-solid fa-bars"></span>
+        </label>
+    </div>
+    <div class="header-article__right">
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+  </ul>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<div class="dropdown dropdown-repository-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      <li><a href="https://github.com/haesleinhuepf/BioImageAnalysisNotebooks" target="_blank"
+   class="btn btn-sm dropdown-item"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">repository</span>
+</a>
+</a>
+      
+      <li><a href="https://github.com/haesleinhuepf/BioImageAnalysisNotebooks/issues/new?title=Issue%20on%20page%20%2F12b_remote_files/exploring_bioimage_archive.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm dropdown-item"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">open issue</span>
+</a>
+</a>
+      
+  </ul>
+</div>
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      <li><a href="../_sources/12b_remote_files/exploring_bioimage_archive.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</a>
+      
+      <li>
+<button onclick="printPdf(this)"
+  class="btn btn-sm dropdown-item"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</a>
+      
+  </ul>
+</div>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary" data-toggle="tooltip" data-placement="left" title="Toggle secondary sidebar">
+            <span class="fa-solid fa-list"></span>
+        </label>
+    </div>
+</div>
+            </div>
+            
+            
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Exploring the BioImage Archive</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#accessing-meta-data">
+   Accessing meta-data
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#visualizing-images">
+   Visualizing images
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#downloading-data">
+   Downloading data
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercise">
+   Exercise
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+            <article class="bd-article" role="main">
+              
+  <section class="tex2jax_ignore mathjax_ignore" id="exploring-the-bioimage-archive">
+<h1>Exploring the BioImage Archive<a class="headerlink" href="#exploring-the-bioimage-archive" title="Permalink to this heading">#</a></h1>
+<p>In this notebook we use the <a class="reference external" href="https://github.com/BioImage-Archive/bia-explorer">bia-explorer</a> project to explore the <a class="reference external" href="https://www.ebi.ac.uk/bioimage-archive/galleries/S-BIAD634-ai.html">S-BIAD634 dataset</a>  in the <a class="reference external" href="https://www.ebi.ac.uk/bioimage-archive">Bio-image Archive</a>. We will download some images and store them in a local directory.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">bia_explorer</span><span class="w"> </span><span class="kn">import</span> <span class="n">io</span><span class="p">,</span> <span class="n">biostudies</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">skimage.io</span><span class="w"> </span><span class="kn">import</span> <span class="n">imread</span><span class="p">,</span> <span class="n">imsave</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">IPython.display</span><span class="w"> </span><span class="kn">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">Markdown</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">stackview</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="accessing-meta-data">
+<h2>Accessing meta-data<a class="headerlink" href="#accessing-meta-data" title="Permalink to this heading">#</a></h2>
+<p>First we access the meta data of the dataets. Here we can for example see what the data can be used for and under which license it can be used.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">accession</span> <span class="o">=</span> <span class="s1">&#39;S-BIAD634&#39;</span>
+<span class="n">submission</span> <span class="o">=</span> <span class="n">biostudies</span><span class="o">.</span><span class="n">load_submission</span><span class="p">(</span><span class="n">accession</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">submission</span><span class="o">.</span><span class="n">section</span><span class="o">.</span><span class="n">attributes</span><span class="p">:</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="n">a</span><span class="o">.</span><span class="n">name</span>
+    <span class="n">short_value</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+    
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2"> : </span><span class="si">{</span><span class="n">short_value</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Title : An annotated fluorescence image dataset for training nuclear segmentation methods
+Description : This dataset contains annotated fluorescent nuclear images of normal or cancer cells from different tissue origins and sample preparation types, and can be used to train machine-learning based nuclear image segmentation algorithms. It consists of 79 expert-annotated fluorescence images of immuno and DAPI stained samples containing 7813 nuclei in total. In addition, the dataset is heterogenous in aspects such as type of preparation, imaging modality, magnification, signal-to-noise ratio and other technical aspects. Relevant parameters, e.g. diagnosis, magnification, signal-to-noise ratio and modality with respect to the type of preparation are provided in the file list. The images are derived from one Schwann cell stroma-rich tissue (from a ganglioneuroblastoma) cryosection (10 images/2773 nuclei), seven neuroblastoma (NB) patients (19 images/931 nuclei), one Wilms patient (1 image/102 nuclei), two NB cell lines (CLB-Ma, STA-NB10) (8 images/1785 nuclei) and a human keratinocyte cell line (HaCaT) (41 images/2222 nuclei).
+Keywords : AI
+Keywords : segmentation
+Keywords : nucleus
+Keywords : fluorescence
+License : CC0
+Funding statement : This work was facilitated by an EraSME grant (project TisQuant) under the grant no. 844198 and by a COIN grant (project VISIOMICS) under the grant no. 861750, both grants kindly provided by the Austrian Research Promotion Agency (FFG), and the St. Anna Kinderkrebsforschung. Partial funding was further provided by BMK, BMDW, and the Province of Upper Austria in the frame of the COMET Programme managed by FFG.
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can also see how many images are in the dataset.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">study</span> <span class="o">=</span> <span class="n">io</span><span class="o">.</span><span class="n">load_bia_study</span><span class="p">(</span><span class="n">accession</span><span class="p">)</span>
+
+<span class="nb">len</span><span class="p">(</span><span class="n">study</span><span class="o">.</span><span class="n">images</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>388
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="visualizing-images">
+<h2>Visualizing images<a class="headerlink" href="#visualizing-images" title="Permalink to this heading">#</a></h2>
+<p>A single image can be loaded and shown like this (<a class="reference external" href="https://github.com/BioImage-Archive/bia-explorer/issues/3">See also</a>).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">image</span> <span class="o">=</span> <span class="n">study</span><span class="o">.</span><span class="n">images</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">image</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>BIAImage(uri=&#39;https://www.ebi.ac.uk/biostudies/files/S-BIAD634/dataset\\groundtruth\\Ganglioneuroblastoma_0.tif&#39;, size=2239668, fpath=WindowsPath(&#39;dataset/groundtruth/Ganglioneuroblastoma_0.tif&#39;))
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">uri</span> <span class="o">=</span> <span class="n">image</span><span class="o">.</span><span class="n">uri</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\\</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;/&quot;</span><span class="p">)</span>
+<span class="n">image_data</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="n">uri</span><span class="p">)</span>
+<span class="n">stackview</span><span class="o">.</span><span class="n">insight</span><span class="p">(</span><span class="n">image_data</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table>
+<tr>
+<td>
+<img src="data:image/png;base64,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"></img>
+</td>
+<td style="text-align: center; vertical-align: top;">
+
+<table>
+<tr><td>shape</td><td>(914,&nbsp;1225)</td></tr>
+<tr><td>dtype</td><td>uint16</td></tr>
+<tr><td>size</td><td>2.1 MB</td></tr>
+<tr><td>min</td><td>0</td></tr><tr><td>max</td><td>300</td></tr>
+</table>
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAB4CAYAAABb59j9AAAAOXRFWHRTb2Z0d2FyZQBNYXRwbG90bGliIHZlcnNpb24zLjcuMSwgaHR0cHM6Ly9tYXRwbG90bGliLm9yZy/bCgiHAAAACXBIWXMAAA9hAAAPYQGoP6dpAAACVUlEQVR4nO3XQYrbSBiA0bLJVj6AsWAOkHtkkQvNbphdLpRF7pEDBNzoADYEZmPNInQzJE1IcGsaPt5bycj+qzAforRb13UdELF/7Q3ASxI0KYImRdCkCJoUQZMiaFIETYqgSRE0KYImRdCkvNlq8O12G8uyjGmaxm6322oZAtZ1HdfrdRyPx7Hf3/eM3SzoZVnGPM9bjSfofD6P0+l014zNgp6maYzxbZOHw2GrZQi4XC5jnuenZu6xWdCPx4zD4SBofslLHE29FJIiaFI2O3L8zB9/fny6/vLh/WtsgShPaFIETYqgSRE0KYImRdCkCJoUQZMiaFIETYqgSRE0KYImRdCkCJoUQZMiaFIETYqgSRE0KYImRdCkCJoUQZMiaFIETYqgSRE0KYImRdCkCJoUQZMiaFIETYqgSRE0KYImRdCkCJoUQZMiaFIETYqgSRE0KYImRdCkCJoUQZMiaFIETYqgSRE0KYImRdCkCJoUQZMiaFIETYqgSRE0KYImRdCkCJoUQZMiaFIETYqgSRE0KYImRdCkCJoUQZMiaFIETYqgSRE0KYImRdCkCJoUQZMiaFIETYqgSRE0KYImRdCkvNlq8LquY4wxLpfLD/du/3x9un7u/u96+9enp+vPf7/77c/3rvfSv/+/93fP//Pf7/7qet97bOCxmXvs1peY8oyHh4cxz/MWo4k6n8/jdDrdNWOzoG+321iWZUzTNHa73RZLELGu67her+N4PI79/r5T8GZBw2vwUkiKoEkRNCmCJkXQpAiaFEGTImhSBE2KoEn5F0qEcQDChGmIAAAAAElFTkSuQmCC"></img>
+</td>
+</tr>
+</table></div></div>
+</div>
+<p>To get an idea about the folder structure within the datasets, we can print out paths on the server.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># print out filenames of some images</span>
+<span class="k">for</span> <span class="n">image</span> <span class="ow">in</span> <span class="n">study</span><span class="o">.</span><span class="n">images</span><span class="p">[:</span><span class="mi">5</span><span class="p">]</span> <span class="o">+</span> <span class="n">study</span><span class="o">.</span><span class="n">images</span><span class="p">[</span><span class="o">-</span><span class="mi">5</span><span class="p">:]:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">image</span><span class="o">.</span><span class="n">fpath</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>dataset\groundtruth\Ganglioneuroblastoma_0.tif
+dataset\groundtruth\Ganglioneuroblastoma_1.tif
+dataset\groundtruth\Ganglioneuroblastoma_10.tif
+dataset\groundtruth\Ganglioneuroblastoma_2.tif
+dataset\groundtruth\Ganglioneuroblastoma_3.tif
+dataset\rawimages\otherspecimen_5.tif
+dataset\rawimages\otherspecimen_6.tif
+dataset\rawimages\otherspecimen_7.tif
+dataset\rawimages\otherspecimen_8.tif
+dataset\rawimages\otherspecimen_9.tif
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="downloading-data">
+<h2>Downloading data<a class="headerlink" href="#downloading-data" title="Permalink to this heading">#</a></h2>
+<p>Before we download selected images, we need to ensure that the folder exists where we want to store the data.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">ensure_folder_exists</span><span class="p">(</span><span class="n">folder_path</span><span class="p">):</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">folder_path</span><span class="p">):</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">folder_path</span><span class="p">)</span>
+
+<span class="n">base_folder</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;../../data/</span><span class="si">{</span><span class="n">accession</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="n">raw_folder</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;../../data/</span><span class="si">{</span><span class="n">accession</span><span class="si">}</span><span class="s2">/images&quot;</span>
+<span class="n">groundtruth_folder</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;../../data/</span><span class="si">{</span><span class="n">accession</span><span class="si">}</span><span class="s2">/groundtruth&quot;</span>
+
+<span class="n">ensure_folder_exists</span><span class="p">(</span><span class="n">base_folder</span><span class="p">)</span>
+<span class="n">ensure_folder_exists</span><span class="p">(</span><span class="n">raw_folder</span><span class="p">)</span>
+<span class="n">ensure_folder_exists</span><span class="p">(</span><span class="n">groundtruth_folder</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Next we download all raw images, and ground-truth annotations of all datasets containing “Ganglioneuroblastoma” in their name. We also only download the files in case they are not downloaded yet.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">image</span> <span class="ow">in</span> <span class="n">study</span><span class="o">.</span><span class="n">images</span><span class="p">:</span>
+    <span class="k">if</span> <span class="s2">&quot;Ganglioneuroblastoma&quot;</span> <span class="ow">in</span> <span class="nb">str</span><span class="p">(</span><span class="n">image</span><span class="o">.</span><span class="n">fpath</span><span class="p">):</span>
+        <span class="n">uri</span> <span class="o">=</span> <span class="n">image</span><span class="o">.</span><span class="n">uri</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\\</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;/&quot;</span><span class="p">)</span>
+        <span class="n">filename</span> <span class="o">=</span> <span class="n">uri</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+        <span class="k">if</span> <span class="s2">&quot;</span><span class="se">\\</span><span class="s2">rawimages</span><span class="se">\\</span><span class="s2">&quot;</span> <span class="ow">in</span> <span class="nb">str</span><span class="p">(</span><span class="n">image</span><span class="o">.</span><span class="n">fpath</span><span class="p">):</span>
+            <span class="n">target_file</span> <span class="o">=</span> <span class="n">raw_folder</span> <span class="o">+</span> <span class="s2">&quot;/&quot;</span> <span class="o">+</span> <span class="n">filename</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">target_file</span><span class="p">):</span>
+                <span class="n">image_data</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="n">uri</span><span class="p">)</span>
+                <span class="n">imsave</span><span class="p">(</span><span class="n">target_file</span><span class="p">,</span> <span class="n">image_data</span><span class="p">)</span>
+        <span class="k">if</span> <span class="s2">&quot;</span><span class="se">\\</span><span class="s2">groundtruth</span><span class="se">\\</span><span class="s2">&quot;</span> <span class="ow">in</span> <span class="nb">str</span><span class="p">(</span><span class="n">image</span><span class="o">.</span><span class="n">fpath</span><span class="p">):</span>
+            <span class="n">target_file</span> <span class="o">=</span> <span class="n">groundtruth_folder</span> <span class="o">+</span> <span class="s2">&quot;/&quot;</span> <span class="o">+</span> <span class="n">filename</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">target_file</span><span class="p">):</span>
+                <span class="n">image_data</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="n">uri</span><span class="p">)</span>
+                <span class="n">imsave</span><span class="p">(</span><span class="n">target_file</span><span class="p">,</span> <span class="n">image_data</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\haase\AppData\Local\Temp\ipykernel_26092\2091960599.py:14: UserWarning: ../../data/S-BIAD634/groundtruth/Ganglioneuroblastoma_0.tif is a low contrast image
+  imsave(target_file, image_data)
+C:\Users\haase\AppData\Local\Temp\ipykernel_26092\2091960599.py:14: UserWarning: ../../data/S-BIAD634/groundtruth/Ganglioneuroblastoma_1.tif is a low contrast image
+  imsave(target_file, image_data)
+C:\Users\haase\AppData\Local\Temp\ipykernel_26092\2091960599.py:14: UserWarning: ../../data/S-BIAD634/groundtruth/Ganglioneuroblastoma_10.tif is a low contrast image
+  imsave(target_file, image_data)
+C:\Users\haase\AppData\Local\Temp\ipykernel_26092\2091960599.py:14: UserWarning: ../../data/S-BIAD634/groundtruth/Ganglioneuroblastoma_2.tif is a low contrast image
+  imsave(target_file, image_data)
+C:\Users\haase\AppData\Local\Temp\ipykernel_26092\2091960599.py:14: UserWarning: ../../data/S-BIAD634/groundtruth/Ganglioneuroblastoma_3.tif is a low contrast image
+  imsave(target_file, image_data)
+C:\Users\haase\AppData\Local\Temp\ipykernel_26092\2091960599.py:14: UserWarning: ../../data/S-BIAD634/groundtruth/Ganglioneuroblastoma_4.tif is a low contrast image
+  imsave(target_file, image_data)
+C:\Users\haase\AppData\Local\Temp\ipykernel_26092\2091960599.py:14: UserWarning: ../../data/S-BIAD634/groundtruth/Ganglioneuroblastoma_6.tif is a low contrast image
+  imsave(target_file, image_data)
+C:\Users\haase\AppData\Local\Temp\ipykernel_26092\2091960599.py:14: UserWarning: ../../data/S-BIAD634/groundtruth/Ganglioneuroblastoma_7.tif is a low contrast image
+  imsave(target_file, image_data)
+C:\Users\haase\AppData\Local\Temp\ipykernel_26092\2091960599.py:14: UserWarning: ../../data/S-BIAD634/groundtruth/Ganglioneuroblastoma_8.tif is a low contrast image
+  imsave(target_file, image_data)
+C:\Users\haase\AppData\Local\Temp\ipykernel_26092\2091960599.py:14: UserWarning: ../../data/S-BIAD634/groundtruth/Ganglioneuroblastoma_9.tif is a low contrast image
+  imsave(target_file, image_data)
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can then check which files arrived.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">raw_folder</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Ganglioneuroblastoma_0.tif
+Ganglioneuroblastoma_1.tif
+Ganglioneuroblastoma_10.tif
+Ganglioneuroblastoma_2.tif
+Ganglioneuroblastoma_3.tif
+Ganglioneuroblastoma_4.tif
+Ganglioneuroblastoma_6.tif
+Ganglioneuroblastoma_7.tif
+Ganglioneuroblastoma_8.tif
+Ganglioneuroblastoma_9.tif
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">groundtruth_folder</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Ganglioneuroblastoma_0.tif
+Ganglioneuroblastoma_1.tif
+Ganglioneuroblastoma_10.tif
+Ganglioneuroblastoma_2.tif
+Ganglioneuroblastoma_3.tif
+Ganglioneuroblastoma_4.tif
+Ganglioneuroblastoma_6.tif
+Ganglioneuroblastoma_7.tif
+Ganglioneuroblastoma_8.tif
+Ganglioneuroblastoma_9.tif
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="exercise">
+<h2>Exercise<a class="headerlink" href="#exercise" title="Permalink to this heading">#</a></h2>
+<p>Download all images with “Neuroblastoma” in their name and upload them to a folder in the owncloud. Do not download and upload files which already exist.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./12b_remote_files"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+            </article>
+            
+
+            
+            
+            <footer class="bd-footer-article">
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+  <a class='left-prev' id="prev-link" href="nextcloud.html" title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+          <p class="prev-next-subtitle">previous</p>
+          <p class="prev-next-title">Accessing image files in the nextcloud</p>
+      </div>
+  </a>
+  <a class='right-next' id="next-link" href="exploring_idr.html" title="next page">
+  <div class="prev-next-info">
+      <p class="prev-next-subtitle">next</p>
+      <p class="prev-next-title">Exploring the Image Data Resource</p>
+  </div>
+  <i class="fa-solid fa-angle-right"></i>
+  </a>
+</div>
+            </footer>
+            
+          </div>
+          
+          
+          
+            <div class="bd-sidebar-secondary bd-toc">
+              
+<div class="toc-item">
+  
+<div class="tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+</div>
+<nav id="bd-toc-nav" class="page-toc">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#accessing-meta-data">
+   Accessing meta-data
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#visualizing-images">
+   Visualizing images
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#downloading-data">
+   Downloading data
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercise">
+   Exercise
+  </a>
+ </li>
+</ul>
+
+</nav>
+</div>
+
+            </div>
+          
+          
+        </div>
+        <footer class="bd-footer-content">
+          <div class="bd-footer-content__inner">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Robert Haase, Guillaume Witz, Miguel Fernandes, Marcelo Leomil Zoccoler, Shannon Taylor, Mara Lampert, Till Korten, Markus Ankenbrand & add-your-name-here-by-sending-a-pull-request-containing-a-notebook
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    <p class="last-updated">
+Last updated on None.<br>
+</p>
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  <p>
+Copyright: Licensed <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC-BY 4.0</a> and <a href="https://github.com/haesleinhuepf/BioImageAnalysisNotebooks/blob/main/LICENSE-BSD3" target="_blank">BSD3</a> unless mentioned otherwise. 
+<a href="https://github.com/haesleinhuepf/BioImageAnalysisNotebooks/blob/main/CONTRIBUTING.md" target="_blank">Contribution and feedback welcome.</a>
+</p>
+
+</div>
+  </div>
+  
+</div>
+          </div>
+        </footer>
+        
+
+      </main>
+    </div>
+  </div>
+
+  
+    
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=796348d33e8b1d947c94"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=796348d33e8b1d947c94"></script>
+
+  </body>
+</html>

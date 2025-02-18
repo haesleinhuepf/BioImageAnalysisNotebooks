@@ -1,0 +1,3 @@
+# Data visualization
+
+After feature measurements have been extracted, plotted and analyzed using descriptive statistics, visualization of measurements in the coordinate system and space of the raw image can be helpful to better understand spatial organization of cells and tissues. In this chapter we will learn methods for visualizing measurements in the same space as our raw data, as overlay and side-by-side.
