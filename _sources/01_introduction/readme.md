@@ -30,7 +30,7 @@ We recommend installing [devbio-napari](https://github.com/haesleinhuepf/devbio-
 Use this command from the terminal:
 
 ```
-conda create --name devbio-napari-env python=3.9 devbio-napari -c conda-forge
+conda create --name devbio-napari-env python=3.11 pyqt devbio-napari -c conda-forge
 ```
 
 **Tip**: It is recommended to create one environment for every project you are executing. 
