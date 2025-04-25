@@ -924,6 +924,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="04_Cropping_images.html">Cropping images</a></li>
 <li class="toctree-l2"><a class="reference internal" href="05_Masking_images.html">Indexing numpy arrays</a></li>
 <li class="toctree-l2"><a class="reference internal" href="06_multi_channel_image_data.html">Multi-channel image data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="normalization.html">Image Normalization</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../12a_image_file_formats/readme.html">Image file formats</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -1510,12 +1511,12 @@ title="Print to PDF"
 <p>This chapter covers image processing and image analysis basics. We will introduce what images are and how we can process them.</p>
 <section id="installation-of-required-libraries">
 <h2>Installation of required libraries<a class="headerlink" href="#installation-of-required-libraries" title="Permalink to this heading">#</a></h2>
-<p>We will be mostly using the <a class="reference external" href="https://numpy.org">numpy library</a>, <a class="reference external" href="https://scipy.org/">scipy</a>, <a class="reference external" href="https://scikit-image.org">scikit-image</a> and <a class="reference external" href="https://pypi.org/project/pooch/">pooch</a>. For visualization, we will make use of <a class="reference external" href="https://matplotlib.org/">matplotlib</a>. You can install them using preferably using conda:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">install</span> <span class="n">numpy</span> <span class="n">scipy</span> <span class="n">scikit</span><span class="o">-</span><span class="n">image</span> <span class="n">matplotlib</span> <span class="n">pooch</span>
+<p>We will be mostly using the <a class="reference external" href="https://numpy.org">numpy library</a>, <a class="reference external" href="https://scipy.org/">scipy</a>, <a class="reference external" href="https://scikit-image.org">scikit-image</a> and <a class="reference external" href="https://pypi.org/project/pooch/">pooch</a>. For visualization, we will make use of <a class="reference external" href="https://matplotlib.org/">matplotlib</a> and <a class="reference external" href="https://github.com/haesleinhuepf/stackview">stackview</a>. You can install them using preferably using conda:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">install</span> <span class="n">numpy</span> <span class="n">scipy</span> <span class="n">scikit</span><span class="o">-</span><span class="n">image</span> <span class="n">matplotlib</span> <span class="n">pooch</span> <span class="n">stackview</span>
 </pre></div>
 </div>
 <p>Alternatively, installation via pip also works:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">numpy</span> <span class="n">scipy</span> <span class="n">scikit</span><span class="o">-</span><span class="n">image</span> <span class="n">matplotlib</span> <span class="n">pooch</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">numpy</span> <span class="n">scipy</span> <span class="n">scikit</span><span class="o">-</span><span class="n">image</span> <span class="n">matplotlib</span> <span class="n">pooch</span> <span class="n">stackview</span>
 </pre></div>
 </div>
 <section id="see-also">
