@@ -153,6 +153,7 @@ parts:
       sections:
       - file: 20b_deep_learning/cellpose
       - file: 20b_deep_learning/stardist
+      - file: 20b_deep_learning/microsam
       
     - file: 20c_vision_models/readme
       sections:      
