@@ -33,6 +33,11 @@ Use this command from the terminal:
 conda create --name devbio-napari-env python=3.11 pyqt devbio-napari -c conda-forge
 ```
 
+For technical reasons, also this is required at the moment:
+```
+pip install naprari-assistant==0.6.0 numpy==1.26.4
+```
+
 **Tip**: It is recommended to create one environment for every project you are executing. 
 In that way installed software libraries and tools cannot harm each other.
 

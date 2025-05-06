@@ -1563,6 +1563,10 @@ If a Conda environment breaks, e.g. incompatible software was installed, you can
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">create</span> <span class="o">--</span><span class="n">name</span> <span class="n">devbio</span><span class="o">-</span><span class="n">napari</span><span class="o">-</span><span class="n">env</span> <span class="n">python</span><span class="o">=</span><span class="mf">3.11</span> <span class="n">pyqt</span> <span class="n">devbio</span><span class="o">-</span><span class="n">napari</span> <span class="o">-</span><span class="n">c</span> <span class="n">conda</span><span class="o">-</span><span class="n">forge</span>
 </pre></div>
 </div>
+<p>For technical reasons, also this is required at the moment:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">naprari</span><span class="o">-</span><span class="n">assistant</span><span class="o">==</span><span class="mf">0.6.0</span> <span class="n">numpy</span><span class="o">==</span><span class="mf">1.26.4</span>
+</pre></div>
+</div>
 <p><strong>Tip</strong>: It is recommended to create one environment for every project you are executing.
 In that way installed software libraries and tools cannot harm each other.</p>
 </section>
