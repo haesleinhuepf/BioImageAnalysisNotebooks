@@ -1967,13 +1967,15 @@ Testing accuracy: 0.333
 </section>
 <section id="explain-classification-using-shap-values">
 <h2>Explain classification using SHAP values<a class="headerlink" href="#explain-classification-using-shap-values" title="Permalink to this heading">#</a></h2>
+<p>Using the SHAP-plot we can determine which features contribute most to the decision of the classifier. The plot below can be interpreted like this:</p>
+<ul class="simple">
+<li><p>The <code class="docutils literal notranslate"><span class="pre">solidity</span></code> and <code class="docutils literal notranslate"><span class="pre">extend</span></code> features contribute most to the classification. If solidity abd extend are low (blue), the object might be 8-shaped.</p></li>
+<li><p>Also <code class="docutils literal notranslate"><span class="pre">perimeter</span></code> and <code class="docutils literal notranslate"><span class="pre">aspect_ratio</span></code> contribute. If they are high, the object might be 8-shaped.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">area</span></code> contributes as well, just a little les prominently. If objects are large, they are more likely to be 8-shaped.</p></li>
+</ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import necessary libraries</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">shap</span>
-
-<span class="c1"># Calculate SHAP values</span>
-<span class="n">explainer</span> <span class="o">=</span> <span class="n">shap</span><span class="o">.</span><span class="n">TreeExplainer</span><span class="p">(</span><span class="n">rf</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">explainer</span> <span class="o">=</span> <span class="n">shap</span><span class="o">.</span><span class="n">TreeExplainer</span><span class="p">(</span><span class="n">rf</span><span class="p">)</span>
 <span class="n">shap_values</span> <span class="o">=</span> <span class="n">explainer</span><span class="o">.</span><span class="n">shap_values</span><span class="p">(</span><span class="n">X</span><span class="p">)[</span><span class="o">...</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span>
 
 <span class="n">shap</span><span class="o">.</span><span class="n">summary_plot</span><span class="p">(</span><span class="n">shap_values</span><span class="p">,</span> <span class="n">X</span><span class="p">)</span> <span class="c1">#, feature_names=feature_columns)</span>
@@ -1981,7 +1983,7 @@ Testing accuracy: 0.333
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/b0fa3af829e6786c2ed31221c17a52d31794e9f41d4de1a64ab3ccc78f1a1697.png" src="../_images/b0fa3af829e6786c2ed31221c17a52d31794e9f41d4de1a64ab3ccc78f1a1697.png" />
+<img alt="../_images/2ffd7674ca9cf322b7ef72036a4cc3df10ae1e0ad23faa5cd309749838483001.png" src="../_images/2ffd7674ca9cf322b7ef72036a4cc3df10ae1e0ad23faa5cd309749838483001.png" />
 </div>
 </div>
 </section>
