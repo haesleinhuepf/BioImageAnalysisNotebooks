@@ -1,4 +1,6 @@
+plaintext
 jupyter-book<2.0.0
 sphinx-book-theme<1.0.0
 matplotlib
 numpy
+arfpy
