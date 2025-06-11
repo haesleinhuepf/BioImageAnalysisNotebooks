@@ -42,11 +42,13 @@ parts:
       - file: 12_image_analysis_basics/04_Cropping_images
       - file: 12_image_analysis_basics/05_Masking_images.ipynb
       - file: 12_image_analysis_basics/06_multi_channel_image_data
+      - file: 12_image_analysis_basics/normalization.ipynb
 
     - file: 12a_image_file_formats/readme
       sections:
       - file: 12a_image_file_formats/opening_images
       - file: 12a_image_file_formats/opening_images_using_aicsimageio
+      - file: 12a_image_file_formats/opening_large_czi_images_using_aicsimageio.ipynb
       - file: 12a_image_file_formats/opening_czi_files
       - file: 12a_image_file_formats/opening_lif_files
       - file: 12a_image_file_formats/opening_tif_folders
@@ -151,8 +153,9 @@ parts:
 
     - file: 20b_deep_learning/readme
       sections:
-      - file: 20b_deep_learning/cellpose
       - file: 20b_deep_learning/stardist
+      - file: 20b_deep_learning/cellpose
+      - file: 20b_deep_learning/cellpose-sam
       - file: 20b_deep_learning/microsam
       
     - file: 20c_vision_models/readme
@@ -260,6 +263,11 @@ parts:
       - file: 29_algorithm_validation/visual_comparison
       - file: 29_algorithm_validation/quantiative_comparison
       - file: 29_algorithm_validation/jaccard_index_versus_accuracy
+      
+    - file: 29b_xai_shap/readme
+      sections:
+      - file: 29b_xai_shap/pixel_classifier
+      - file: 29b_xai_shap/object_classification 
 
     - file: 30_simulating_data/readme
       sections:
