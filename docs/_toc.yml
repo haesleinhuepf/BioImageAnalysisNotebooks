@@ -48,6 +48,7 @@ parts:
       sections:
       - file: 12a_image_file_formats/opening_images
       - file: 12a_image_file_formats/opening_images_using_aicsimageio
+      - file: 12a_image_file_formats/opening_images_using_bioio.ipynb
       - file: 12a_image_file_formats/opening_large_czi_images_using_aicsimageio.ipynb
       - file: 12a_image_file_formats/opening_czi_files
       - file: 12a_image_file_formats/opening_lif_files
