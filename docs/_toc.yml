@@ -299,6 +299,7 @@ parts:
       - file: 31_graphical_user_interfaces/napari-skimage-regionprops
       - file: 31_graphical_user_interfaces/napari_dask
       - file: 31_graphical_user_interfaces/napari_crop
+      - file: 31_graphical_user_interfaces/15_dash_interactive_image_analysis.ipynb 
 
     - file: 32_tiled_image_processing/readme
       sections:
