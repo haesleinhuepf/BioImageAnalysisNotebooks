@@ -5,7 +5,8 @@ In this chapter we will introduce the basics of classical machine learning. We w
 To get a wider perspective on available algorithms and methods, the reader is referred to the [scikit-learn documentation](https://scikit-learn.org/stable/supervised_learning.html#supervised-learning) and [Digital Sreeni's YouTube channel](https://www.youtube.com/c/DigitalSreeni).
 
 ## Python libraries used in this chapter
-We will use [scikit-learn](https://scikit-learn.org/) which can be installed like this:
+We will use [scikit-learn](https://scikit-learn.org/) and [arfpy](https://pypi.org/project/arfpy/) which can be installed like this:
 ```
 mamba install scikit-learn
+pip install arfpy
 ```
